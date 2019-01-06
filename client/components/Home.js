@@ -11,7 +11,15 @@ class Home extends Component {
   emailMessage = (evt) => {
     evt.preventDefault();
     const {email, message} = evt.target;
-    console.log(email.value, message.value)
+    fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify({ email: email.value, message: message.value }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res =>  console.log(`POSTED SUCCESSFULLY: ${email.value, message.value}`))
+    .catch(err =>  console.error(err))
   }
 
   componentDidMount() {
