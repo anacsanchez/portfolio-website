@@ -5,6 +5,16 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+#landing-links a, #landing-links a:visited {
+  text-decoration: none;
+  color: white;
+  margin: 0 .5em;
+}
+
+#landing-links {
+  margin-top: 20vh;
+}
+
 #landing {
   background-image: url("cosmos.jpg");
   background-size: 100% 100%;
@@ -124,5 +134,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
 
 
