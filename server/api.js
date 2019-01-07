@@ -9,12 +9,12 @@ router.get('/', (req,res) => {
 })
 
 router.post('/email', (req,res) => {
-  const {email, message} = req.body;
+  const {email, subject, message} = req.body;
   let messageObj = {
     from: email,
     to: config.email,
     replyTo: email,
-    subject: "Test",
+    subject: subject,
     text: message,
   }
   let transporter = nodemailer.createTransport(config.smtp)

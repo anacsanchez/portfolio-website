@@ -103,7 +103,7 @@ form {
   display: flex;
 }
 table {
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 input[type="submit"] {
@@ -112,6 +112,13 @@ input[type="submit"] {
   font-size: 1.2em;
   border-radius: .2em;
   padding: .3em .7em;
+}
+
+input[type="email"] {
+  width: 100%;
+}
+input[type="text"] {
+  width: 100%;
 }
 
 input[type="submit"]:hover {

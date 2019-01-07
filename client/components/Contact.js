@@ -11,6 +11,9 @@ const Contact = ({handleEmail}) => {
             <td width="30%"><label>Email Address: </label></td><td><input required type="email" name="email" autoComplete="off"/></td>
           </tr>
           <tr>
+            <td width="30%"><label>Subject: </label></td><td width="60%"><input required type="text" name="subject" autoComplete="off"/></td>
+          </tr>
+          <tr>
             <td width="30%"><label>Message: </label></td><td><textarea  rows="8" required name="message" /></td>
           </tr>
           <tr><td colSpan="2" style={{textAlign: "center"}}><input type="submit" value="Send"/></td></tr>
