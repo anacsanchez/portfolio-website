@@ -1,10 +1,15 @@
 import React from 'react';
-const SingleProject = ({name, image, url}) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+const SingleProject = ({name, image, url, description}) => {
   return (
     <div className="project">
       <a className="project-url" href={url}>
         <div className="project-header">
           <div className="project-name">{name}</div>
+          <div className="project-description">{description}</div>
+          {/* <div className="project-github"><FontAwesomeIcon icon={ faGithub }/></div> */}
         </div>
         <div className="project-image" style={{backgroundImage: `url(${image.length ? image : "default_proj.png"})`}}></div>
       </a>

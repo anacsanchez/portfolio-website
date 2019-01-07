@@ -6,10 +6,13 @@ const About = () => {
       <div className="section-title">About</div>
       <div id="about-content">
         <div id="about-pic" style={{backgroundImage: `url('assets/ana_portfolio.jpg')`}}></div>
-        <div id="about-bio">I'm a software developer currently enjoying life in NYC. My interest in computing began when I was a kid; my father picked up from desktop computers from curbsides which we disassembled and I would swap the best parts for my computer. I found my passion for coding when creating support article content as a tech support rep. In order to optimize articles, I decided to dive right into the source code and learn HTML and CSS, and then I was hooked.
+        <div id="about-bio">
+          <p>I'm a software developer and lifelong New Yorker currently loving Manhattan.</p>
+          <p>My interest in computers began when I was a kid; my Dad would pick up computers that were left for recycling and bring them home for me to dissasemble and find the best parts for my PC.</p>
+          <p>I found my passion for software development working in tech support, creating articles for the company support website. I decided to dive right into the source code and learn HTML and CSS, and then I was hooked. This led to my decision to attend the Grace Hopper program at Fullstack Academy for full stack web development.</p>
+          <p>Aside from coding, I enjoy playing my violin and guitar, optimizing electronics, fantastic tea, and intermittent bouts of gaming and yoga.</p>
       </div>
-        {/* <div id="about-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum libero sit amet arcu imperdiet, eu elementum mauris aliquam. Sed rhoncus tellus eu ornare tristique. Sed rhoncus nisl eget luctus scelerisque. Aliquam pharetra tortor in justo sollicitudin lobortis. Praesent elementum magna et lorem pharetra accumsan. Quisque nec facilisis risus. Etiam pulvinar risus molestie consectetur maximus. Donec aliquet quam vel porta sodales. Aenean placerat faucibus orci quis facilisis. Sed consectetur massa eget augue dictum, eu eleifend odio tempor. Maecenas id diam in lacus condimentum porttitor at eu diam. Praesent malesuada elementum lorem varius auctor. Nulla ultricies mauris non eleifend sagittis. Etiam dictum facilisis odio.
-      </div> */}
+
       </div>
     </div>
   )

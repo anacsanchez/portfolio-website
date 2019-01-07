@@ -1,17 +1,22 @@
 body {
-  /* font-family: Arial, Helvetica, sans-serif; */
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
-#landing-links a, #landing-links a:visited {
+a, a:visited {
+  text-decoration: none;
+}
+
+#landing-icons a, #landing-icons a:visited {
   text-decoration: none;
   color: white;
   margin: 0 .5em;
 }
 
-#landing-links {
+#landing-icons {
   margin-top: 20vh;
 }
 
@@ -24,41 +29,9 @@ body {
   color: white;
   text-align: center;
 }
-#note {
-  padding-top: 20vh;
-}
-#about-section {
-  background-color: rgb(24, 0, 24);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-}
 
-#about-content {
-  display: flex;
-  flex-direction: row;
-  padding: 3em;
-  align-content: center;
-  align-items: center;
-  height: 90%;
-}
-td {
-  padding: .25em;
-}
-input {
-  font-size: 1.1em;
-}
-textarea {
-  font-size: 1em;
-}
-input[type="submit"] {
-  background-color:rgb(43, 43, 43);
-  color: white;
-  font-size: 1.2em;
-  border-radius: .2em;
-  padding: .3em .7em;
+#landing-intro {
+  padding-top: 20vh;
 }
 #name {
   padding-top: 35vh;
@@ -71,14 +44,86 @@ input[type="submit"] {
   font-size: 2em;
 }
 
+#about-content {
+  display: flex;
+  flex-direction: row;
+  padding: 3em;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  flex-wrap: wrap;
+}
 #about-pic {
-  width:250px;
-  height:350px;
+  max-width:250px;
+  max-height:350px;
+  min-height:350px;
+  min-width:250px;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 2em;
-  margin-top: 1.5em;
-  /* padding: 1.5em; */
+}
+#about-bio {
+  font-size: 1.2em;
+  padding: 0 0 1.5em 1.5em;
+  width: 60%;
+  line-height: 130%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+#about-section {
+  background-color: rgb(24, 0, 24);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+}
+
+td {
+  padding: .25em 0;
+}
+input {
+  font-size: 1.1em;
+  border: .05em solid black;
+  border-radius: .1em;
+}
+textarea {
+  font-size: 1em;
+  border: .05em solid black;
+  border-radius: .1em;
+  box-shadow: none;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+form {
+  width: 100%;
+  display: flex;
+}
+table {
+  width: 40%;
+  margin: auto;
+}
+input[type="submit"] {
+  background-color:rgb(43, 43, 43);
+  color: white;
+  font-size: 1.2em;
+  border-radius: .2em;
+  padding: .3em .7em;
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 60vh;
+}
+
+#email-form {
+  margin-top: 2%;
 }
 
 #projects-section {
@@ -87,17 +132,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#contact-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 60vh;
-}
-
-#email-form {
-  margin-top: 2%;
+  width: 100%;
 }
 
 #projects-list {
@@ -106,23 +141,16 @@ input[type="submit"] {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-#about-bio {
-  font-size: 1.25em;
-  padding: 1.5em;
-  width: 70%;
-  line-height: 130%;
-  /* margin-bottom */
+  /* width: 100vw; */
 }
 
 .section {
-  padding: 2em 2em 2em 2em;
+  /* padding: 2em 2em 2em 2em; */
 }
 .section-title {
   font-size: 2.5em;
   height: 10%;
-  /* margin-bottom: 2%; */
+  margin-top: 4%;
   font-family: 'Share Tech Mono', monospace;
   letter-spacing: .1em;
   font-weight: bold;
@@ -130,25 +158,34 @@ input[type="submit"] {
 }
 
 .project {
-  border: 1px solid white;
+  border: 1px solid rgb(53, 53, 53);
   margin: 1em;
   border-radius: 1em;
 }
 .project-header {
   width: 15em;
-  height: 3em;
+  height: 5em;
   background-color: rgb(54, 54, 54);
   color: white;
-  /* text-align: center; */
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.project-description {
+  font-size: .9em;
+  font-style: italic;
+  margin-top: .5em;
+  text-align: center;
+}
+.project-github {
+  margin-top: .5em;
 }
 .project-name {
-  /* margin: 0 .5em; */
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 1.2em;
 }
 .project-image {

@@ -1,79 +1,92 @@
 [
   {
-    "name": "Choropleth Map",
-    "image":"assets/choropleth_ss.png",
-    "url": "https://anacsanchez.github.io/Choropleth-Map/",
-    "github": "https://github.com/anacsanchez/Choropleth-Map"
-  },
-  {
-    "name": "Bob's Burgers Emporium",
-    "image":"assets/burger_emporium_ss.png",
-    "url": "https://burgers-emporium.herokuapp.com/",
-    "github": "https://github.com/anacsanchez/Bobs-Burgers-Emporium"
-  },
-  {
     "name": "Build And Go",
     "image":"assets/build_and_go_ss.png",
+    "description":"Javascript, React Native, Redux, Node, Postgres, ViroMedia SDK",
     "url": "https://github.com/anacsanchez/BuildAndGo",
     "github": "https://github.com/anacsanchez/BuildAndGo"
   },
   {
+    "name": "Binary Tree Visualization",
+    "image":"assets/binary_ss.png",
+    "description":"Javascript, D3",
+    "url": "https://anacsanchez.github.io/Binary-Tree-Visualization/",
+    "github": "https://github.com/anacsanchez/Binary-Tree-Visualization"
+  },
+  {
+    "name": "Bob's Burgers Emporium",
+    "image":"assets/burger_emporium_ss.png",
+    "description":"Javascript, React, Redux, Node, Postgres, Heroku",
+    "url": "https://burgers-emporium.herokuapp.com/",
+    "github": "https://github.com/anacsanchez/Bobs-Burgers-Emporium"
+  },
+  {
+    "name": "Choropleth Map",
+    "image":"assets/choropleth_ss.png",
+    "description": "Javascript, D3",
+    "url": "https://anacsanchez.github.io/Choropleth-Map/",
+    "github": "https://github.com/anacsanchez/Choropleth-Map"
+  },
+  {
     "name": "US GDP Growth",
     "image": "assets/bar_chart.png",
+    "description":"Javascript, D3",
     "url": "https://anacsanchez.github.io/US-GDP-Growth/",
     "github": "https://github.com/anacsanchez/US-GDP-Growth"
   },
   {
     "name": "Calculator",
     "image": "assets/calculator_ss.png",
+    "description":"Javascript, React, Heroku",
     "url": "https://mysterious-scrubland-83297.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Calculator"
   },
   {
-    "name": "Binary Tree Visualization",
-    "image":"assets/binary_ss.png",
-    "url": "https://anacsanchez.github.io/Binary-Tree-Visualization/",
-    "github": "https://github.com/anacsanchez/Binary-Tree-Visualization"
-  },
-  {
     "name": "Drum Machine",
     "image": "assets/drum_machine_ss.png",
+    "description":"Javascript, React, Heroku",
     "url": "https://quiet-spire-26936.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Drum-Machine"
   },
   {
     "name": "Heat Map",
     "image": "assets/heat_map_ss.png",
+    "description":"Javascript, D3",
     "url": "https://anacsanchez.github.io/Global-Heat-Map/",
     "github": "https://github.com/anacsanchez/Global-Heat-Map"
   },
   {
     "name": "Pomodoro Clock",
     "image": "assets/pomodoro_ss.png",
+    "description":"Javascript, React, Heroku",
     "url": "https://shrouded-mesa-16381.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Pomodoro-Clock"
   },
   {
     "name": "Markdown Previewer",
     "image": "assets/markdown_ss.png",
+    "description":"Javascript, React, Heroku",
     "url": "https://pacific-beyond-16486.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Markdown-Previewer"
   },
   {
     "name": "Random Quote Machine",
     "image": "assets/random_quote_ss.png",
+    "description":"Javascript, React, Heroku",
     "url": "https://guarded-anchorage-42384.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Random-Quote-Machine"
   },
   {
     "name": "Treemap Diagram",
     "image": "assets/treemap_ss.png",
+    "description":"Javascript, D3",
     "url": "https://anacsanchez.github.io/Treemap-Diagram/",
     "github": "https://github.com/anacsanchez/Treemap-Diagram"
   },
   {
     "name": "Math Tutor",
     "image": "assets/math_tutor_ss.png",
+    "description":"Java, JavaFX, MySQL",
     "url": "https://github.com/anacsanchez/Math-Tutor",
     "github": "https://github.com/anacsanchez/Math-Tutor"
   }

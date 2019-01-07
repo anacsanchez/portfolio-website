@@ -8,10 +8,10 @@ const Contact = ({handleEmail}) => {
         <table>
           <tbody>
           <tr>
-            <td><label>Email Address: </label></td><td><input required type="email" name="email" size="45" autoComplete="off"/></td>
+            <td width="30%"><label>Email Address: </label></td><td><input required type="email" name="email" autoComplete="off"/></td>
           </tr>
           <tr>
-            <td><label>Message: </label></td><td><textarea required name="message" rows="10" cols="50" /></td>
+            <td width="30%"><label>Message: </label></td><td><textarea  rows="8" required name="message" /></td>
           </tr>
           <tr><td colSpan="2" style={{textAlign: "center"}}><input type="submit" value="Send"/></td></tr>
           </tbody>
