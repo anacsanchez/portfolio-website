@@ -18,7 +18,7 @@ class Home extends Component {
         "Content-Type": "application/json"
       }
     })
-    // .then(res =>  console.log(`POSTED SUCCESSFULLY: ${email.value, message.value}`))
+    .then(() => alert('Email sent!'))
     .catch(err =>  console.error(err))
   }
 

@@ -114,6 +114,10 @@ input[type="submit"] {
   padding: .3em .7em;
 }
 
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
 #contact-section {
   display: flex;
   flex-direction: column;
