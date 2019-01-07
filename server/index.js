@@ -19,6 +19,10 @@ app.get('*', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 })
 
+app.get(/^#/, (req,res) => {
+  console.log("no")
+})
+
 app.use((req, res, next) => {
   if (path.extname(req.path).length) {
     const err = new Error('not found');

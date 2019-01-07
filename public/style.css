@@ -44,7 +44,22 @@ body {
   align-items: center;
   height: 90%;
 }
-
+td {
+  padding: .25em;
+}
+input {
+  font-size: 1.1em;
+}
+textarea {
+  font-size: 1em;
+}
+input[type="submit"] {
+  background-color:rgb(43, 43, 43);
+  color: white;
+  font-size: 1.2em;
+  border-radius: .2em;
+  padding: .3em .7em;
+}
 #name {
   padding-top: 35vh;
   font-size: 3.5em;
@@ -57,11 +72,13 @@ body {
 }
 
 #about-pic {
-  width:300px;
-  height:400px;
+  width:250px;
+  height:350px;
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 2em;
+  margin-top: 1.5em;
+  /* padding: 1.5em; */
 }
 
 #projects-section {
@@ -95,6 +112,8 @@ body {
   font-size: 1.25em;
   padding: 1.5em;
   width: 70%;
+  line-height: 130%;
+  /* margin-bottom */
 }
 
 .section {

@@ -8,12 +8,12 @@ const Contact = ({handleEmail}) => {
         <table>
           <tbody>
           <tr>
-            <td><label>Email Address: </label></td><td><input type="email" name="email" autoComplete="off"/></td>
+            <td><label>Email Address: </label></td><td><input required type="email" name="email" size="45" autoComplete="off"/></td>
           </tr>
           <tr>
-            <td><label>Message: </label></td><td><textarea name="message" /></td>
+            <td><label>Message: </label></td><td><textarea required name="message" rows="10" cols="50" /></td>
           </tr>
-          <tr><td colSpan="2" style={{textAlign: "center"}}><input type="submit" /></td></tr>
+          <tr><td colSpan="2" style={{textAlign: "center"}}><input type="submit" value="Send"/></td></tr>
           </tbody>
         </table>
       </form>
