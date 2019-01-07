@@ -49,7 +49,7 @@
     "github": "https://github.com/anacsanchez/Drum-Machine"
   },
   {
-    "name": "Heat Map",
+    "name": "Global Heat Map",
     "image": "assets/heat_map_ss.png",
     "description":"Javascript, D3",
     "url": "https://anacsanchez.github.io/Global-Heat-Map/",
