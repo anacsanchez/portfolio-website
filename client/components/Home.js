@@ -8,6 +8,7 @@ class Home extends Component {
       projects: []
     }
   }
+
   emailMessage = (evt) => {
     evt.preventDefault();
     const {email, message, subject} = evt.target;
@@ -28,10 +29,23 @@ class Home extends Component {
       .then(data => {
         this.setState({projects: data})
     })
+    window.addEventListener('scroll', (evt) => {
+
+      if (window.scrollY > window.innerHeight) {
+        console.log('show header!')
+      }
+      else {
+        console.log(window.scrollY)
+      }
+    })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll');
   }
   render() {
     return (
-      <div>
+      <div id="home-page" onScroll={this.handleScroll}>
         <Landing />
         <About />
         <Projects projects={this.state.projects} />

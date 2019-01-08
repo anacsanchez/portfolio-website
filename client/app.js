@@ -3,9 +3,7 @@ import { Home } from './components';
 
 const App = () => {
   return (
-    <div>
-      <Home />
-    </div>
+    <Home />
   )
 }
 export default App;

@@ -2,8 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  /* height: 100%; */
+  /* width: 100%; */
+}
+
+#home-page {
   height: 100%;
-  width: 100%;
 }
 
 a, a:visited {
@@ -30,12 +34,18 @@ a, a:visited {
   text-align: center;
 }
 
+#navbar {
+  width: 100%;
+  height: 4em;
+  background-color: rgb(57, 57, 57);
+}
+
 #landing-intro {
   padding-top: 20vh;
 }
 #name {
   padding-top: 35vh;
-  font-size: 3.5em;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
@@ -65,7 +75,7 @@ a, a:visited {
 #about-bio {
   font-size: 1.2em;
   padding: 0 0 1.5em 1.5em;
-  width: 60%;
+  width: 70%;
   line-height: 130%;
   display: flex;
   flex-direction: column;
@@ -138,6 +148,12 @@ input[type="submit"]:hover {
   margin-top: 2%;
 }
 
+.field-name {
+  text-align: right;
+  width: 15%;
+  padding-right: 2%;
+}
+
 #projects-section {
   background-color: #350035;
   color: white;
@@ -153,7 +169,11 @@ input[type="submit"]:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /* width: 100vw; */
+
+}
+
+.hide {
+  display: none;
 }
 
 .section {
@@ -166,7 +186,6 @@ input[type="submit"]:hover {
   font-family: 'Share Tech Mono', monospace;
   letter-spacing: .1em;
   font-weight: bold;
-
 }
 
 .project {
@@ -197,7 +216,6 @@ input[type="submit"]:hover {
   margin-top: .5em;
 }
 .project-name {
-  /* font-weight: 600; */
   font-size: 1.2em;
 }
 .project-image {
@@ -214,5 +232,10 @@ input[type="submit"]:hover {
 }
 
 
+@media only screen and (max-width: 420px) {
+  table {
+    width: 70%;
+  }
+}
 
 
