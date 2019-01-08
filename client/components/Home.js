@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Landing, About, Contact, Projects } from './index';
+import { Landing, About, Contact, Projects, Header } from './index';
 
 class Home extends Component {
   constructor(props) {
@@ -46,9 +46,10 @@ class Home extends Component {
   render() {
     return (
       <div id="home-page" onScroll={this.handleScroll}>
-        <Landing />
-        <About />
+        {/* <Landing /> */}
+        <Header />
         <Projects projects={this.state.projects} />
+        <About />
         <Contact handleEmail={this.emailMessage}/>
       </div>
     )

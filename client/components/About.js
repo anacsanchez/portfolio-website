@@ -5,7 +5,7 @@ const About = () => {
     <div id="about-section" className="section">
       <div className="section-title">About</div>
       <div id="about-content">
-        <div id="about-pic" style={{backgroundImage: `url('assets/ana_portfolio.jpg')`}}></div>
+        {/* <div id="about-pic" style={{backgroundImage: `url('assets/ana_portfolio.jpg')`}}></div> */}
         <div id="about-bio">
           <p>I'm a software developer and lifelong New Yorker currently loving Manhattan.</p>
           <p>My interest in computers began when I was a kid; my Dad would pick up computers that were left for recycling and bring them home for me to dissasemble and find the best parts for my PC.</p>
