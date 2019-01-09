@@ -14,6 +14,57 @@ a, a:visited {
   display: none;
 }
 
+.dark1-color-bg {
+  background-color: #A2A2A2;
+}
+
+.dark2-color-bg {
+  /* background-color: rgb(45, 45, 45); */
+  /* background-color: #565656; */
+  background-color: #343434;
+}
+
+.color1-bg {
+  background-color: #16B1B5;
+}
+
+.light1-color-bg {
+  background-color: #FFFFFF;
+}
+.light2-color-bg {
+  background-color: #D0D0D0;
+}
+
+.light1-color-font {
+
+}
+
+.light2-color-font {
+
+}
+
+.color1-font {
+  color: #16B1B5;
+}
+
+.color2-font {
+
+}
+
+
+.mid1-color-scheme {
+  background-color: #C09F80;
+}
+
+.mid2-color-scheme {
+  background-color: #76323F;
+}
+
+.light-color-scheme {
+  background-color: #D7CEC7;
+  /* background-color: rgb(223, 223, 223); */
+}
+
 /*  Home Page  */
 
 #home-page {
@@ -61,7 +112,6 @@ a, a:visited {
 #navbar {
   width: 100%;
   height: 4em;
-  background-color: rgb(57, 57, 57);
 }
 
 /*  Header  */
@@ -71,8 +121,6 @@ a, a:visited {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* background-image: url('') */
-  /* background-color: rgb(3, 99, 121); */
   background-image: url('overlook.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,23 +130,36 @@ a, a:visited {
 #header-section-links {
   align-items: flex-end;
   display: flex;
-  height: 70%;
+  height: 30%;
   flex-direction: row;
+  flex-wrap: wrap;
   font-family: 'Share Tech Mono', monospace;
+  color: white;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 #header-section-links a {
-  margin: 0 2em;
-  /* font-weight: 600; */
-  font-size: 1.2em;
+  /* margin: 0 .2em; */
+  font-weight: 800;
+  font-size: 1.4em;
   padding-bottom: .3em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #343434;
+  /* color: white; */
+  /* color: #565656; */
+  color: #343434;
+}
+
+#header-section-links a:hover {
+  color: #16B1B5;
+  cursor: pointer;
 }
 
 #header-layer {
   width: 100%;
   height: 100%;
-  background-color: rgba(232, 232, 232, 0.728);
+  /* background-color: rgba(208, 208, 208, 0.543); */
+  background-color: rgba(255, 255, 255, 0.619);
 }
 
 #header-content {
@@ -119,7 +180,7 @@ a, a:visited {
   min-width: 150px;
   background-size: contain;
   background-repeat: no-repeat;
-  border: 3px solid rgb(45, 45, 45);
+  border: 3px solid rgb(45, 45, 45)s;
 }
 
 #header-details {
@@ -127,7 +188,7 @@ a, a:visited {
   width: 32%;
   color: white;
   margin-left: 3%;
-  height: 30%;
+  height: 70%;
 }
 
 #header-info {
@@ -135,7 +196,6 @@ a, a:visited {
 }
 
 #header-social {
-  background-color: rgb(45, 45, 45);
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -146,7 +206,6 @@ a, a:visited {
 }
 
 #header-title-section {
-  background-color: rgb(45, 45, 45);
   padding: .75em 0 0 0;
   border-top-left-radius: .3em;
   border-top-right-radius: .3em;
@@ -174,7 +233,6 @@ a, a:visited {
 #header-name {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.4em;
-  /* width: 75%; */
 }
 
 /*  About  */
@@ -186,7 +244,6 @@ a, a:visited {
   align-content: center;
   align-items: center;
   justify-content: center;
-  /* height: 90%; */
   flex-wrap: wrap;
   width: 100%;
 }
@@ -212,10 +269,10 @@ a, a:visited {
 }
 
 #about-section {
-  background-image: url('overlook.jpg');
-  background-repeat: no-repeat;
+  /* background-image: url('overlook.jpg'); */
+  /* background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom left;
+  background-position: bottom left; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -290,7 +347,10 @@ input[type="submit"]:hover {
 /*  Projects  */
 
 #projects-section {
-  background-color: rgb(223, 223, 223);
+  /* background-color: rgb(223, 223, 223); */
+  /* background-color: #A2A2A2; */
+  /* background-color: #D0D0D0; */
+  background-color: #FFFFFF;
   color: white;
   display: flex;
   flex-direction: column;
@@ -311,11 +371,12 @@ input[type="submit"]:hover {
   /* border: 1px solid rgb(53, 53, 53); */
   margin: .5em 1em .5em 0;
   border-radius: .5em;
+  border: 2px solid #343434;
 }
 .project-header {
   width: 12em;
   height: 3em;
-  background-color: rgb(54, 54, 54);
+  /* background-color: rgb(54, 54, 54); */
   color: white;
   border-top-right-radius: .5em;
   border-top-left-radius: .5em;
@@ -336,6 +397,9 @@ input[type="submit"]:hover {
 }
 .project-name {
   font-size: .9em;
+  /* color: #565656; */
+  /* color: #16B1B5; */
+  color: #FFFFFF;
 }
 .project-image {
   width: 12em;
@@ -364,7 +428,9 @@ input[type="submit"]:hover {
   letter-spacing: .1em;
   font-weight: bold;
   width: 100%;
-  color: rgb(3, 99, 121);
+  /* color: rgb(3, 99, 121); */
+  /* color: white; */
+  color: #16B1B5;
 }
 
 /*  Media Queries  */

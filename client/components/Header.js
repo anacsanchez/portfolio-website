@@ -10,11 +10,11 @@ const Header = () => {
         {/* <div id="header-pic-small" style={{backgroundImage: `url('assets/ana_portfolio.jpg')`}}></div> */}
         <div id="header-details">
           <div id="header-info">
-            <div id="header-title-section">
+            <div id="header-title-section" className="dark2-color-bg">
               <div id="header-name">Ana C Sanchez</div>
               <div id="header-location">Software Developer | NYC </div>
             </div>
-            <div id="header-social">
+            <div id="header-social" className="dark2-color-bg">
               <a href="https://www.linkedin.com/in/ana-c-sanchez/"><FontAwesomeIcon icon={ faLinkedinIn } size="2x" /></a>
               <a href="https://github.com/anacsanchez"><FontAwesomeIcon icon={ faGithub } size="2x"/></a>
               <a href="https://angel.co/anacsanchez?public_profile=1"><FontAwesomeIcon size="2x" icon={ faAngellist } /></a>
