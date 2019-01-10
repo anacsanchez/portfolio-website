@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = ({handleEmail}) => {
   return (
     <div id="contact-section">
-      <div className="section-title light1-color-font">Contact</div>
+      <div className="section-title">Contact</div>
       <form id="email-form" onSubmit={handleEmail}>
         <table>
           <tbody>
