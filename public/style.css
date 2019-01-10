@@ -14,47 +14,6 @@ a, a:visited {
   display: none;
 }
 
-.dark1-color-bg {
-  background-color: #3C312B;
-}
-
-.color1-bg {
-  background-color: 	#EE4653;
-}
-
-.color2-bg {
-  background-color: #1A3B5A;
-}
-
-.light1-color-bg {
-  background-color:	#FFFFFD;
-}
-.light2-color-bg {
-  background-color: #D9DAD9;
-}
-
-.light1-color-font {
-  color: #FCFEFF;
-}
-
-.light2-color-font {
-  color: #D9DAD9;
-}
-
-.color1-font {
-  color: 	#EE4653;
-}
-
-.color2-font {
-  color: #1A3B5A;
-}
-
-.dark1-color-font {
-  color: #3C312B;
-}
-
-
-
 /*  Home Page  */
 
 #home-page {
@@ -109,7 +68,6 @@ a, a:visited {
 #header-title {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.3rem;
-  /* margin-top: .5rem; */
   padding-top: .5rem;
 }
 
@@ -151,7 +109,6 @@ a, a:visited {
   font-size: 1.3rem;
   padding-bottom: .3rem;
   border-bottom: 2px solid #494748;
-  /* margin-bottom: 2vh; */
   margin-bottom: .75rem;
 }
 
@@ -176,7 +133,6 @@ a, a:visited {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* justify-content: space-around; */
   flex-wrap: wrap;
   width: 100%;
   padding-top: 2%;
@@ -200,8 +156,6 @@ a, a:visited {
   flex-direction: column;
   align-content: flex-start;
 }
-
-
 
 /*  Contact  */
 
@@ -238,7 +192,6 @@ input[type="submit"] {
   padding: .3rem .7rem;
   border: none;
   margin-top: 1rem;
-  /* border: 1px solid #EE4653; */
 }
 
 input[type="email"] {
@@ -275,7 +228,7 @@ input[type="submit"]:hover {
 /*  Projects  */
 
 #projects-section {
-  color: white;
+  background-color: #D9DAD9;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -298,7 +251,7 @@ input[type="submit"]:hover {
 .project-header {
   width: 12em;
   height: 3em;
-  color: white;
+  color: #FFFFFD;
   border-top-right-radius: .5em;
   border-top-left-radius: .5em;
   display: flex;
@@ -306,6 +259,7 @@ input[type="submit"]:hover {
   align-items: center;
   align-content: center;
   flex-direction: column;
+  background-color: #3C312B;
 }
 .project-description {
   font-size: .9em;
@@ -335,9 +289,6 @@ input[type="submit"]:hover {
 
 /*  Section Classes  */
 
-.section {
-
-}
 .section-title {
   font-size: 1.5em;
   padding-top: 2%;
@@ -358,5 +309,3 @@ input[type="submit"]:hover {
     width: 75%;
   }
 }
-
-
