@@ -3,8 +3,8 @@ import { SingleProject } from './index';
 
 const Projects = ({projects}) => {
   return (
-    <div id="projects-section" className="section">
-      <div className="section-title">Projects</div>
+    <div id="projects-section" className="section light2-color-bg">
+      <div className="section-title color2-font">Projects</div>
       <div id="projects-list">
         {projects.length ? projects.map((project,i) => <SingleProject key={i} name={project.name} image={project.image} url={project.url} description={project.description} github={project.github}/>) : null}
       </div>
