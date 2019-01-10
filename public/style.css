@@ -15,30 +15,38 @@ a, a:visited {
 }
 
 .dark1-color-bg {
-  background-color: #938E94;
+  background-color: #596676;
 }
 
 .dark2-color-bg {
-  background-color: #5D5C61;
+  background-color: #637080;
 }
 
 .dark3-color-bg {
-  background-color: rgb(43, 43, 43);
+  background-color: #262B31;
 }
 
 .color1-bg {
-  background-color: #7395AE;
+  background-color: #A0BDE9;
 }
 
 .color2-bg {
-  background-color: #557A95;
+  background-color: #88A3CE;
+}
+
+.color3-bg {
+  background-color: #55657E;
+}
+
+.color4-bg {
+  background-color: #81736A;
 }
 
 .light1-color-bg {
-  background-color: #FFFFFF;
+  background-color: #CBD8E8;
 }
 .light2-color-bg {
-  background-color: #B1A296;
+  background-color: #C4CFE5;
   /* background-color: #B0A393; */
 }
 
@@ -47,23 +55,35 @@ a, a:visited {
 }
 
 .light2-color-font {
-  color: #B1A296;
+  color: #d8e9f3;
 }
 
 .color1-font {
-  color: #7395AE;
+  color: #b2d3e6;
 }
 
 .color2-font {
-  color: #7395AE;
+  color: #8dbdd8;
+}
+
+.color3-font {
+  color: #68a7ca;
+}
+
+.color4-font {
+  color: #4390bc;
 }
 
 .dark1-color-font {
-  color: #938E94;
+  color: #596676;
 }
 
 .dark2-color-font {
-  color: #5D5C61;
+  color: #637080;
+}
+
+.dark3-color-font {
+  color: #262B31;
 }
 
 /*  Home Page  */
@@ -105,21 +125,23 @@ a, a:visited {
 
 #header-section-links a {
   font-weight: 800;
-  font-size: 1.4em;
+  font-size: 1.5em;
   padding-bottom: .3em;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 2px solid #262B31;
 }
 
 #header-section-links a:hover {
-  color: #7395AE;
+  color: #FFFFFF;
   cursor: pointer;
-  border-bottom: 1px solid #7395AE;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 #header-layer {
   width: 100%;
   height: 100%;
-  background-color: rgba(50, 50, 50, 0.358);
+  /* background-color: rgba(50, 50, 50, 0.358); */
+  /* background-color: rgba(225, 226, 225, 0.406); */
+  background-color: rgba(245, 245, 246, 0.317);
 }
 
 #header-content {

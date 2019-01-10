@@ -10,11 +10,11 @@ const Header = () => {
         {/* <div id="header-pic-small" style={{backgroundImage: `url('assets/ana_portfolio.jpg')`}}></div> */}
         <div id="header-details">
           <div id="header-info">
-            <div id="header-title-section" className="color2-bg">
+            <div id="header-title-section" className="color3-bg">
               <div id="header-name">Ana C Sanchez</div>
               <div id="header-location">Software Developer | NYC </div>
             </div>
-            <div id="header-social" className="color2-bg">
+            <div id="header-social" className="color3-bg">
               <a href="https://www.linkedin.com/in/ana-c-sanchez/"><FontAwesomeIcon icon={ faLinkedinIn } size="2x" /></a>
               <a href="https://github.com/anacsanchez"><FontAwesomeIcon icon={ faGithub } size="2x"/></a>
               <a href="https://angel.co/anacsanchez?public_profile=1"><FontAwesomeIcon size="2x" icon={ faAngellist } /></a>
@@ -24,7 +24,7 @@ const Header = () => {
 
 
         </div>
-        <div id="header-section-links" className="light1-color-font">
+        <div id="header-section-links" className="dark3-color-font">
           <a>About</a>
           <a>Projects</a>
           {/* <a>Skills</a> */}
