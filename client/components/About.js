@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div id="about-section" className="section">
+    <div id="about-section" className="section dark2-color-bg">
       <div className="section-title">About</div>
       <div id="about-content">
         {/* <div id="about-pic" style={{backgroundImage: `url('assets/ana_portfolio.jpg')`}}></div> */}
