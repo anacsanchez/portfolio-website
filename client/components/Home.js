@@ -29,20 +29,20 @@ class Home extends Component {
       .then(data => {
         this.setState({projects: data})
     })
-    // window.addEventListener('scroll', (evt) => {
+    window.addEventListener('scroll', (evt) => {
 
-    //   if (window.scrollY > window.innerHeight) {
-    //     console.log('show header!')
-    //   }
-    //   else {
-    //     console.log(window.scrollY)
-    //   }
-    // })
+      if (window.scrollY > window.innerHeight) {
+        console.log('show header!')
+      }
+      else {
+        console.log(window.scrollY)
+      }
+    })
   }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll');
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('scroll');
+  }
   render() {
     return (
       <div id="home-page">
