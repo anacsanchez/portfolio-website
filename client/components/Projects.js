@@ -12,14 +12,14 @@ class Projects extends Component {
     // evt.target.children[1].classList.add("hide")
     // evt.target.children[2].classList.remove("hide")
     // evt.target.children[1].children[0].classList.remove("hide")
-    console.log(evt.target.classList.add('hide'));
+    // console.log(evt.target.classList.add('hide'));
     // console.log(evt.target.children)\
     // console.log(evt.target)
     // evt.target.children[0].classList.add('full')
   }
 
   hideDescription = (evt) => {
-    evt.target.children[1].classList.remove("hide")
+    // evt.target.children[1].classList.remove("hide")
     // evt.target.children[2].classList.add("hide")
   }
 
