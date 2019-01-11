@@ -12,6 +12,7 @@ a, a:visited {
 
 .hide {
   display: none;
+  transition: 1s;
 }
 
 .full {
@@ -60,6 +61,7 @@ a, a:visited {
   padding: .5rem 0;
   transition: 0s;
   box-shadow: 0 5px 0 #3C312B;
+  z-index: 1;
 }
 
 #nav-content {
@@ -309,11 +311,19 @@ input[type="submit"]:hover {
   cursor: pointer;
   width: 12rem;
   height: 15rem;
+  position: relative;
 }
 
 .project-wrapper {
-  width: 12rem;
-  height: 12rem;
+  height: 100%;
+  width: 100%;
+  /* width: 12rem;
+  height: 12rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 
 .project-header {
@@ -330,10 +340,10 @@ input[type="submit"]:hover {
 }
 .project-description {
   font-size: .9rem;
-  font-style: italic;
+  /* font-style: italic; */
   color: #1A3B5A;
-  text-align: center;
-  padding-top: 1rem;
+  /* text-align: center; */
+  padding: .5rem;
 }
 .project-github {
   margin-top: .5rem;
@@ -348,21 +358,24 @@ input[type="submit"]:hover {
   background-size: contain;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
+  position: absolute;
 }
 .project-options {
   display: flex;
   align-items: flex-end;
   text-align: center;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  background-color: #1A3B5A;
 }
 .project-options a {
   width: 50%;
-  background-color: #1A3B5A;
   padding: .5rem 0;
-  color: white;
+  color: #EE4653;
 }
 
 .project-options a:hover {
-  color: #EE4653;
+  color: white;
 }
 
 .project-url {
@@ -372,9 +385,13 @@ input[type="submit"]:hover {
 }
 
 .project-info {
-  flex-direction: column;
-  justify-content: space-between;
   height: 12em;
+  width: 12em;
+  position: absolute;
+  background-color: #EE4653;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  cursor: initial;
 }
 
 /*  Section Classes  */

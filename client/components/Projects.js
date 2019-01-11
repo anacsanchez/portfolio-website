@@ -8,25 +8,19 @@ class Projects extends Component {
 
   showDescription = (evt) => {
     if (evt.target.parentNode.className == "project") {
-      console.dir(evt.target.parentNode)
+      // console.dir(evt.target.parentNode)
+      evt.target.parentNode.children[1].children[0].classList.remove("hide")
+      // evt.target.parentNode.children[1].classList.add("hide")
     }
     // else {
-    //   console.log('not project div')
+    //   evt.preventDefault();
     // }
-    // console.log(evt.target)
-    // evt.stopPropagatio n()
-    // evt.target.children[1].classList.add("hide")
-    // evt.target.children[2].classList.remove("hide")
-    // evt.target.children[1].children[0].classList.remove("hide")
-    // console.log(evt.target.classList.add('hide'));
-    // console.log(evt.target.children)\
-    // console.log(evt.target)
-    // evt.target.children[0].classList.add('full')
   }
 
   hideDescription = (evt) => {
-    // evt.target.children[1].classList.remove("hide")
-    // evt.target.children[2].classList.add("hide")
+    if(!evt.relatedTarget || evt.relatedTarget.id == "projects-list" || evt.relatedTarget.id == "projects-section" || (evt.relatedTarget.parentNode.className == "project" && evt.relatedTarget.parentNode.id !== evt.currentTarget.id )) {
+      evt.currentTarget.children[1].children[0].classList.add("hide")
+    }
   }
 
   render() {
