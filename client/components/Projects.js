@@ -7,7 +7,7 @@ class Projects extends Component {
   }
 
   showDescription = (evt) => {
-    console.log(evt.target)
+    // console.log(evt.target)
     // evt.stopPropagatio n()
     // evt.target.children[1].classList.add("hide")
     // evt.target.children[2].classList.remove("hide")

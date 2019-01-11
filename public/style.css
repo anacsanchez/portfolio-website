@@ -15,6 +15,15 @@ a, a:visited {
   /* height: 0em; */
 }
 
+.show {
+  /* position: fixed; */
+  /* top: 0; */
+
+  /* display: inherit !important; */
+  /* transform: translateY(0) */
+  /* transition: 2s; */
+}
+
 .full {
   height: 12em !important;
 }
@@ -23,11 +32,23 @@ a, a:visited {
   pointer-events: auto !important;
 }
 
+.bg-dark {
+  background-color: #1A3B5A;
+}
+
 .descrip-bg {
   background-image: none !important;
   /* display: flex; */
   /* background-color: #1A3B5A; */
   background-color: #EE4653;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  background-color: #1A3B5A;
+  color: white;
+  /* transition: 1s; */
 }
 
 .flex {
@@ -44,7 +65,33 @@ a, a:visited {
 
 #navbar {
   width: 100%;
-  height: 4em;
+  /* height: 4em; */
+  position: fixed;
+  top: 0;
+  background-color: #1A3B5A;
+  color: white;
+  /* height: 2rem; */
+  font-size: 1.2rem;
+  padding: .5rem 0;
+  /* display: none; */
+}
+
+#nav-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+#nav-links a {
+  padding: 0 .5rem;
+}
+
+#nav-logo {
+  padding-right: .5rem;
 }
 
 /*  Header  */
@@ -73,7 +120,7 @@ a, a:visited {
 #header-landing {
   text-align: center;
   width: 100%;
-  height: 40vh;
+  height: 48vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,18 +165,20 @@ a, a:visited {
 #header-nav {
   align-items: flex-end;
   display: flex;
-  height: 20vh;
+  height: 12vh;
   flex-direction: row;
   flex-wrap: wrap;
   font-family: 'Share Tech Mono', monospace;
   justify-content: space-evenly;
   width: 100%;
+  /* position: absolute; */
+  /* top: 0; */
   /* background-color: #1A3B5A; */
 }
 
 #header-nav a {
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   padding-bottom: .3rem;
   border-bottom: 2px solid #494748;
   margin-bottom: .75rem;

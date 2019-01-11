@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { About, Contact, Projects, Header } from './index';
+import { About, Contact, Projects, Header, Navbar } from './index';
 
 class Home extends Component {
   constructor(props) {
@@ -29,13 +29,30 @@ class Home extends Component {
       .then(data => {
         this.setState({projects: data})
     })
+    // window.addEventListener('scroll', (evt) => {
+
+    //   if (window.scrollY > window.innerHeight * .6) {
+    //     // console.log('show header!')
+    //     if(!document.getElementById("navbar").classList.contains("show"))
+    //     document.getElementById("navbar").classList.add("show")
+    //   }
+    //   else {
+    //     if (document.getElementById("navbar").classList.contains("show")) {
+    //       document.getElementById("navbar").classList.remove("show")
+    //     }
+    //   }
+    // })
     window.addEventListener('scroll', (evt) => {
 
-      if (window.scrollY > window.innerHeight) {
-        console.log('show header!')
+      if (window.scrollY > window.innerHeight * .6) {
+        // console.log('show header!')
+        if(document.getElementById("navbar").classList.contains("hide"))
+        document.getElementById("navbar").classList.remove("hide")
       }
       else {
-        console.log(window.scrollY)
+        if (!document.getElementById("navbar").classList.contains("hide")) {
+          document.getElementById("navbar").classList.add("hide")
+        }
       }
     })
   }
@@ -47,6 +64,7 @@ class Home extends Component {
     return (
       <div id="home-page">
         <Header />
+        <Navbar />
         <Projects projects={this.state.projects} />
         <About />
         <Contact handleEmail={this.emailMessage}/>
