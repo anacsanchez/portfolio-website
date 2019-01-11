@@ -29,23 +29,11 @@ class Home extends Component {
       .then(data => {
         this.setState({projects: data})
     })
-    // window.addEventListener('scroll', (evt) => {
 
-    //   if (window.scrollY > window.innerHeight * .6) {
-    //     // console.log('show header!')
-    //     if(!document.getElementById("navbar").classList.contains("show"))
-    //     document.getElementById("navbar").classList.add("show")
-    //   }
-    //   else {
-    //     if (document.getElementById("navbar").classList.contains("show")) {
-    //       document.getElementById("navbar").classList.remove("show")
-    //     }
-    //   }
-    // })
-    window.addEventListener('scroll', (evt) => {
-
-      if (window.scrollY > window.innerHeight * .6) {
-        // console.log('show header!')
+    window.addEventListener('scroll', () => {
+      // console.log(document.getElementById("header").scrollHeight)
+      // if (window.scrollY > window.innerHeight * .6) {
+        if (window.scrollY > document.getElementById("header").scrollHeight) {
         if(document.getElementById("navbar").classList.contains("hide"))
         document.getElementById("navbar").classList.remove("hide")
       }

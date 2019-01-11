@@ -7,9 +7,9 @@ const SingleProject = ({project, handleMouseOver, handleMouseOut, projKey}) => {
   return (
     <div className="project" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <div className="project-header">
-        <a className="project-url" target="_blank" href={url}>
+        {/* <a className="project-url" target="_blank" href={url}> */}
           <div className="project-name">{name}</div>
-        </a>
+        {/* </a> */}
       </div>
       <div className="project-image" id={`image-${projKey}`} style={{backgroundImage: `url(${image.length ? image : "default_proj.png"})`}}></div>
       <div className="project-info hide">

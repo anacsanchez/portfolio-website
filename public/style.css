@@ -12,16 +12,6 @@ a, a:visited {
 
 .hide {
   display: none;
-  /* height: 0em; */
-}
-
-.show {
-  /* position: fixed; */
-  /* top: 0; */
-
-  /* display: inherit !important; */
-  /* transform: translateY(0) */
-  /* transition: 2s; */
 }
 
 .full {
@@ -38,8 +28,6 @@ a, a:visited {
 
 .descrip-bg {
   background-image: none !important;
-  /* display: flex; */
-  /* background-color: #1A3B5A; */
   background-color: #EE4653;
 }
 
@@ -48,7 +36,6 @@ a, a:visited {
   top: 0;
   background-color: #1A3B5A;
   color: white;
-  /* transition: 1s; */
 }
 
 .flex {
@@ -65,21 +52,21 @@ a, a:visited {
 
 #navbar {
   width: 100%;
-  /* height: 4em; */
   position: fixed;
   top: 0;
   background-color: #1A3B5A;
   color: white;
-  /* height: 2rem; */
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: .5rem 0;
-  /* display: none; */
+  transition: 0s;
+  box-shadow: 0 5px 0 #3C312B;
 }
 
 #nav-content {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-shrink: 3;
 }
 
 #nav-links {
@@ -87,40 +74,45 @@ a, a:visited {
   justify-content: space-evenly;
 }
 #nav-links a {
+  font-family: 'Share Tech Mono', monospace;
   padding: 0 .5rem;
+  color: white;
+}
+
+#nav-links a:hover {
+  color: #EE4653;
 }
 
 #nav-logo {
+  font-family: 'Share Tech Mono', monospace;
   padding-right: .5rem;
 }
 
 /*  Header  */
 
 #header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   background-image: url('overlook.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom left;
   border-bottom: 8px solid #374F64;
-  height: 60vh;
-  /* position: sticky; */
 }
 
 #header-layer {
   width: 100%;
   height: 100%;
   background-color: rgba(223, 223, 223, 0.714);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 #header-landing {
   text-align: center;
   width: 100%;
-  height: 48vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,8 +120,7 @@ a, a:visited {
 
 #header-info {
   border-radius: .1rem;
-  padding: 1rem .2rem;
-  width: 30%;
+  padding: 1rem 2rem;
   background-color: #1A3B5A;
   color: #EE4653;
 }
@@ -165,15 +156,11 @@ a, a:visited {
 #header-nav {
   align-items: flex-end;
   display: flex;
-  height: 12vh;
   flex-direction: row;
   flex-wrap: wrap;
   font-family: 'Share Tech Mono', monospace;
   justify-content: space-evenly;
   width: 100%;
-  /* position: absolute; */
-  /* top: 0; */
-  /* background-color: #1A3B5A; */
 }
 
 #header-nav a {
@@ -182,6 +169,7 @@ a, a:visited {
   padding-bottom: .3rem;
   border-bottom: 2px solid #494748;
   margin-bottom: .75rem;
+  color: #3C312B;
 }
 
 #header-nav a:hover {
@@ -213,8 +201,8 @@ a, a:visited {
 #about-pic {
   max-width:200px;
   max-height:300px;
-  min-height:300px;
   min-width:200px;
+  min-height:300px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -307,8 +295,6 @@ input[type="submit"]:hover {
   padding-bottom: 2rem;
 }
 
-
-
 #projects-list {
   margin-top: 1%;
   margin-left: 5%;
@@ -318,78 +304,65 @@ input[type="submit"]:hover {
 }
 
 .project {
-  margin: .5em 1em .5em 0;
-  border-radius: .5em;
+  margin: .5rem 1rem .5rem 0;
+  border-radius: .5rem;
   cursor: pointer;
-  width: 12em;
-  height: 15em;
+  width: 12rem;
+  height: 15rem;
 }
 
-/* .project > * {
-  pointer-events: none;
-} */
-
 .project-wrapper {
-  width: 12em;
-  height: 12em;
+  width: 12rem;
+  height: 12rem;
 }
 
 .project-header {
-  width: 12em;
-  height: 3em;
+  width: 12rem;
+  height: 3rem;
   color: #FFFFFD;
-  border-top-right-radius: .5em;
-  border-top-left-radius: .5em;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   flex-direction: column;
   background-color: #3C312B;
-  /* pointer-events: none; */
 }
 .project-description {
-  font-size: .9em;
+  font-size: .9rem;
   font-style: italic;
   color: #1A3B5A;
-  /* margin-top: .5em; */
   text-align: center;
-  /* display: none; */
   padding-top: 1rem;
-
 }
 .project-github {
-  margin-top: .5em;
+  margin-top: .5rem;
 }
 .project-name {
-  font-size: .9em;
+  font-size: .9rem;
   color: #FFFFFF;
 }
 .project-image {
-  width: 12em;
-  height: 12em;
+  width: 12rem;
+  height: 12rem;
   background-size: contain;
-  border-bottom-left-radius: .5em;
-  border-bottom-right-radius: .5em;
-  /* pointer-events: none; */
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 .project-options {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  /* pointer-events: auto; */
 }
 .project-options a {
   width: 50%;
   background-color: #1A3B5A;
   padding: .5rem 0;
   color: white;
-  /* pointer-events: auto; */
 }
 
 .project-options a:hover {
   color: #EE4653;
-
 }
 
 .project-url {
@@ -399,10 +372,8 @@ input[type="submit"]:hover {
 }
 
 .project-info {
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
-  /* height: 100%; */
   height: 12em;
 }
 
@@ -410,7 +381,7 @@ input[type="submit"]:hover {
 
 .section-title {
   font-size: 1.5em;
-  padding-top: 2%;
+  padding-top: 3%;
   padding-left: 5%;
   font-family: 'Share Tech Mono', monospace;
   letter-spacing: .1em;
@@ -424,7 +395,39 @@ input[type="submit"]:hover {
   table {
     width: 70%;
   }
-  #header-info {
-    width: 75%;
+  #nav-logo {
+    display: none;
+  }
+  #nav-content {
+    justify-content: center;
+  }
+  #about-pic {
+    max-width:150px;
+    max-height:200px;
+    min-width:150px;
+    min-height:200px;
+  }
+  #projects-list {
+    justify-content: center;
+  }
+  #projects-list > .project {
+    width: 9rem;
+    height: 11rem;
+    margin: .3rem .75rem .3rem 0;
+  }
+   .project > .project-wrapper {
+    width: 9rem;
+    height: 9rem;
+  }
+  .project > .project-header {
+    width: 9rem;
+    height: 2rem;
+  }
+  .project > .project-image {
+    width: 9rem;
+    height: 9rem;
+  }
+  .project-name {
+    font-size: .8rem;
   }
 }

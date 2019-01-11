@@ -18,10 +18,9 @@ const Header = () => {
         </div>
       </div>
       <div id="header-nav">
-        <a>About</a>
-        <a>Projects</a>
-        {/* <a>Skills</a> */}
-        <a>Contact</a>
+        <a href="#about-section">About</a>
+        <a href="#projects-section">Projects</a>
+        <a href="#contact-section">Contact</a>
       </div>
     </div>
     </div>

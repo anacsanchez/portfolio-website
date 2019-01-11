@@ -7,6 +7,12 @@ class Projects extends Component {
   }
 
   showDescription = (evt) => {
+    if (evt.target.parentNode.className == "project") {
+      console.dir(evt.target.parentNode)
+    }
+    // else {
+    //   console.log('not project div')
+    // }
     // console.log(evt.target)
     // evt.stopPropagatio n()
     // evt.target.children[1].classList.add("hide")
