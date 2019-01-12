@@ -2,14 +2,16 @@
   {
     "name": "Build And Go",
     "image":"assets/build_and_go_ss.png",
-    "description":"Javascript, React Native, Redux, Node, Postgres, ViroMedia SDK",
+    "tools":"Javascript, React Native, Redux, Node, Postgres, ViroMedia SDK",
+    "description": "An interactive augmented reality mobile app with the goal to collect parts necessary to build a car.",
     "url": "https://github.com/anacsanchez/BuildAndGo",
     "github": "https://github.com/anacsanchez/BuildAndGo"
   },
   {
     "name": "Binary Tree Visualization",
     "image":"assets/binary_ss.png",
-    "description":"Javascript, D3",
+    "tools":"Javascript, D3",
+    "description": "A binary tree visualization tool that can be used to create trees from arrays, heap trees, and binary search trees",
     "url": "https://anacsanchez.github.io/Binary-Tree-Visualization/",
     "github": "https://github.com/anacsanchez/Binary-Tree-Visualization"
   },

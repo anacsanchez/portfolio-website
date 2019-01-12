@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { About, Contact, Projects, Header } from './index';
+import { About, Contact, Projects, Header, Navbar, Footer } from './index';
 
 class Home extends Component {
   constructor(props) {
@@ -29,27 +29,32 @@ class Home extends Component {
       .then(data => {
         this.setState({projects: data})
     })
-    // window.addEventListener('scroll', (evt) => {
 
-    //   if (window.scrollY > window.innerHeight) {
-    //     console.log('show header!')
-    //   }
-    //   else {
-    //     console.log(window.scrollY)
-    //   }
-    // })
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > document.getElementById("header").scrollHeight) {
+        if(document.getElementById("navbar").classList.contains("hide"))
+        document.getElementById("navbar").classList.remove("hide")
+      }
+      else {
+        if (!document.getElementById("navbar").classList.contains("hide")) {
+          document.getElementById("navbar").classList.add("hide")
+        }
+      }
+    })
   }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll');
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('scroll');
+  }
   render() {
     return (
       <div id="home-page">
         <Header />
+        <Navbar />
         <Projects projects={this.state.projects} />
         <About />
         <Contact handleEmail={this.emailMessage}/>
+        <Footer />
       </div>
     )
   }
