@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { About, Contact, Projects, Header, Navbar } from './index';
+import { About, Contact, Projects, Header, Navbar, Footer } from './index';
 
 class Home extends Component {
   constructor(props) {
@@ -31,8 +31,6 @@ class Home extends Component {
     })
 
     window.addEventListener('scroll', () => {
-      // console.log(document.getElementById("header").scrollHeight)
-      // if (window.scrollY > window.innerHeight * .6) {
         if (window.scrollY > document.getElementById("header").scrollHeight) {
         if(document.getElementById("navbar").classList.contains("hide"))
         document.getElementById("navbar").classList.remove("hide")
@@ -56,6 +54,7 @@ class Home extends Component {
         <Projects projects={this.state.projects} />
         <About />
         <Contact handleEmail={this.emailMessage}/>
+        <Footer />
       </div>
     )
   }

@@ -15,34 +15,6 @@ a, a:visited {
   transition: 1s;
 }
 
-.full {
-  height: 12em !important;
-}
-
-.pointer-enable {
-  pointer-events: auto !important;
-}
-
-.bg-dark {
-  background-color: #1A3B5A;
-}
-
-.descrip-bg {
-  background-image: none !important;
-  background-color: #EE4653;
-}
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  background-color: #1A3B5A;
-  color: white;
-}
-
-.flex {
-  display: flex;
-}
-
 /*  Home Page  */
 
 #home-page {
@@ -287,6 +259,14 @@ input[type="submit"]:hover {
   padding-right: 2%;
 }
 
+#footer {
+  background-color: #D9DAD9;
+  padding: .6rem;
+  font-size: .8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*  Projects  */
 
 #projects-section {
@@ -306,7 +286,7 @@ input[type="submit"]:hover {
 }
 
 .project {
-  margin: .5rem 1rem .5rem 0;
+  margin: 1rem 1.75rem 1rem 0;
   border-radius: .5rem;
   cursor: pointer;
   width: 12rem;
@@ -317,8 +297,6 @@ input[type="submit"]:hover {
 .project-wrapper {
   height: 100%;
   width: 100%;
-  /* width: 12rem;
-  height: 12rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -339,14 +317,10 @@ input[type="submit"]:hover {
   background-color: #3C312B;
 }
 .project-description {
-  font-size: .9rem;
-  /* font-style: italic; */
+  font-size: .8rem;
   color: #1A3B5A;
-  /* text-align: center; */
   padding: .5rem;
-}
-.project-github {
-  margin-top: .5rem;
+  font-weight: 600;
 }
 .project-name {
   font-size: .9rem;
@@ -391,7 +365,6 @@ input[type="submit"]:hover {
   background-color: #EE4653;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
-  cursor: initial;
 }
 
 /*  Section Classes  */
@@ -432,19 +405,25 @@ input[type="submit"]:hover {
     height: 11rem;
     margin: .3rem .75rem .3rem 0;
   }
-   .project > .project-wrapper {
-    width: 9rem;
-    height: 9rem;
-  }
   .project > .project-header {
     width: 9rem;
     height: 2rem;
+  }
+  .project > .project-header > .project-name {
+    font-size: .7rem;
   }
   .project > .project-image {
     width: 9rem;
     height: 9rem;
   }
-  .project-name {
-    font-size: .8rem;
+  .project-image > .project-info {
+    width: 9rem;
+    height: 9rem;
+  }
+  .project-info > .project-wrapper > .project-description {
+    font-size: .6rem;
+  }
+  .project-info > .project-wrapper > .project-options {
+    font-size: .7rem;
   }
 }
