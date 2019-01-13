@@ -14,8 +14,8 @@ const SingleProject = ({project, handleMouseOver, handleMouseOut, projKey}) => {
           <div className="project-wrapper">
             <div className="project-description">{description}<p>Built with: {tools}</p></div>
             <div className="project-options">
-              <a href={url}>Visit</a>
-              <a href={github}>Github</a>
+              <a target="_blank" href={url}>Visit</a>
+              <a target="_blank" href={github}>Github</a>
             </div>
           </div>
         </div>
