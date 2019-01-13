@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 a, a:visited {
@@ -286,7 +288,7 @@ input[type="submit"]:hover {
 }
 
 .project {
-  margin: 1rem 1.75rem 1rem 0;
+  margin: .75rem 1.5rem .75rem 0;
   border-radius: .5rem;
   cursor: pointer;
   width: 12rem;
@@ -318,13 +320,14 @@ input[type="submit"]:hover {
 }
 .project-description {
   font-size: .8rem;
-  color: #1A3B5A;
+  color: white;
   padding: .5rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 .project-name {
   font-size: .9rem;
   color: #FFFFFF;
+  font-weight: 500;
 }
 .project-image {
   width: 12rem;
@@ -340,12 +343,14 @@ input[type="submit"]:hover {
   text-align: center;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
-  background-color: #1A3B5A;
+  background-color: #EE4653;
 }
 .project-options a {
   width: 50%;
-  padding: .5rem 0;
-  color: #EE4653;
+  padding: .4rem 0;
+  color: #1A3B5A;
+  font-size: .9rem;
+  font-weight: 500;
 }
 
 .project-options a:hover {
@@ -362,9 +367,11 @@ input[type="submit"]:hover {
   height: 12em;
   width: 12em;
   position: absolute;
-  background-color: #EE4653;
+  background-color: #1A3B5A;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*  Section Classes  */

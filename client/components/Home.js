@@ -19,7 +19,7 @@ class Home extends Component {
         "Content-Type": "application/json"
       }
     })
-    .then(() => alert('Email sent!'))
+    .then(() => alert('Thank you for reaching out to me!'))
     .catch(err =>  console.error(err))
   }
 

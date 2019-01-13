@@ -2,7 +2,7 @@
   {
     "name": "Build And Go",
     "image":"assets/build_and_go_ss.png",
-    "tools":"Javascript, React Native, Redux, Node, Postgres, ViroMedia SDK",
+    "tools":"Javascript, React Native, Redux, Node.js, Postgres, ViroMedia SDK",
     "description": "An interactive augmented reality mobile app with the goal to collect parts necessary to build a car.",
     "url": "https://github.com/anacsanchez/BuildAndGo",
     "github": "https://github.com/anacsanchez/BuildAndGo"
@@ -10,7 +10,7 @@
   {
     "name": "Binary Tree Visualization",
     "image":"assets/binary_ss.png",
-    "tools":"Javascript, D3",
+    "tools":"Javascript, D3.js",
     "description": "A binary tree visualization tool that can be used to create trees from arrays, heap trees, and binary search trees",
     "url": "https://anacsanchez.github.io/Binary-Tree-Visualization/",
     "github": "https://github.com/anacsanchez/Binary-Tree-Visualization"
@@ -18,77 +18,88 @@
   {
     "name": "Bob's Burgers Emporium",
     "image":"assets/burger_emporium_ss.png",
-    "description":"Javascript, React, Redux, Node, Postgres, Heroku",
+    "tools":"Javascript, React, Redux, Node.js, Postgres, Heroku, Stripe",
+    "description":"An e-commerce web app featuring order and product management, guest checkout, and Stripe payment.",
     "url": "https://burgers-emporium.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Bobs-Burgers-Emporium"
   },
   {
     "name": "Choropleth Map",
     "image":"assets/choropleth_ss.png",
-    "description": "Javascript, D3",
+    "tools": "Javascript, D3.js",
+    "description": "A choropleth map visualizing college education statistics in the United States.",
     "url": "https://anacsanchez.github.io/Choropleth-Map/",
     "github": "https://github.com/anacsanchez/Choropleth-Map"
   },
   {
     "name": "US GDP Growth",
     "image": "assets/bar_chart.png",
-    "description":"Javascript, D3",
+    "tools":"Javascript, D3.js",
+    "description": "A bar chart showing US GDP growth.",
     "url": "https://anacsanchez.github.io/US-GDP-Growth/",
     "github": "https://github.com/anacsanchez/US-GDP-Growth"
   },
   {
     "name": "Calculator",
     "image": "assets/calculator_ss.png",
-    "description":"Javascript, React, Heroku",
+    "tools":"Javascript, React, Heroku",
+    "description":"A calculator web app with formula/expression logic.",
     "url": "https://mysterious-scrubland-83297.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Calculator"
   },
   {
     "name": "Drum Machine",
     "image": "assets/drum_machine_ss.png",
-    "description":"Javascript, React, Heroku",
+    "tools":"Javascript, React, Heroku",
+    "description": "A drum machine web app with keyboard controls.",
     "url": "https://quiet-spire-26936.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Drum-Machine"
   },
   {
     "name": "Global Heat Map",
     "image": "assets/heat_map_ss.png",
-    "description":"Javascript, D3",
+    "tools":"Javascript, D3",
+    "description": "A heat map visualizing changes in global temperature.",
     "url": "https://anacsanchez.github.io/Global-Heat-Map/",
     "github": "https://github.com/anacsanchez/Global-Heat-Map"
   },
   {
     "name": "Pomodoro Clock",
     "image": "assets/pomodoro_ss.png",
-    "description":"Javascript, React, Heroku",
+    "tools":"Javascript, React, Heroku",
+    "description":"A pomodoro clock web app.",
     "url": "https://shrouded-mesa-16381.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Pomodoro-Clock"
   },
   {
     "name": "Markdown Previewer",
     "image": "assets/markdown_ss.png",
-    "description":"Javascript, React, Heroku",
+    "tools":"Javascript, React, Heroku",
+    "description": "A live preview markdown editor.",
     "url": "https://pacific-beyond-16486.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Markdown-Previewer"
   },
   {
     "name": "Random Quote Machine",
     "image": "assets/random_quote_ss.png",
-    "description":"Javascript, React, Heroku",
+    "tools":"Javascript, React, Heroku",
+    "description": "A web app that generates random quotes to post on Twitter.",
     "url": "https://guarded-anchorage-42384.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Random-Quote-Machine"
   },
   {
     "name": "Treemap Diagram",
     "image": "assets/treemap_ss.png",
-    "description":"Javascript, D3",
+    "tools":"Javascript, D3",
+    "description": "A treemap diagram visualizing data on best-selling videogames.",
     "url": "https://anacsanchez.github.io/Treemap-Diagram/",
     "github": "https://github.com/anacsanchez/Treemap-Diagram"
   },
   {
     "name": "Math Tutor",
     "image": "assets/math_tutor_ss.png",
-    "description":"Java, JavaFX, MySQL",
+    "tools":"Java, JavaFX, MySQL",
+    "description": "A desktop app featuring math quizzes to practice arithmetic concepts.",
     "url": "https://github.com/anacsanchez/Math-Tutor",
     "github": "https://github.com/anacsanchez/Math-Tutor"
   }
