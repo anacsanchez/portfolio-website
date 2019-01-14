@@ -17,6 +17,8 @@ router.post('/email', (req,res) => {
     subject: subject,
     text: message,
   }
+
+
   let transporter = nodemailer.createTransport(config.smtp)
   transporter.sendMail(messageObj, (err, info) => {
     if (err) {
@@ -26,5 +28,13 @@ router.post('/email', (req,res) => {
       console.log(info)
     }
   })
+
+  // transporter.verify((err, success) => {
+  //   if (err) {
+  //     console.log(err)
+  //   } else {
+  //     console.log("everything's working")
+  //   }
+  // })
   res.end();
 })
