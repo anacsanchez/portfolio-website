@@ -4,6 +4,7 @@ const Contact = ({handleEmail}) => {
   return (
     <div id="contact-section">
       <div className="section-title">Contact</div>
+      <div className="section-description">If you'd like to contact me about job or project opportunities, you can send me an email through the form below:</div>
       <form id="email-form" onSubmit={handleEmail}>
         <table>
           <tbody>
