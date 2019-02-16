@@ -1,12 +1,8 @@
 const router = require("express").Router();
 const nodemailer = require("nodemailer");
-const config = require("../config.js");
+const config = require("../config.js") | {};
 
 module.exports = router;
-
-router.get('/', (req,res) => {
-  res.send("You've reached the api!")
-})
 
 router.post('/email', (req,res) => {
   const {email, subject, message} = req.body;
@@ -29,12 +25,5 @@ router.post('/email', (req,res) => {
     }
   })
 
-  // transporter.verify((err, success) => {
-  //   if (err) {
-  //     console.log(err)
-  //   } else {
-  //     console.log("everything's working")
-  //   }
-  // })
   res.end();
 })

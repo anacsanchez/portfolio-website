@@ -451,4 +451,7 @@ input[type="submit"]:hover {
   .project-info > .project-wrapper > .project-options {
     font-size: .7rem;
   }
+  .section-title {
+    align-self: center;
+  }
 }
