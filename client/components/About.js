@@ -11,7 +11,6 @@ const About = () => {
           <p>I found my passion for coding while working in tech support, researching HTML and CSS to create custom content for a company support website.</p>
           <p>I'm dedicated and enthusiastic to learn and explore new technologies that make life simpler. I believe in universal access to tech, regardless of background or experience.</p>
           <p>My skills include building full stack applications in Javascript, Node.js, Postgres, React and Redux. I've completed computer science courses in C++, C# and Java.</p>
-          <p>Aside from programming, I enjoy playing my violin, optimizing electronics, and intermittent bouts of gaming and yoga.</p>
       </div>
       </div>
     </div>
