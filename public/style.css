@@ -441,7 +441,7 @@ input[type="submit"]:hover {
     width: 9rem;
     height: 9rem;
   }
-  .project-image > .project-info {
+  .project > .project-info {
     width: 9rem;
     height: 9rem;
   }
