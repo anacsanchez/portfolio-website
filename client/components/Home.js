@@ -9,19 +9,19 @@ class Home extends Component {
     }
   }
 
-  emailMessage = (evt) => {
-    evt.preventDefault();
-    const {email, message, subject} = evt.target;
-    fetch('/api/email', {
-      method: 'POST',
-      body: JSON.stringify({ email: email.value, subject: subject.value, message: message.value }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(() => alert('Thank you for reaching out to me!'))
-    .catch(err =>  console.error(err))
-  }
+  // emailMessage = (evt) => {
+  //   evt.preventDefault();
+  //   const {email, message, subject} = evt.target;
+  //   fetch('/api/email', {
+  //     method: 'POST',
+  //     body: JSON.stringify({ email: email.value, subject: subject.value, message: message.value }),
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     }
+  //   })
+  //   .then(() => alert('Thank you for reaching out to me!'))
+  //   .catch(err =>  console.error(err))
+  // }
 
   componentDidMount() {
     fetch("projects.json")
@@ -53,7 +53,8 @@ class Home extends Component {
         <Navbar />
         <Projects projects={this.state.projects} />
         <About />
-        <Contact handleEmail={this.emailMessage}/>
+        <Contact />
+        {/* <Contact handleEmail={this.emailMessage}/> */}
         <Footer />
       </div>
     )
