@@ -9,7 +9,7 @@ const Header = () => {
       <div id="header-landing">
         <div id="header-info">
           <div id="header-name">Ana C Sanchez</div>
-          <div id="header-title">Software Developer | NYC </div>
+          <div id="header-title">Software Engineer | NYC </div>
           <div id="header-social">
             <a href="https://www.linkedin.com/in/ana-c-sanchez/"><FontAwesomeIcon icon={ faLinkedinIn } size="2x" /></a>
             <a href="https://github.com/anacsanchez"><FontAwesomeIcon icon={ faGithub } size="2x"/></a>
