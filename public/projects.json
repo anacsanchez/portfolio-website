@@ -40,14 +40,6 @@
     "github": "https://github.com/anacsanchez/US-GDP-Growth"
   },
   {
-    "name": "Calculator",
-    "image": "assets/calculator_ss.png",
-    "tools":"Javascript, React, Heroku",
-    "description":"A calculator web app with formula/expression logic.",
-    "url": "https://mysterious-scrubland-83297.herokuapp.com/",
-    "github": "https://github.com/anacsanchez/Calculator"
-  },
-  {
     "name": "Drum Machine",
     "image": "assets/drum_machine_ss.png",
     "tools":"Javascript, React, Heroku",
@@ -64,14 +56,6 @@
     "github": "https://github.com/anacsanchez/Global-Heat-Map"
   },
   {
-    "name": "Pomodoro Clock",
-    "image": "assets/pomodoro_ss.png",
-    "tools":"Javascript, React, Heroku",
-    "description":"A pomodoro clock web app.",
-    "url": "https://shrouded-mesa-16381.herokuapp.com/",
-    "github": "https://github.com/anacsanchez/Pomodoro-Clock"
-  },
-  {
     "name": "Markdown Previewer",
     "image": "assets/markdown_ss.png",
     "tools":"Javascript, React, Heroku",
@@ -86,14 +70,6 @@
     "description": "A web app that generates random quotes to post on Twitter.",
     "url": "https://guarded-anchorage-42384.herokuapp.com/",
     "github": "https://github.com/anacsanchez/Random-Quote-Machine"
-  },
-  {
-    "name": "Treemap Diagram",
-    "image": "assets/treemap_ss.png",
-    "tools":"Javascript, D3",
-    "description": "A treemap diagram visualizing data on best-selling videogames.",
-    "url": "https://anacsanchez.github.io/Treemap-Diagram/",
-    "github": "https://github.com/anacsanchez/Treemap-Diagram"
   },
   {
     "name": "Math Tutor",
