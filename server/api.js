@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const nodemailer = require("nodemailer");
-const config = require("../config.js") | {};
+const config = require("../config.js");
 
 module.exports = router;
 
