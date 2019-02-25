@@ -4,17 +4,13 @@ import { About, Contact, Projects, Header, Navbar, Footer } from './index';
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      projects: []
-    }
+    this.state = { projects: [] }
   }
 
   componentDidMount() {
     fetch("projects.json")
       .then(data => data.json())
-      .then(data => {
-        this.setState({projects: data})
-    })
+      .then(data => this.setState({projects: data}))
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > document.getElementById("header").scrollHeight) {

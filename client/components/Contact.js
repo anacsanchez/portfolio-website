@@ -7,7 +7,11 @@ const Contact = () => {
     const {email, message, subject} = evt.target;
     fetch('/api/email', {
       method: 'POST',
-      body: JSON.stringify({ email: email.value, subject: subject.value, message: message.value }),
+      body: JSON.stringify({
+        email: email.value,
+        subject: subject.value,
+        message: message.value
+      }),
       headers: {
         "Content-Type": "application/json"
       }
