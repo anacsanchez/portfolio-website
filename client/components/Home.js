@@ -7,7 +7,6 @@ class Home extends Component {
     this.state = {
       projects: [],
     };
-  }
 
   componentDidMount() {
     fetch('projects.json')
