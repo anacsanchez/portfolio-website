@@ -74,13 +74,14 @@ a, a:visited {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom left;
-  border-bottom: 8px solid #374F64;
+  /* border-bottom: 8px solid #374F64; */
 }
 
 #header-layer {
   width: 100%;
   height: 100%;
-  background-color: rgba(37, 42, 45, 0.301);
+  /* background-color: rgba(37, 42, 45, 0.301); */
+  background-color: hsl(225,75%,15%,80%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -100,7 +101,7 @@ a, a:visited {
 #header-info {
   border-radius: .1rem;
   padding: 1rem 2rem;
-  background-color: #1A3B5A;
+  /* background-color: #1A3B5A; */
   color: #FFFFFF;
 }
 
@@ -112,14 +113,14 @@ a, a:visited {
 
 #header-name {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.7rem;
+  font-size: 42px;
 }
 
 #header-social {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding-top: .6rem;
+  padding-top: 20px;
 }
 
 #header-social a, #header-social a:visited {
@@ -147,7 +148,7 @@ a, a:visited {
   font-size: 1.3em;
   padding-bottom: .3rem;
   border-bottom: 2px solid #FFFFFF;
-  margin-bottom: .75rem;
+  margin-bottom: 16px;
   color: #FFFFFF;
 }
 
