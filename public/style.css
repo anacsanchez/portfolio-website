@@ -395,11 +395,10 @@ input[type="submit"]:hover {
 .section-title {
   font-size: 1.5em;
   padding-top: 3%;
-  padding-left: 5%;
   font-family: 'Share Tech Mono', monospace;
   letter-spacing: .1em;
   font-weight: bold;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .section-description {
