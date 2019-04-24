@@ -40,14 +40,6 @@
     "github": "https://github.com/anacsanchez/US-GDP-Growth"
   },
   {
-    "name": "Drum Machine",
-    "image": "assets/drum_machine_ss.png",
-    "tools":"Javascript, React, Heroku",
-    "description": "A drum machine web app with keyboard controls.",
-    "url": "https://quiet-spire-26936.herokuapp.com/",
-    "github": "https://github.com/anacsanchez/Drum-Machine"
-  },
-  {
     "name": "Global Heat Map",
     "image": "assets/heat_map_ss.png",
     "tools":"Javascript, D3",
