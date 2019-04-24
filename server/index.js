@@ -12,16 +12,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use('/api', router)
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.use("/api", router)
-
-app.get('*', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
-})
-
-app.get(/^#/, (req,res) => {
-  console.log("no")
-})
 
 app.use((req, res, next) => {
   if (path.extname(req.path).length) {
@@ -33,10 +26,15 @@ app.use((req, res, next) => {
   }
 })
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'));
+})
 
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   console.error(err);
   console.error(err.stack);
   res.status(err.status || 500).send(err.message || 'Internal server error.');
 })
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
