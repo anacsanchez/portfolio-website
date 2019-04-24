@@ -24,7 +24,7 @@ app.use((req, res, next) => {
   } else {
     next();
   }
-})
+});
 
 app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public/index.html'));
