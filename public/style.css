@@ -207,52 +207,53 @@ td {
   padding: .25em 0;
 }
 input {
-  font-size: 1.1em;
+  font-size: 16px;
   border: .05em solid black;
   border-radius: .1em;
+  padding: 6px;
 }
 textarea {
   font-size: 1em;
   border: .05em solid black;
   border-radius: .1em;
   box-shadow: none;
-  width: 100%;
   font-family: 'Open Sans', sans-serif;
   padding: .2em;
+  min-height: 100px;
 }
 form {
-  width: 100%;
   display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 200px;
+  margin-top: 6px;
 }
+
 table {
   width: 50%;
   margin: auto;
 }
-input[type="submit"] {
+form > button {
+  margin-top: 12px;
   background-color: #A1C0E8;
   color: #1A3B5A;
   font-size: 1.2rem;
-  border-radius: .2rem;
-  padding: .3rem .7rem;
+  border-radius: 4px;
+  padding: 6px 12px;
   border: 1px solid #1A3B5A;
-  margin-top: 1rem;
+  align-self: center;
 }
 
-input[type="submit"]:hover {
+form > button:hover {
   background-color: #1A3B5A;
   color: white;
   border: 1px solid white;
-}
-
-input[type="email"] {
-  width: 100%;
-}
-input[type="text"] {
-  width: 100%;
-}
-
-input[type="submit"]:hover {
   cursor: pointer;
+}
+
+label {
+  margin-top: 20px;
+  margin-bottom: 6px;
 }
 
 #contact-section {
@@ -263,10 +264,6 @@ input[type="submit"]:hover {
   align-content: center;
   background-color: #252A2D;
   padding-bottom: 2rem;
-}
-
-#email-form {
-  margin-top: 2%;
 }
 
 .field-name {
@@ -295,14 +292,15 @@ input[type="submit"]:hover {
 
 #projects-list {
   margin-top: 1%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
-  margin: .75rem 1.5rem .75rem 0;
+  margin: 12px;
   border-radius: .5rem;
   cursor: pointer;
   width: 12rem;
@@ -411,8 +409,8 @@ input[type="submit"]:hover {
 /*  Media Queries  */
 
 @media only screen and (max-width: 420px) {
-  table {
-    width: 70%;
+  form {
+    width: 75%;
   }
   #nav-logo {
     display: none;
@@ -432,7 +430,6 @@ input[type="submit"]:hover {
   #projects-list > .project {
     width: 9rem;
     height: 11rem;
-    margin: .3rem .75rem .3rem 0;
   }
   .project > .project-header {
     width: 9rem;
