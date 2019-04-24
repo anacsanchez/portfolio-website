@@ -18,8 +18,8 @@ const Header = () => {
         </div>
       </div>
       <div id="header-nav">
-        <a href="#about-section">About</a>
         <a href="#projects-section">Projects</a>
+        <a href="#about-section">About</a>
         <a href="#contact-section">Contact</a>
       </div>
     </div>

@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const Contact = () => {
 
@@ -25,20 +27,10 @@ const Contact = () => {
       <div className="section-title">Contact</div>
       <div className="section-description">If you'd like to contact me about job or project opportunities, you can send me an email through the form below:</div>
       <form id="email-form" onSubmit={emailMessage}>
-        <table>
-          <tbody>
-          <tr>
-            <td className="field-name"><label>Email Address:  </label></td><td><input required type="email" name="email" autoComplete="off"/></td>
-          </tr>
-          <tr>
-            <td className="field-name"><label>Subject: </label></td><td width="60%"><input required type="text" name="subject" autoComplete="off"/></td>
-          </tr>
-          <tr>
-            <td className="field-name"><label>Message: </label></td><td><textarea  rows="8" required name="message" /></td>
-          </tr>
-          <tr><td colSpan="2" style={{textAlign: "center"}}><input type="submit" value="Send"/></td></tr>
-          </tbody>
-        </table>
+        <label>Email:</label><input required type="email" name="email" autoComplete="off"/>
+        <label>Subject:</label><input required type="text" name="subject" autoComplete="off"/>
+        <label>Message:</label><textarea required name="message" />
+        <button type="submit">Send</button>
       </form>
     </div>
   )
