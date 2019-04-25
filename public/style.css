@@ -37,12 +37,12 @@ a, a:visited {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: var(--dark-bg-color);
+  background-color: hsl(225, 30%, 20%);
   color: white;
   font-size: 1.1rem;
   padding: .5rem 0;
   transition: 0s;
-  box-shadow: 0 5px 0 #3C312B;
+  box-shadow: 0px 4px 14px 0px hsl(220,20%,10%);
   z-index: 1;
 }
 
