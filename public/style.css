@@ -192,13 +192,11 @@ a, a:visited {
 }
 
 #about-bio {
-  font-size: .9em;
-  padding: 0 0 1.5rem 1.5rem;
-  width: 70%;
-  line-height: 130%;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
+  font-size: 16px;
+  padding: 12px 32px;
+  width: 50%;
+  margin: 0 16px 12px 16px;
+  line-height: 150%;
 }
 
 /*  Contact  */
@@ -252,7 +250,7 @@ form > button:hover {
 }
 
 label {
-  margin-top: 20px;
+  margin-top: 24px;
   margin-bottom: 6px;
 }
 
@@ -261,7 +259,6 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
   background-color: #252A2D;
   padding-bottom: 2rem;
 }
@@ -292,7 +289,6 @@ label {
 
 #projects-list {
   margin-top: 1%;
-  /* margin-left: 5%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -303,9 +299,10 @@ label {
   margin: 12px;
   border-radius: .5rem;
   cursor: pointer;
-  width: 12rem;
-  height: 15rem;
+  width: 250px;
+  height: 300px;
   position: relative;
+  box-shadow: 0px 4px 6px hsl(0,0%, 70%);
 }
 
 .project-wrapper {
@@ -319,31 +316,29 @@ label {
 }
 
 .project-header {
-  width: 12rem;
-  height: 3rem;
-  color: #FFFFFD;
+  height: 50px;
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #252A2D;
+  background-color: hsl(80,2%,93%);
 }
 .project-description {
-  font-size: .8rem;
+  font-size: 16px;
   color: white;
-  padding: .5rem;
+  padding: 16px;
   font-weight: 400;
 }
 .project-name {
-  font-size: .9rem;
-  color: #FFFFFF;
-  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
 }
 .project-image {
-  width: 12rem;
-  height: 12rem;
+  width: 250px;
+  height: 250px;
   background-size: contain;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
@@ -353,16 +348,14 @@ label {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  border-bottom-left-radius: .5rem;
-  border-bottom-right-radius: .5rem;
   background-color: #A1C0E8;
   border-bottom: none;
 }
 .project-options a {
   width: 50%;
-  padding: .4rem 0;
+  padding: 8px 0;
   color: #1A3B5A;
-  font-size: .9rem;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -377,8 +370,8 @@ label {
 }
 
 .project-info {
-  height: 12em;
-  width: 12em;
+  height: 250px;
+  width: 250px;
   position: absolute;
   background-color: #1A3B5A;
   border-bottom-left-radius: .5rem;
@@ -391,19 +384,20 @@ label {
 /*  Section Classes  */
 
 .section-title {
-  font-size: 1.5em;
-  padding-top: 3%;
+  font-size: 24px;
+  padding-top: 32px;
   font-family: 'Share Tech Mono', monospace;
-  letter-spacing: .1em;
   font-weight: bold;
   align-self: center;
 }
 
 .section-description {
-  margin: 3% auto 0 auto;
-  padding: 0 5%;
-  text-align: center;
-  font-size: .9rem;
+  padding-top: 32px;
+  font-size: 16px;
+  width: 60%;
+  line-height: 150%;
+  display: flex;
+  justify-content: center;
 }
 
 /*  Media Queries  */
@@ -424,35 +418,13 @@ label {
     min-width:150px;
     min-height:200px;
   }
+  #about-bio {
+    width: 75%;
+  }
   #projects-list {
     justify-content: center;
   }
-  #projects-list > .project {
-    width: 9rem;
-    height: 11rem;
-  }
-  .project > .project-header {
-    width: 9rem;
-    height: 2rem;
-  }
-  .project > .project-header > .project-name {
-    font-size: .7rem;
-  }
-  .project > .project-image {
-    width: 9rem;
-    height: 9rem;
-  }
-  .project > .project-info {
-    width: 9rem;
-    height: 9rem;
-  }
-  .project-info > .project-wrapper > .project-description {
-    font-size: .6rem;
-  }
-  .project-info > .project-wrapper > .project-options {
-    font-size: .7rem;
-  }
-  .section-title {
-    align-self: center;
+  .section-description {
+    width: 75%;
   }
 }
