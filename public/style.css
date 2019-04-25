@@ -179,7 +179,7 @@ a, a:visited {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: 2%;
+  padding-top: 12px;
 
 }
 #about-pic {
