@@ -20,7 +20,7 @@
     "image":"assets/burger_emporium_ss.png",
     "tools":"Javascript, React, Redux, Node.js, Postgres, Heroku, Stripe",
     "description":"An e-commerce web app featuring order and product management, guest checkout, and Stripe payment.",
-    "url": "https://burgers-emporium.herokuapp.com/",
+    "url": "https://anacsanchez.com/burgers-emporium/",
     "github": "https://github.com/anacsanchez/Bobs-Burgers-Emporium"
   },
   {
