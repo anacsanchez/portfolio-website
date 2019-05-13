@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SingleProject } from './index';
 
-class Projects extends Component {
-  constructor(props) {
-    super(props)
-  }
+const Projects = () => {
+  const [ projects, setProjects ] = useState([]);
 
-  render() {
+  useEffect (() => {
+    const fetchProjects = async() => {
+      const projectsData = await fetch('projects.json').then(data => data.json());
+      setProjects(projectsData);
+    };
+    fetchProjects();
+  }, []);
+
     return (
       <div id="projects-section">
         <div className="section-title">Projects</div>
         <div id="projects-list">
-          {this.props.projects.length ? this.props.projects.map((project,i) => <SingleProject key={i} {...project} />) : null}
+          { projects.length ?
+              projects.map(project =>
+                <SingleProject key={ project.name } {...project} />
+              )
+              : null
+          }
         </div>
       </div>
-    )
-  }
-}
+    );
+};
 
 export default Projects;

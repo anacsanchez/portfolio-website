@@ -12,18 +12,17 @@ router.post('/email', (req,res) => {
     replyTo: email,
     subject: subject,
     text: message,
-  }
+  };
 
-
-  let transporter = nodemailer.createTransport(config.smtp)
+  let transporter = nodemailer.createTransport(config.smtp);
   transporter.sendMail(messageObj, (err, info) => {
     if (err) {
-      console.log(err)
+      console.log(err);
     }
     else {
-      console.log(info)
+      console.log(info);
     }
-  })
+  });
 
   res.end();
-})
+});

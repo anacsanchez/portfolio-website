@@ -5,7 +5,7 @@ const Footer = () => {
     <div id="footer">
       <div>©2019 Ana C Sanchez</div>
     </div>
-  )
-}
+  );
+};
 
 export default Footer;
