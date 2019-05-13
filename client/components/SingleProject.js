@@ -12,17 +12,17 @@ const SingleProject = ({ name, image, url, description, tools, github }) => {
         <div className="project-wrapper">
           <div className="project-description">{description}<p>Built with: {tools}</p></div>
           <div className="project-options">
-            <a target="_blank" href={url}>Visit</a>
-            <a target="_blank" href={github}>Github</a>
+            <a target="_blank" rel="noopener noreferrer" href={url}>Visit</a>
+            <a target="_blank" rel="noopener noreferrer" href={github}>Github</a>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const active = { display: 'initial' }
-const inactive = { display: 'none' }
+const active = { display: 'initial' };
+const inactive = { display: 'none' };
 
 export default SingleProject;
 

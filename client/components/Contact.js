@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const Contact = () => {
 
@@ -19,8 +17,8 @@ const Contact = () => {
       }
     })
     .then(() => alert('Thank you for reaching out to me!'))
-    .catch(err =>  console.error(err))
-  }
+    .catch(err =>  console.error(err));
+  };
 
   return (
     <div id="contact-section">
@@ -33,7 +31,7 @@ const Contact = () => {
         <button type="submit">Send</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default Contact;

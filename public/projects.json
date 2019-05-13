@@ -4,8 +4,8 @@
     "image":"assets/build_and_go_ss.png",
     "tools":"Javascript, React Native, Redux, Node.js, Postgres, ViroMedia SDK",
     "description": "An interactive augmented reality mobile app with the goal to collect parts necessary to build a car.",
-    "url": "https://github.com/anacsanchez/BuildAndGo",
-    "github": "https://github.com/anacsanchez/BuildAndGo"
+    "url": "https://github.com/BuildAndGo/BuildAndGo",
+    "github": "https://github.com/BuildAndGo"
   },
   {
     "name": "Binary Tree Visualization",

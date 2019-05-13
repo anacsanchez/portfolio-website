@@ -13,7 +13,7 @@ const Navbar = () => {
         <div id="nav-logo">Ana C Sanchez</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
