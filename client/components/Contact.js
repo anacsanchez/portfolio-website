@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
 
-  const emailMessage = (evt) => {
+  const handleEmailSubmit = (evt) => {
     evt.preventDefault();
     const {email, message, subject} = evt.target;
     fetch('/api/email', {
@@ -24,7 +24,7 @@ const Contact = () => {
     <div id="contact-section">
       <div className="section-title">Contact</div>
       <div className="section-description">If you'd like to contact me about job or project opportunities, you can send me an email through the form below:</div>
-      <form id="email-form" onSubmit={emailMessage}>
+      <form id="email-form" onSubmit={ handleEmailSubmit }>
         <label>Email:</label><input required type="email" name="email" autoComplete="off"/>
         <label>Subject:</label><input required type="text" name="subject" autoComplete="off"/>
         <label>Message:</label><textarea required name="message" />

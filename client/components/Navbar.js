@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({ visible }) => {
   return (
-    <div id="navbar" className="hide">
+    <div id="navbar" className={visible ? '' : 'hide'}>
       <div id="nav-content">
         <div id="nav-links">
           <a href="#header">Home</a>
