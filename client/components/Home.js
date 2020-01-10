@@ -1,24 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { About, Contact, Projects, Header, Navbar, Footer } from './index';
+import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
-const Home  = () => {
+const Home = () => {
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > document.getElementById('header').scrollHeight) {
-      if (document.getElementById('navbar').classList.contains('hide'))
-        document.getElementById('navbar').classList.remove('hide');
+  const [ isVisible, setVisibility ] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > document.getElementById('header').scrollHeight && !isVisible) {
+        setVisibility(true);
     }
-    else {
-      if (!document.getElementById('navbar').classList.contains('hide')) {
-        document.getElementById('navbar').classList.add('hide');
-      }
+    else if (window.scrollY < document.getElementById('header').scrollHeight && isVisible) {
+        setVisibility(false);
     }
-  });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  },
+  [isVisible]);
 
   return (
     <div id="home-page">
       <Header />
-      <Navbar />
+      <Navbar visible={ isVisible }/>
       <Projects />
       <About />
       <Contact />

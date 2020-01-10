@@ -1,5 +1,13 @@
 [
   {
+    "name":"Reddit Search",
+    "image":"assets/reddit_ss.png",
+    "tools":"Javascript, React, Node.js",
+    "description":"A search engine for Reddit. Features spoiler warnings and expandable post content.",
+    "url":"https://anacsanchez.com/reddit-search/",
+    "github":"https://github.com/anacsanchez/Reddit-Search"
+  },
+  {
     "name": "Build And Go",
     "image":"assets/build_and_go_ss.png",
     "tools":"Javascript, React Native, Redux, Node.js, Postgres, ViroMedia SDK",
@@ -24,36 +32,12 @@
     "github": "https://github.com/anacsanchez/Bobs-Burgers-Emporium"
   },
   {
-    "name": "Choropleth Map",
-    "image":"assets/choropleth_ss.png",
-    "tools": "Javascript, D3.js",
-    "description": "A choropleth map visualizing college education statistics in the United States.",
-    "url": "https://anacsanchez.github.io/Choropleth-Map/",
-    "github": "https://github.com/anacsanchez/Choropleth-Map"
-  },
-  {
-    "name": "US GDP Growth",
-    "image": "assets/bar_chart.png",
-    "tools":"Javascript, D3.js",
-    "description": "A bar chart showing US GDP growth.",
-    "url": "https://anacsanchez.github.io/US-GDP-Growth/",
-    "github": "https://github.com/anacsanchez/US-GDP-Growth"
-  },
-  {
     "name": "Global Heat Map",
     "image": "assets/heat_map_ss.png",
     "tools":"Javascript, D3",
-    "description": "A heat map visualizing changes in global temperature.",
+    "description": "A heat map visualizing changes in global temperature. Created for freecodecamp.",
     "url": "https://anacsanchez.github.io/Global-Heat-Map/",
     "github": "https://github.com/anacsanchez/Global-Heat-Map"
-  },
-  {
-    "name": "Markdown Previewer",
-    "image": "assets/markdown_ss.png",
-    "tools":"Javascript, React, Heroku",
-    "description": "A live preview markdown editor.",
-    "url": "https://anacsanchez.com/markdown-previewer/",
-    "github": "https://github.com/anacsanchez/Markdown-Previewer"
   },
   {
     "name": "Math Tutor",
