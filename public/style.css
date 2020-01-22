@@ -108,15 +108,17 @@ a, a:visited {
 }
 
 #header-title {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 22px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
   padding-top: .5rem;
+  color: hsl(225, 0%, 100%, 90%);
 }
 
 #header-name {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 42px;
-  font-weight: 800;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-shadow: 0px 3px 10px hsl(200, 0%, 20%);
 }
 
 #header-social {
@@ -128,12 +130,29 @@ a, a:visited {
 
 #header-social a, #header-social a:visited {
   text-decoration: none;
-  color: #FFFFFF;
-  padding: 0 .3rem;
+  color: hsl(225, 20%, 90%, 80%);
+  padding: 0 .5rem;
+  font-size: 12px;
 }
 
 #header-social a:hover {
-  color: #A1C0E8;
+  color: hsl(200, 90%, 70%);
+}
+
+#header-location-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+  color: hsl(225, 10%, 90%, 80%);
+  padding: 0 .5rem;
+  font-size: 12px;
+}
+
+#header-location-name {
+  font-size: 20px;
+  color: hsl(225, 0%, 90%, 80%);
+  margin-left: 4px;
 }
 
 #header-nav {
@@ -141,14 +160,14 @@ a, a:visited {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Exo 2', sans-serif;
   justify-content: space-evenly;
   width: 100%;
 }
 
 #header-nav a {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 22px;
   padding-bottom: 6px;
   border-bottom: 2px solid hsl(225,30%,85%,50%);
   margin-bottom: 12px;
@@ -175,28 +194,34 @@ a, a:visited {
 #about-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: 12px;
-
+  /* margin-top: 18px; */
+  padding: 24px 0;
 }
 #about-pic {
-  max-width:200px;
-  max-height:300px;
-  min-width:200px;
-  min-height:300px;
-  background-size: contain;
+  max-width: 200px;
+  max-height: 250px;
+  min-width: 200px;
+  min-height: 250px;
+  background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 #about-bio {
   font-size: 16px;
-  padding: 12px 32px;
+  padding: 2px 20px;
   width: 50%;
-  margin: 0 16px 12px 16px;
+  margin: 0px 16px 12px 38px;
   line-height: 150%;
+  border-radius: 8px;
+  background-color: hsl(225, 80%, 100%,10%);
+  color: white;
+  max-width: 600px;
 }
 
 /*  Contact  */
@@ -260,7 +285,7 @@ label {
   flex-direction: column;
   align-items: center;
   background-color: #252A2D;
-  padding-bottom: 2rem;
+  padding-bottom: 38px;
 }
 
 .field-name {
@@ -270,11 +295,13 @@ label {
 }
 
 #footer {
-  background-color: #D9DAD9;
+  background-color: hsl(225, 0%, 20%, 100%);
   padding: .6rem;
-  font-size: .8rem;
+  font-size: 14px;
   display: flex;
   justify-content: flex-end;
+  color: hsl(225, 0%, 100%, 90%);
+  font-family: 'Ubuntu', sans-erif;
 }
 
 /*  Projects  */
@@ -285,6 +312,7 @@ label {
   flex-direction: column;
   width: 100%;
   padding-bottom: 2rem;
+  align-items: center;
 }
 
 #projects-list {
@@ -293,16 +321,17 @@ label {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1000px;
 }
 
 .project {
-  margin: 12px;
+  margin: 18px;
   border-radius: .5rem;
   cursor: pointer;
   width: 250px;
   height: 300px;
   position: relative;
-  box-shadow: 0px 4px 8px hsl(0,0%, 70%);
+  box-shadow: 0px 2px 10px hsl(0,0%, 30%);
 }
 
 .project-wrapper {
@@ -323,18 +352,20 @@ label {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: hsl(80,2%,93%);
+  background-color: hsl(225,75%,15%,85%);
+  font-family: 'Ubuntu', sans-serif;
 }
 .project-description {
   font-size: 16px;
-  color: white;
+  color: hsl(200, 0%, 100%);
   padding: 16px;
   font-weight: 400;
 }
 .project-name {
-  font-size: 16px;
-  color: black;
-  font-weight: 500;
+  font-size: 18px;
+  color: hsl(200, 50%, 100%, 85%);
+  text-shadow: 0px 2px 4px hsl(225, 0%, 20%);
+  font-weight: 600;
 }
 .project-image {
   width: 250px;
@@ -348,19 +379,21 @@ label {
   display: flex;
   align-items: flex-end;
   text-align: center;
-  background-color: #A1C0E8;
+  background-color: hsl(225,75%,85%);
   border-bottom: none;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 .project-options a {
   width: 50%;
-  padding: 8px 0;
-  color: #1A3B5A;
+  padding: 10px 0;
+  color: hsl(225,75%,10%,92%);
   font-size: 16px;
   font-weight: 500;
 }
 
 .project-options a:hover {
-  color: white;
+  color: hsl(209, 90%, 50%);
 }
 
 .project-url {
@@ -373,7 +406,7 @@ label {
   height: 250px;
   width: 250px;
   position: absolute;
-  background-color: #1A3B5A;
+  background-color: hsl(225,75%,10%,95%);
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem;
   border-bottom: none;
@@ -386,18 +419,23 @@ label {
 .section-title {
   font-size: 24px;
   padding-top: 32px;
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   align-self: center;
 }
 
 .section-description {
-  padding-top: 32px;
+  /* padding-top: 32px; */
   font-size: 16px;
+  padding: 20px;
   width: 60%;
   line-height: 150%;
   display: flex;
   justify-content: center;
+  max-width: 600px;
+  background-color: hsl(225, 0%, 100%, 10%);
+  margin: 24px;
+  border-radius: 8px;
 }
 
 /*  Media Queries  */
@@ -420,11 +458,21 @@ label {
   }
   #about-bio {
     width: 75%;
+    margin: 4px 16px 12px 16px;
   }
   #projects-list {
     justify-content: center;
   }
   .section-description {
     width: 75%;
+  }
+  #header-social a, #header-location-icon {
+    font-size:10px;
+  }
+  #header-location-name {
+    font-size: 16px;
+  }
+  #header-nav a {
+    font-size:18px;
   }
 }
