@@ -198,7 +198,6 @@ a, a:visited {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  /* margin-top: 18px; */
   padding: 24px 0;
 }
 #about-pic {
@@ -214,7 +213,7 @@ a, a:visited {
 
 #about-bio {
   font-size: 16px;
-  padding: 2px 20px;
+  padding: 2px 20px 2px 20px;
   width: 50%;
   margin: 0px 16px 12px 38px;
   line-height: 150%;
@@ -436,6 +435,34 @@ label {
   background-color: hsl(225, 0%, 100%, 10%);
   margin: 24px;
   border-radius: 8px;
+}
+
+/** Modal **/
+
+#dog-modal-link {
+  color: hsl(195, 62%, 63%);
+  border-bottom: 1px solid hsl(195, 62%, 63%, 30%);
+}
+
+#dog-modal-link:hover {
+  cursor: pointer;
+  color: hsl(175, 82%, 70%);
+  border-bottom: 1px solid hsl(175, 90%, 68%, 40%);
+}
+
+#dog-modal {
+  background-color: white;
+  min-height: 250px;
+  min-width: 250px;
+  background-size: cover;
+  max-height: 400px;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+#dog-modal:hover {
+  cursor: pointer;
 }
 
 /*  Media Queries  */
