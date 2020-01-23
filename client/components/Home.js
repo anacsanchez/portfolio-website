@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { About, Contact, Projects, Header, Navbar, Footer } from './index';
-import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
 

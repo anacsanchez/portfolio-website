@@ -1,8 +1,0 @@
-{
-  "name": "Random Quote Machine",
-  "image": "assets/random_quote_ss.png",
-  "tools":"Javascript, React, Heroku",
-  "description": "A web app that generates random quotes to post on Twitter.",
-  "url": "https://guarded-anchorage-42384.herokuapp.com/",
-  "github": "https://github.com/anacsanchez/Random-Quote-Machine"
-}
