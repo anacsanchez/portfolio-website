@@ -1,0 +1,102 @@
+@font-face {
+  font-family:"JD Nadia Regular";
+  src:url("assets/jd_nadia.woff2") format("woff2"),
+    url("assets/jd_nadia.woff") format("woff"),
+    url('assets/jd_nadia.ttf') format('truetype');
+  font-style:normal;
+  font-weight:400;
+}
+
+
+body {
+  background-color: black;
+  color: white;
+  padding: 18px;
+  font-family: "JD Nadia Regular";
+}
+
+#name {
+  color: #05FF09;
+}
+
+#name, #title{
+  font-size: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(80, end);
+  letter-spacing: 0px;
+}
+
+#title {
+  color: white;
+}
+
+@keyframes typing {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.menu {
+  padding-top: 28px;
+}
+
+.command-key {
+  font-size: 32px;
+}
+
+.command-rest {
+  font-size: 24px;
+  letter-spacing: 4px;
+  padding-left: 1px;
+}
+
+.menu-option {
+
+}
+
+.links-section {
+  padding-top: 6px;
+  color: lightblue;
+}
+
+.links-header {
+  font-size: 28px;
+  padding: 6px 0 8px 0;
+}
+
+.link-command-key {
+  font-size: 28px;
+}
+
+.link-command-rest {
+  font-size: 24px;
+  letter-spacing: 4px;
+  padding-left: 1px;
+}
+
+.section {
+  font-size: 24px;
+  padding: 24px 0 10px 0;
+}
+
+.section-header, .section-footer {
+  font-size: 28px;
+  color: #05FF09;
+  padding: 12px 0 12px 0;
+}
+.project-name {
+  padding: 2px 0 8px 0;
+  color: #FFFD00;
+  word-spacing: 3px;
+}
+.project-description {
+  word-spacing: 3px;
+}
+.project-tech {
+  padding: 6px 0 2px 0;
+  color: lightblue;
+  word-spacing: 3px;
+}
+.project {
+  padding: 6px 0;
+}

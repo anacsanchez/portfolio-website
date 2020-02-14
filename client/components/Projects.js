@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { SingleProject } from './index';
 
 const Projects = () => {
@@ -13,16 +13,14 @@ const Projects = () => {
   }, []);
 
     return (
-      <div id="projects-section">
-        <div className="section-title">Projects</div>
-        <div id="projects-list">
-          { projects.length ?
-              projects.map(project =>
-                <SingleProject key={ project.name } {...project} />
-              )
-              : null
+      <div className="section">
+        <div className="section-header">======  PROJECTS  ======</div>
+          {
+            projects.length ? projects.map((project,i) =>
+              <SingleProject key={ project.name } index={i} {...project} />
+            ) : null
           }
-        </div>
+        <div className="section-footer">======== END ========</div>
       </div>
     );
 };
