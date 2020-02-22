@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import { Footer, Menu, Projects, About, Skills, SectionSwitch, Links, Resume } from './index';
+import { Menu, Projects, About, Skills, SectionSwitch, Links, Resume } from './index';
 import nav from '../options';
 const { navOptions, navKeyCodes, linkKeyCodes } = nav;
 
@@ -45,7 +45,6 @@ const Home = () => {
           <Resume key={ navOptions.resume.name } />
           <Skills key={ navOptions.skills.name } />
         </SectionSwitch>
-        {/* <Footer /> */}
         <Links />
       </div>
   );
