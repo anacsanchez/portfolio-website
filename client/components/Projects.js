@@ -6,7 +6,7 @@ const Projects = () => {
 
   useEffect (() => {
     const fetchProjects = async() => {
-      const projectsData = await fetch('projects.json').then(data => data.json());
+      const projectsData = await fetch('/api/projects').then(data => data.json());
       setProjects(projectsData);
     };
     fetchProjects();
