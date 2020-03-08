@@ -15,7 +15,7 @@ const Resume = () => {
 
   return (
     <div className="section">
-      <div className="section-header">===== RESUME =====</div>
+      <div className="section-header">====== RESUME ======</div>
       <ul className="resume-experience-content">
         {
           workExperience?.length ? workExperience.map((work, index) => {
@@ -23,7 +23,7 @@ const Resume = () => {
             return (
               <li key={`${company}`} style={{ animationDelay: `${index*180}ms`}}>
                 <h1>> { title.toUpperCase() }</h1>
-                <h3>{ company }</h3>
+                <h2>{ company }</h2>
                 <div className="info-section">
                   <h4>{ location }</h4>
                   <h4>{ date }</h4>
@@ -57,7 +57,7 @@ const Resume = () => {
           }) : ''
         }
       </ul>
-      <div className="section-footer">====== END =======</div>
+      <div className="section-footer">======= END ========</div>
     </div>
   );
 };
