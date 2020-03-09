@@ -13,7 +13,7 @@ const Projects = () => {
   }, []);
 
     return (
-      <div className="section">
+      <section id="project">
         <div className="section-header">======  PROJECTS  ======</div>
         <ul>
           {
@@ -23,7 +23,7 @@ const Projects = () => {
           }
         </ul>
         <div className="section-footer">======== END ========</div>
-      </div>
+      </section>
     );
 };
 

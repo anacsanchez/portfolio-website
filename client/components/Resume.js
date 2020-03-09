@@ -14,7 +14,7 @@ const Resume = () => {
   const { workExperience=[], education=[] } = resume;
 
   return (
-    <div className="section">
+    <section id="resume">
       <div className="section-header">====== RESUME ======</div>
       <ul className="resume-experience-content">
         {
@@ -22,11 +22,11 @@ const Resume = () => {
             const { title, company, location, date, responsibilities } = work;
             return (
               <li key={`${company}`} style={{ animationDelay: `${index*180}ms`}}>
-                <h1>> { title.toUpperCase() }</h1>
-                <h2>{ company }</h2>
+                <h3>> { title.toUpperCase() }</h3>
+                <h4>{ company }</h4>
                 <div className="info-section">
-                  <h4>{ location }</h4>
-                  <h4>{ date }</h4>
+                  <h6>{ location }</h6>
+                  <h6>{ date }</h6>
                 </div>
                 { responsibilities?.map((description,i) =>
                   <p key={`${company}-desc-${i}`} >• {description}</p>)
@@ -42,11 +42,11 @@ const Resume = () => {
             const { title, school, location, date, curriculum } = ed;
             return (
               <li key={school} style={{ animationDelay: `${(index+workExperience.length)*180}ms`}}>
-                <h1>> {title.toUpperCase()}</h1>
-                <h3>{school}</h3>
+                <h3>> {title.toUpperCase()}</h3>
+                <h4>{school}</h4>
                 <div className="info-section">
-                  <h4>{ location }</h4>
-                  <h4>{ date }</h4>
+                  <h6>{ location }</h6>
+                  <h6>{ date }</h6>
                 </div>
                 { curriculum?.map((description, i) => (
                     <p key={`${school}-desc-${i}`}>• {description}</p>
@@ -58,7 +58,7 @@ const Resume = () => {
         }
       </ul>
       <div className="section-footer">======= END ========</div>
-    </div>
+    </section>
   );
 };
 

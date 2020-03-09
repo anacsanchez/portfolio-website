@@ -37,7 +37,7 @@ const Home = () => {
   []);
 
   return (
-      <div id="home-page">
+      <main id="home-page">
         <Menu handleClick={ switchSection } menuItems={ menuItems } />
         <SectionSwitch sectionToDisplay={currSection}>
           <About key={ navOptions.about.name }/>
@@ -46,7 +46,7 @@ const Home = () => {
           <Skills key={ navOptions.skills.name } />
         </SectionSwitch>
         <Links />
-      </div>
+      </main>
   );
 };
 

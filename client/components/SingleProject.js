@@ -8,7 +8,7 @@ const SingleProject = ({ name, image, url, description, tools, github, index }) 
 
   return (
     <li style={{ animationDelay: `${index*180}ms`}}>
-      <h1>> { name.toUpperCase() }</h1>
+      <h3>> { name.toUpperCase() }</h3>
       <p>{description}</p>
       <p className="emphasize">Built with: { tools }</p>
       <a className="project-url">[ VISIT ]</a>

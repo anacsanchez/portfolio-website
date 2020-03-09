@@ -5,7 +5,7 @@ const About = () => {
   const [ showModal, setShowModal ] = useState(false);
 
   return (
-    <div className="section">
+    <section id="about">
       <div className="section-header">======  ABOUT  ======</div>
         <div id="about-pic" style={{ backgroundImage: `url('assets/ana_portfolio.jpg')` }}></div>
         <div id="about-bio">
@@ -16,7 +16,7 @@ const About = () => {
           { showModal && <ImageModal assetName='tictac_rocket.jpeg' handleClick={() => setShowModal(!showModal)}/>}
         <div className="section-footer">======= END =======</div>
       </div>
-    </div>
+    </section>
   );
 };
 

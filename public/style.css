@@ -5,6 +5,7 @@
   --white: #F7F8F8;
   --off-white:  #E7EAF1;
   --bright-yellow: #FFFD00;
+  --bright-yellow-shadow: #fffd00ba;
   --dark-yellow: #A8AE00;
   --light-teal: #60E8FC;
   --light-blue: lightblue;
@@ -17,7 +18,7 @@
   --orange: #EA851C;
   --light-orange: #F09238;
   --dark-orange: #AC6B2C;
-  --white-shadow: hsl(0, 0%, 50%);
+  --white-shadow: hsl(0, 0%, 100%,40%);
 }
 
 @font-face {
@@ -45,7 +46,7 @@ a {
   color: var(--neon-green);
 }
 
-h1,h2,h3,h4,p, ul, li {
+h1,h2,h3,h4,h5,h6,p, ul, li, a {
   margin-block-start: 0px;
   margin-block-end: 0px;
   font-weight: 400;
@@ -54,21 +55,31 @@ h1,h2,h3,h4,p, ul, li {
   padding-inline-start: 0px;
 }
 
-h1 {
+header > h1 {
+  color: var(--green);
+  text-shadow: hsl(150, 50%,50%,50%) 1px 0 5px
+}
+
+header > h2 {
+  color: var(--white);
+  text-shadow: var(--white-shadow) 1px 0 10px;
+}
+
+h3 {
   font-size: 28px;
   padding: 2px 0 8px 0;
   color: var(--bright-yellow);
   word-spacing: 3px;
 }
 
-h2 {
+h4 {
   font-size: 26px;
   padding: 2px 0;
   color: var(--teal);
   word-spacing: 3px;
 }
 
-h3 {
+h5 {
   word-spacing: 3px;
   letter-spacing: 1px;
   color: var(--teal);
@@ -77,12 +88,13 @@ h3 {
   font-size: 24px;
 }
 
-p, h4 {
+p, h6 {
   word-spacing: 3px;
   letter-spacing: 1px;
   color: var(--white);
   width: 800px;
   white-space: normal;
+  font-size: 26px;
 }
 
 ul, li {
@@ -98,22 +110,12 @@ li {
   animation-fill-mode: forwards;
 }
 
-#header > * {
+header > * {
   font-size: 38px;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 2.3s steps(80, end);
   letter-spacing: 0px;
-}
-
-#name {
-  color: var(--green);
-  text-shadow: var(--green) 1px 0 20px;
-}
-
-#title {
-  color: var(--white);
-  text-shadow: var(--white-shadow) 1px 0 20px;
 }
 
 @keyframes appear {
@@ -151,7 +153,7 @@ li {
 
 .command:hover {
   color: var(--bright-yellow);
-  text-shadow: var(--bright-yellow) 1px 0 15px;
+  text-shadow: var(--bright-yellow-shadow) 1px 0 10px;
 }
 
 .command-key {
@@ -173,6 +175,8 @@ li {
 .links-section {
   padding-top: 32px;
   color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
 }
 
 .links-header {
@@ -193,7 +197,7 @@ li {
   padding-left: 1px;
 }
 
-.section {
+section {
   font-size: 26px;
   padding: 24px 0 10px 0;
 }

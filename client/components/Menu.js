@@ -2,7 +2,8 @@ import React from 'react';
 
 const Menu = ({ handleClick, menuItems }) => {
   return (
-    <div className="menu">
+    <nav className="menu">
+      <ul className="menu-items">
       {
         menuItems.map((item,index) => (
           <div className="menu-item" key={item} style={{ animationDelay: `${(index+2.4)*250}ms`}}>
@@ -13,7 +14,8 @@ const Menu = ({ handleClick, menuItems }) => {
           </div>
         ))
       }
-    </div>
+      </ul>
+    </nav>
   );
 };
 
