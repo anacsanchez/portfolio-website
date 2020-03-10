@@ -7,10 +7,10 @@ const SingleProject = ({ name, image, url, description, tools, github, index }) 
   const [ isActive, setStatus ] = useState(INACTIVE);
 
   return (
-    <li style={{ animationDelay: `${index*180}ms`}}>
-      <h3>> { name.toUpperCase() }</h3>
-      <p>{description}</p>
-      <p className="emphasize">Built with: { tools }</p>
+    <li className="expanding-list-item" style={{ animationDelay: `${index*180}ms`}}>
+      <h3 className="item-title">> { name.toUpperCase() }</h3>
+      <p className="item-text">{description}</p>
+      <p className="emphasized-text">Built with: { tools }</p>
       <a className="project-url">[ VISIT ]</a>
     </li>
   );
