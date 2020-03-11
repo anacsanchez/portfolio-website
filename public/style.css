@@ -115,8 +115,11 @@ section {
   white-space: normal;
   font-size: 26px;
 }
+.standalone-text {
+  padding: 8px 0;
+}
 
-.expanding-list-item {
+.expanding-item {
   width: 0%;
   padding: 12px 0;
   overflow: hidden;
@@ -140,12 +143,12 @@ section {
 
 .parallel-list-container {
   display: flex;
-  font-size: 26px;
 }
 
 .parallel-list-container ul {
   padding: 6px 6px 6px 0;
-  margin-right: 22px;
+  margin-right: 26px;
+  font-size: 28px;
 }
 
 .sub-list-title {
@@ -158,10 +161,16 @@ section {
   padding-top: 28px;
 }
 
+.menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu-item {
   opacity: 0;
   animation: 0s appear;
   animation-fill-mode: forwards;
+  box-sizing: border-box;
 }
 
 .menu-item > span {
@@ -175,6 +184,8 @@ section {
     hsl(0, 0%, 10%,40%) 20px,
      hsl(220, 10%, 80%, 10%) 20px,
     hsl(220, 10%, 80%, 10%) 22px);
+  font-size: 30px;
+  width: max-content;
 }
 
 .command:hover {
@@ -196,6 +207,8 @@ section {
   opacity: 0;
   animation: 0s appear;
   animation-fill-mode: forwards;
+  box-sizing: border-box;
+  width: max-content;
 }
 
 .links-section {
@@ -228,37 +241,37 @@ section {
 }
 
 @media only screen and (max-width: 850px) {
-  p, .emphasized-text {
+  p, .emphasized-text, .item-text {
     width: 700px;
   }
 }
 
 @media only screen and (max-width: 750px) {
-  p, .emphasized-text {
+  p, .emphasized-text, .item-text {
     width: 600px;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  p, .emphasized-text {
+  p, .emphasized-text, .item-text {
     width: 500px;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  p, .emphasized-text {
+  p, .emphasized-text, .item-text {
     width: 400px;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  p, .emphasized-text {
+  p, .emphasized-text, .item-text {
     width: 300px;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  p, .emphasized-text {
+  p, .emphasized-text, .item-text {
     width: 225px;
   }
 }

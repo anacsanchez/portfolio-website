@@ -45,7 +45,7 @@ const Home = () => {
           <Resume key={ navOptions.resume.name } />
           <Skills key={ navOptions.skills.name } />
         </SectionSwitch>
-        <Links />
+        <Links tabIndexStart={menuItems.length+1}/>
       </main>
   );
 };

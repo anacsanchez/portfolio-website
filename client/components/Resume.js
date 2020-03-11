@@ -21,7 +21,7 @@ const Resume = () => {
           workExperience?.length ? workExperience.map((work, index) => {
             const { title, company, location, date, responsibilities } = work;
             return (
-              <li className="expanding-list-item" key={`${company}`} style={{ animationDelay: `${index*180}ms`}}>
+              <li className="expanding-item" key={`${company}`} style={{ animationDelay: `${index*180}ms`}}>
                 <h3 className="item-title">> { title.toUpperCase() }</h3>
                 <h4 className="item-sub-title">{ company }</h4>
                 <div className="info-section">
@@ -41,7 +41,7 @@ const Resume = () => {
           education?.length ? education.map((ed,index) => {
             const { title, school, location, date, curriculum } = ed;
             return (
-              <li className="expanding-list-item" key={school} style={{ animationDelay: `${(index+workExperience.length)*180}ms`}}>
+              <li className="expanding-item" key={school} style={{ animationDelay: `${(index+workExperience.length)*180}ms`}}>
                 <h3 className="item-title">> {title.toUpperCase()}</h3>
                 <h4 className="item-sub-title">{school}</h4>
                 <div className="info-section">

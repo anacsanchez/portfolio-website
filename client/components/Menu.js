@@ -6,12 +6,12 @@ const Menu = ({ handleClick, menuItems }) => {
       <ul className="menu-items">
       {
         menuItems.map((item,index) => (
-          <div className="menu-item" key={item} style={{ animationDelay: `${(index+2.4)*250}ms`}}>
-            <span className="command">
-              <span className="command-key" onClick={ () => handleClick(item) }>[ {`${item[0].toUpperCase()}`} ] </span>
-              <span className="command-rest" onClick={ () => handleClick(item) }>{`${item.slice(1).toUpperCase()}`}</span>
-            </span>
-          </div>
+          <li className="menu-item" key={item} style={{ animationDelay: `${(index+2.4)*250}ms`}} >
+            <button className="command" tabIndex={index+1} onClick={ () => handleClick(item) }>
+              <span className="command-key">[ {`${item[0].toUpperCase()}`} ] </span>
+              <span className="command-rest">{`${item.slice(1).toUpperCase()}`}</span>
+            </button>
+          </li>
         ))
       }
       </ul>
