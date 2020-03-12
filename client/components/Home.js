@@ -33,8 +33,7 @@ const Home = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  },
-  []);
+  },[]);
 
   return (
       <main id="home-page">

@@ -32,11 +32,11 @@
 
 body {
   background-color: var(--black);
-  color: var(--white);
-  padding: 18px;
+  /* color: var(--white); */
+  /* padding: 18px; */
   font-family: "JD Nadia Regular";
 }
-
+/* 
 a {
   text-decoration: none;
 }
@@ -186,6 +186,9 @@ section {
     hsl(220, 10%, 80%, 10%) 22px);
   font-size: 30px;
   width: max-content;
+  border: none;
+  font-family: "JD Nadia Regular";
+  color: var(--white);
 }
 
 .command:hover {
@@ -274,4 +277,4 @@ section {
   p, .emphasized-text, .item-text {
     width: 225px;
   }
-}
+} */
