@@ -1,5 +1,5 @@
 :root {
-  --green: #05FF09;
+  /* --green: #05FF09;
   --neon-green: #00F983;
   --dark-green: #00550F;
   --white: #F7F8F8;
@@ -9,16 +9,16 @@
   --dark-yellow: #A8AE00;
   --light-teal: #60E8FC;
   --light-blue: lightblue;
-  --soft-blue: #D6FEFF;
+  --soft-blue: #D6FEFF; */
   --black: black;
-  --teal: #00F8FC;
+  /* --teal: #00F8FC;
   --bright-blue: #009FFE;
   --blue: #0098E2;
   --gray: #818A93;
   --orange: #EA851C;
   --light-orange: #F09238;
   --dark-orange: #AC6B2C;
-  --white-shadow: hsl(0, 0%, 100%,40%);
+  --white-shadow: hsl(0, 0%, 100%,40%); */
 }
 
 @font-face {
@@ -36,7 +36,7 @@ body {
   /* padding: 18px; */
   font-family: "JD Nadia Regular";
 }
-/* 
+
 a {
   text-decoration: none;
 }
@@ -53,7 +53,7 @@ h1,h2,h3,h4,h5,h6,p, ul, li, a {
 ul, li {
   list-style: none;
 }
-
+/*
 @keyframes appear {
   from { opacity: 0; }
   to { opacity: 1; }

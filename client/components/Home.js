@@ -1,9 +1,7 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import { Menu, Projects, About, Skills, SectionSwitch, Links, Resume } from './index';
+import React, { useState, useEffect } from 'react';
+import Main from './Main';
 import nav from '../options';
 const { navOptions, navKeyCodes, linkKeyCodes } = nav;
-
-const menuItems = [ 'projects', 'resume', 'skills', 'about' ];
 
 const Home = () => {
 
@@ -34,18 +32,16 @@ const Home = () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   },[]);
+  
+  const menuItems = [ 'projects', 'resume', 'skills', 'about' ];
 
   return (
-      <main id="home-page">
-        <Menu handleClick={ switchSection } menuItems={ menuItems } />
-        <SectionSwitch sectionToDisplay={currSection}>
-          <About key={ navOptions.about.name }/>
-          <Projects key={ navOptions.projects.name } />
-          <Resume key={ navOptions.resume.name } />
-          <Skills key={ navOptions.skills.name } />
-        </SectionSwitch>
-        <Links tabIndexStart={menuItems.length+1}/>
-      </main>
+    <Main 
+      handleSwitch={switchSection} 
+      currSection={currSection}
+      navOptions={navOptions}
+      menuItems={menuItems}
+    />
   );
 };
 
