@@ -1,36 +1,50 @@
-import React, { useState, useEffect } from 'react';
-import { About, Contact, Projects, Header, Navbar, Footer } from './index';
+import React, { useState, useEffect, Fragment } from 'react';
+import { Header, Main } from './index';
+import nav from '../options';
+const { navOptions, navKeyCodes, linkKeyCodes } = nav;
 
 const Home = () => {
 
-  const [ isVisible, setVisibility ] = useState(false);
+  const [ currSection, setCurrSection ] = useState('');
 
-  const handleScroll = () => {
-    if (window.scrollY > document.getElementById('header').scrollHeight && !isVisible) {
-        setVisibility(true);
+  const switchSection = (name) => {
+    setCurrSection(name);
+  };
+
+  const openLink = (url) => {
+    window.open(url,'_blank', 'noopener,noreferrer');
+  };
+
+  const handleKeyDown = (evt) => {
+    const evtKey = evt.key.toLowerCase();
+
+    if(navKeyCodes[evtKey]) {
+      switchSection(navKeyCodes[evtKey]);
     }
-    else if (window.scrollY < document.getElementById('header').scrollHeight && isVisible) {
-        setVisibility(false);
+    else if(linkKeyCodes[evtKey]) {
+      openLink(linkKeyCodes[evtKey]);
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
     };
-  },
-  [isVisible]);
+  },[]);
+  
+  const menuItems = [ 'projects', 'resume', 'skills', 'about' ];
 
   return (
-    <div id="home-page">
-      <Header />
-      <Navbar visible={ isVisible }/>
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
-    </div>
+    <Fragment>
+      <Header typingLengthInSeconds={2.3}/>
+      <Main 
+        handleSwitch={switchSection} 
+        currSection={currSection}
+        navOptions={navOptions}
+        menuItems={menuItems}
+      />
+    </Fragment>
   );
 };
 
