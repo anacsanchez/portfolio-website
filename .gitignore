@@ -3,7 +3,6 @@ public/bundle.js
 public/bundle.js.map
 config.js
 .DS_Store
-npm-debug.log
 *.sh
 *.log
 *.out

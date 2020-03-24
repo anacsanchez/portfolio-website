@@ -6,24 +6,24 @@ const Projects = () => {
 
   useEffect (() => {
     const fetchProjects = async() => {
-      const projectsData = await fetch('projects.json').then(data => data.json());
+      const projectsData = await fetch('/api/projects').then(data => data.json());
       setProjects(projectsData);
     };
     fetchProjects();
   }, []);
 
     return (
-      <div id="projects-section">
-        <div className="section-title">Projects</div>
-        <div id="projects-list">
-          { projects.length ?
-              projects.map(project =>
-                <SingleProject key={ project.name } {...project} />
-              )
-              : null
+      <section id="project">
+        <div className="section-header">======  PROJECTS  ======</div>
+        <ul>
+          {
+            projects?.length ? projects.map((project,i) =>
+              <SingleProject key={ project.name } index={i} {...project} />
+            ) : ''
           }
-        </div>
-      </div>
+        </ul>
+        <div className="section-footer">======== END ========</div>
+      </section>
     );
 };
 
