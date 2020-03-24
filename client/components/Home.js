@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Main from './Main';
+import React, { useState, useEffect, Fragment } from 'react';
+import { Header, Main } from './index';
 import nav from '../options';
 const { navOptions, navKeyCodes, linkKeyCodes } = nav;
 
@@ -36,12 +36,15 @@ const Home = () => {
   const menuItems = [ 'projects', 'resume', 'skills', 'about' ];
 
   return (
-    <Main 
-      handleSwitch={switchSection} 
-      currSection={currSection}
-      navOptions={navOptions}
-      menuItems={menuItems}
-    />
+    <Fragment>
+      <Header typingLengthInSeconds={2.3}/>
+      <Main 
+        handleSwitch={switchSection} 
+        currSection={currSection}
+        navOptions={navOptions}
+        menuItems={menuItems}
+      />
+    </Fragment>
   );
 };
 
