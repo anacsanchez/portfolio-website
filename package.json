@@ -6,7 +6,6 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "build:client-watch": "webpack -w --config webpack.dev.js",
-    "postinstall": "npm run build",
     "start": "node server",
     "start:dev": "npm run build:client-watch & npm run start:dev-server",
     "start:dev-server": "NODE_ENV='development' nodemon server -e html,js,scss --ignore public --ignore client"
@@ -14,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.8.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
     "@fortawesome/free-regular-svg-icons": "^5.8.1",
@@ -27,20 +27,13 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
-    "@babel/plugin-proposal-json-strings": "^7.0.0",
-    "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.4.3",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "@babel/runtime": "^7.4.3",
-    "babel-loader": "^8.0.0",
-    "css-loader": "^0.28.11",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
     "nodemon": "^1.18.3",
-    "webpack": "^4.12.0",
+    "webpack": "^4.41.6",
     "webpack-cli": "^3.0.6",
     "webpack-livereload-plugin": "^2.1.1",
     "webpack-merge": "^4.2.1"
