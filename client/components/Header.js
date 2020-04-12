@@ -16,7 +16,7 @@ const Header = () => {
             <a href="https://www.linkedin.com/in/ana-c-sanchez/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={ faLinkedinIn } size="3x" /></a>
             <a href="https://github.com/anacsanchez" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={ faGithub } size="3x"/></a>
             <a href="https://angel.co/anacsanchez?public_profile=1" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon size="3x" icon={ faAngellist } /></a>
-            <a href="https://anacsanchez.com/Resume-Ana_Sanchez.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon size="3x" icon={ faFileAlt } /></a>
+            <a href="https://anacsanchez.com/Ana_Sanchez-Resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon size="3x" icon={ faFileAlt } /></a>
             <div id="header-location-icon"><FontAwesomeIcon size="3x" icon={faBuilding} /><div id="header-location-name">NYC</div>
             </div>
           </div>
