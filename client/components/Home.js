@@ -3,7 +3,7 @@ import { Header, MainContent } from './index';
 
 const Home = () => (
   <Fragment>
-    <Header typingLengthInSeconds={2.3}/>
+    <Header/>
     <MainContent />
   </Fragment>
 );

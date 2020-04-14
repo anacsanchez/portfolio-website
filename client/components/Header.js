@@ -2,9 +2,12 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { animations, colors } from '../styles';
 
-const Header = ({ typingLengthInSeconds }) => {
+const Header = () => {
+
+  const headerTypingDuration = 5;
+
   const headerAnimation = css({
-    animation: `${animations.typing} ${typingLengthInSeconds}s steps(80, end)`
+    animation: `${animations.typing} ${headerTypingDuration}s steps(80, end)`
   });
 
   const headerBase = css({
