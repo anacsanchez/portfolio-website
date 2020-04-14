@@ -33,7 +33,7 @@
 body {
   background-color: var(--black);
   /* color: var(--white); */
-  /* padding: 18px; */
+  padding: 18px;
   font-family: "JD Nadia Regular";
 }
 
@@ -54,33 +54,6 @@ ul, li {
   list-style: none;
 }
 /*
-@keyframes appear {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes typing {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-header > * {
-  font-size: 38px;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 2.3s steps(80, end);
-  letter-spacing: 0px;
-}
-
-header > h1 {
-  color: var(--green);
-  text-shadow: hsl(150, 50%,50%,50%) 1px 0 5px
-}
-
-header > h2 {
-  color: var(--white);
-  text-shadow: var(--white-shadow) 1px 0 10px;
-}
 
 section {
   font-size: 26px;
@@ -155,55 +128,6 @@ section {
   color: var(--teal);
   letter-spacing: 1px;
   padding: 4px 0px;
-}
-
-.menu {
-  padding-top: 28px;
-}
-
-.menu-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-item {
-  opacity: 0;
-  animation: 0s appear;
-  animation-fill-mode: forwards;
-  box-sizing: border-box;
-}
-
-.menu-item > span {
-  cursor: pointer;
-}
-
-.command {
-  text-shadow: var(--white-shadow) 1px 0 10px;
-  background: repeating-linear-gradient(
-    hsl(0, 0%, 10%,40%),
-    hsl(0, 0%, 10%,40%) 20px,
-     hsl(220, 10%, 80%, 10%) 20px,
-    hsl(220, 10%, 80%, 10%) 22px);
-  font-size: 30px;
-  width: max-content;
-  border: none;
-  font-family: "JD Nadia Regular";
-  color: var(--white);
-}
-
-.command:hover {
-  color: var(--bright-yellow);
-  text-shadow: var(--bright-yellow-shadow) 1px 0 10px;
-}
-
-.command-key {
-  font-size: 30px;
-}
-
-.command-rest {
-  font-size: 28px;
-  letter-spacing: 4px;
-  padding-left: 2px;
 }
 
 .link {

@@ -2,7 +2,6 @@ const colors = {
   white: '#F7F8F8',
   green: '#05FF09',
   darkGreen: '#00550F',
-  white: '#F7F8F8',
   offWhite:  '#E7EAF1',
   brightYellow: '#FFFD00',
   brightYellowShadow: '#fffd00ba',

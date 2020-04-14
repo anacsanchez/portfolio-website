@@ -9,3 +9,7 @@ export { default as SectionSwitch } from './SectionSwitch';
 export { default as Links } from './Links';
 export { default as Resume } from './Resume';
 export { default as Skills } from './Skills';
+export { default as MainContent } from './MainContent';
+export { default as CommandKey } from './CommandKey';
+export { default as MenuButton } from './MenuButton';
+export { default as DelayedListItem } from './DelayedListItem';
