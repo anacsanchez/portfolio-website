@@ -20,7 +20,7 @@
   --dark-orange: #AC6B2C;
   --white-shadow: hsl(0, 0%, 100%,40%); */
 }
-/*
+
 @font-face {
   font-family:"JD Nadia Regular";
   src:url("assets/jd_nadia.woff2") format("woff2"),
@@ -28,12 +28,12 @@
     url('assets/jd_nadia.ttf') format('truetype');
   font-style:normal;
   font-weight:400;
-} */
+}
 
 body {
   background-color: var(--black);
   padding: 18px;
-  /* font-family: "JD Nadia Regular"; */
+  font-family: "JD Nadia Regular";
 }
 
 a {
