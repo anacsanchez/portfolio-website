@@ -1,11 +1,65 @@
 import { css } from '@emotion/core';
 import animations from './animations';
+import colors from './colors';
+import { expandingTextMediaQueries } from './mediaQueries';
 
 export const globalStyles = css`
   color: white;
 `;
 
-export const expandingItemAnimation = (delayIndex, baseMs) => css({
+export const sectionHeaderAndFooterStyles = css({
+  fontSize: '30px',
+  color: colors.green,
+  padding: '12px 0 12px 0'
+});
+
+export const expandingTextStyles = css`{
+  width: 800px;
+  white-space: normal;
+
+  ${expandingTextMediaQueries}
+}`;
+
+export const itemStyles = css`
+  .item-title {
+    font-size: 28px;
+    padding: 2px 0 8px 0;
+    color: ${colors.brightYellow};
+    word-spacing: 3px;
+    width: 800px;
+    white-space: normal;
+  }
+
+  .item-sub-title {
+    font-size: 26px;
+    padding: 2px 0;
+    color: ${colors.teal};
+    word-spacing: 3px;
+  }
+
+  .item-text {
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    color: ${colors.white};
+    width: 800px;
+    white-space: normal;
+    font-size: 26px;
+  }
+
+  .item-text-section {
+    padding: 8px 0;
+  }
+
+  .emphasized-text {
+    padding: 10px 0;
+    color: ${colors.teal};
+    word-spacing: 3px;
+    width: 800px;
+    white-space: normal;
+  }
+`;
+
+export const expandingItemAnimationInMs = (delayIndex, baseMs) => css({
   width: '0%',
   // padding: '12px 0',
   overflow: 'hidden',
@@ -15,10 +69,15 @@ export const expandingItemAnimation = (delayIndex, baseMs) => css({
   animationDelay: `${ delayIndex * baseMs }ms`
 });
 
-export const delayedItemAnimation = (delayIndex, baseMs) => css({
+export const delayedItemAnimationInMs = (delayIndex, baseMs) => css({
   opacity: 0,
   animation: `0s ${animations.appear}`,
   animationFillMode: 'forwards',
   boxSizing: 'border-box',
   animationDelay: `${ delayIndex * baseMs }ms`
 });
+
+
+
+
+

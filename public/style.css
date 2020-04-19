@@ -54,81 +54,12 @@ ul, li {
 }
 /*
 
-.section-header, .section-footer {
-  font-size: 30px;
-  color: var(--green);
-  padding: 12px 0 12px 0;
-}
-
-.item-title {
-  font-size: 28px;
-  padding: 2px 0 8px 0;
-  color: var(--bright-yellow);
-  word-spacing: 3px;
-}
-
-.item-sub-title {
-  font-size: 26px;
-  padding: 2px 0;
-  color: var(--teal);
-  word-spacing: 3px;
-}
-
-.item-text {
-  word-spacing: 3px;
-  letter-spacing: 1px;
-  color: var(--white);
-  width: 800px;
-  white-space: normal;
-  font-size: 26px;
-}
-.standalone-text {
-  padding: 8px 0;
-}
-
-.expanding-item {
-  width: 0%;
-  padding: 12px 0;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: 500ms steps(100, end) typing;
-  animation-fill-mode: forwards;
-}
-
-.emphasized-text {
-  padding: 10px 0;
-  color: var(--teal);
-  word-spacing: 3px;
-  width: 800px;
-  white-space: normal;
-}
-
 .project-url {
   padding: 8px 0;
   color: var(--neon-green);
 }
-
-.parallel-list-container {
-  display: flex;
-}
-
-.parallel-list-container ul {
-  padding: 6px 6px 6px 0;
-  margin-right: 26px;
-  font-size: 28px;
-}
-
-.sub-list-title {
-  color: var(--teal);
-  letter-spacing: 1px;
-  padding: 4px 0px;
-}
-
-.info-section {
-  padding: 8px 0;
-}
-
-@media only screen and (max-width: 850px) {
+*/
+/* @media only screen and (max-width: 850px) {
   p, .emphasized-text, .item-text {
     width: 700px;
   }

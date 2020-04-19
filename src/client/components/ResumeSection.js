@@ -1,4 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import {
+  sectionHeaderAndFooterStyles,
+  itemStyles,
+  expandingItemAnimationInMs,
+  expandingTextStyles
+} from '../styles';
+import { css } from '@emotion/core';
 
 const ResumeSection = () => {
   const [ resume, setResume ] = useState({});
@@ -21,36 +28,52 @@ const ResumeSection = () => {
 
   return (
     <Fragment>
-      <div className="section-header">====== RESUME ======</div>
-      <ul className="list" id="resume-experience-content">
+      <div className="section-header" css={sectionHeaderAndFooterStyles}>
+        ====== RESUME ======
+      </div>
+      <ul className="list" id="resume-experience" >
         {
           workExperience?.length ? workExperience.map((work, index) => {
             const { title, company, location, date, responsibilities } = work;
             return (
-              <li className="expanding-item" key={`${company}`} style={{ animationDelay: `${index*180}ms`}}>
+              <li css={[
+                  expandingItemAnimationInMs(index, 180),
+                  { paddingBottom: '16px' },
+                  itemStyles,
+                  css({ '& p, .emphasized-text, .item-text, .item-title': expandingTextStyles })
+                ]}
+                key={`${company}`}
+              >
                 <h3 className="item-title">> { title.toUpperCase() }</h3>
                 <h4 className="item-sub-title">{ company }</h4>
-                <div className="info-section">
+                <div className="item-text-section">
                   <h6 className="item-text">{ location }</h6>
                   <h6 className="item-text">{ date }</h6>
                 </div>
                 { responsibilities?.map((description,i) =>
-                  <p key={`${company}-desc-${i}`} className="item-text" >• {description}</p>)
+                  <p className="item-text" key={`${company}-desc-${i}`} >• {description}</p>)
                 }
             </li>
             );
           }) : ''
         }
       </ul>
-      <ul className="list" id="resume-education-content">
+      <ul className="list" id="resume-education">
         {
           education?.length ? education.map((ed,index) => {
             const { title, school, location, date, curriculum } = ed;
             return (
-              <li className="expanding-item" key={school} style={{ animationDelay: `${(index+workExperience.length)*180}ms`}}>
+              <li
+                css={[
+                  expandingItemAnimationInMs(index+workExperience.length, 180),
+                  { paddingBottom: '16px' },
+                  itemStyles
+                ]}
+                key={school}
+              >
                 <h3 className="item-title">> {title.toUpperCase()}</h3>
                 <h4 className="item-sub-title">{school}</h4>
-                <div className="info-section">
+                <div className="item-text-section">
                   <h6 className="item-text">{ location }</h6>
                   <h6 className="item-text">{ date }</h6>
                 </div>
@@ -63,7 +86,9 @@ const ResumeSection = () => {
           }) : ''
         }
       </ul>
-      <div className="section-footer">======= END ========</div>
+      <div className="section-footer" css={sectionHeaderAndFooterStyles}>
+        ======= END ========
+      </div>
     </Fragment>
   );
 };

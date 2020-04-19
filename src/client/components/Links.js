@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { CommandKey } from './index';
-import { colors, delayedItemAnimation } from '../styles';
+import { colors, delayedItemAnimationInMs } from '../styles';
 
 const Links = ({ tabIndexStart, links }) => {
 
@@ -35,14 +35,17 @@ const Links = ({ tabIndexStart, links }) => {
 
   return(
     <div className="links-section" css={linksSectionStyles}>
-        <div className="links-header" css={[linksHeaderStyles, delayedItemAnimation(tabIndexStart+2, 250)]}>
+        <div className="links-header"
+          css={[linksHeaderStyles, delayedItemAnimationInMs(tabIndexStart+2, 250)]}
+        >
           Find me on:
         </div>
       {
         links?.map((link, index) =>
             <a tabIndex={tabIndexStart}
               className="link"
-              css={[linkStyles, delayedItemAnimation(tabIndexStart+index+3, 250)]}
+              css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+3, 250)]}
+              key={link}
             >
               <CommandKey
                 keyName={link}
