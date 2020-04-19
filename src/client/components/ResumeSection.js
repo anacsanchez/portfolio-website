@@ -1,20 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
-const Resume = () => {
+const ResumeSection = () => {
   const [ resume, setResume ] = useState({});
 
   useEffect (() => {
     const fetchResume = async() => {
-      const resumeData = await fetch('/api/resume').then(data => data.json());
-      setResume(resumeData);
+      try {
+        const data = await fetch('/api/resume');
+        const resumeData = await data.json();
+        setResume(resumeData);
+      }
+      catch(err) {
+        console.error(err);
+      }
     };
     fetchResume();
   }, []);
 
-  const { workExperience=[], education=[] } = resume;
+  const { workExperience, education } = resume;
 
   return (
-    <section id="resume">
+    <Fragment>
       <div className="section-header">====== RESUME ======</div>
       <ul className="list" id="resume-experience-content">
         {
@@ -58,8 +64,8 @@ const Resume = () => {
         }
       </ul>
       <div className="section-footer">======= END ========</div>
-    </section>
+    </Fragment>
   );
 };
 
-export default Resume;
+export default ResumeSection;

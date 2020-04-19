@@ -1,19 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { SingleProject } from './index';
 
-const Projects = () => {
+const ProjectsSection = () => {
   const [ projects, setProjects ] = useState([]);
 
   useEffect (() => {
     const fetchProjects = async() => {
-      const projectsData = await fetch('/api/projects').then(data => data.json());
-      setProjects(projectsData);
+      try {
+        const data = await fetch('/api/projects');
+        const projectsData = await data.json();
+        setProjects(projectsData);
+      }
+      catch(err) {
+        console.error(err);
+      }
     };
     fetchProjects();
   }, []);
 
     return (
-      <section id="project">
+      <Fragment>
         <div className="section-header">======  PROJECTS  ======</div>
         <ul>
           {
@@ -23,8 +29,8 @@ const Projects = () => {
           }
         </ul>
         <div className="section-footer">======== END ========</div>
-      </section>
+      </Fragment>
     );
 };
 
-export default Projects;
+export default ProjectsSection;

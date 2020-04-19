@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Skills = () => {
   return (
-    <section id="skills">
+    <Fragment>
       <div className="section-header">===== SKILLS =====</div>
       <div className="parallel-list-container">
         <ul id="proficient-skills">
@@ -28,7 +28,7 @@ const Skills = () => {
         </ul>
       </div>
       <div className="section-footer">====== END =======</div>
-    </section>
+    </Fragment>
   );
 };
 

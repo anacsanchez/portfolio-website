@@ -1,15 +1,57 @@
 import React from 'react';
+import { css } from '@emotion/core';
+import { CommandKey } from './index';
+import { colors, delayedItemAnimation } from '../styles';
 
-const Links = ({ tabIndexStart }) => {
+const Links = ({ tabIndexStart, links }) => {
+
+  const linksSectionStyles = css({
+    display: 'flex',
+    flexDirection: 'column',
+    paddingTop: '32px',
+    color: colors.lightBlue
+  });
+
+  const linkCommandKeyStyles = css({
+    fontSize: '28px'
+  });
+
+  const linkCommandRestStyles = css({
+    fontSize: '26px',
+    letterSpacing: '4px',
+    paddingLeft: '1px'
+  });
+
+  const linksHeaderStyles = css({
+    fontSize: '28px',
+    padding: '6px 0 8px 0'
+  });
+
+  const linkStyles = css({
+    boxSizing: 'border-box',
+    width: 'max-content',
+    fontSize: '26px'
+  });
+
   return(
-    <div className="links-section">
-      <div className="links-header" style={{ animationDelay: `${6*250}ms`}}>Find me on:</div>
-      <a tabIndex={tabIndexStart} className="link" style={{ animationDelay: `${7*250}ms`}}>
-        <span className="link-command-key">[ G ] </span><span className="link-command-rest">ITHUB</span>
-      </a>
-      <a tabIndex={tabIndexStart+1} className="link" style={{ animationDelay: `${8*250}ms`}}>
-        <span className="link-command-key">[ L ] </span><span className="link-command-rest">INKEDIN</span>
-      </a>
+    <div className="links-section" css={linksSectionStyles}>
+        <div className="links-header" css={[linksHeaderStyles, delayedItemAnimation(tabIndexStart+2, 250)]}>
+          Find me on:
+        </div>
+      {
+        links?.map((link, index) =>
+            <a tabIndex={tabIndexStart}
+              className="link"
+              css={[linkStyles, delayedItemAnimation(tabIndexStart+index+3, 250)]}
+            >
+              <CommandKey
+                keyName={link}
+                keyOptionStyle={linkCommandKeyStyles}
+                keyRestStyle={linkCommandRestStyles}
+              />
+            </a>
+        )
+      }
     </div>
   );
 };

@@ -54,11 +54,6 @@ ul, li {
 }
 /*
 
-section {
-  font-size: 26px;
-  padding: 24px 0 10px 0;
-}
-
 .section-header, .section-footer {
   font-size: 30px;
   color: var(--green);
@@ -127,39 +122,6 @@ section {
   color: var(--teal);
   letter-spacing: 1px;
   padding: 4px 0px;
-}
-
-.link {
-  opacity: 0;
-  animation: 0s appear;
-  animation-fill-mode: forwards;
-  box-sizing: border-box;
-  width: max-content;
-}
-
-.links-section {
-  padding-top: 32px;
-  color: var(--light-blue);
-  display: flex;
-  flex-direction: column;
-}
-
-.links-header {
-  opacity: 0;
-  animation: 0s appear;
-  animation-fill-mode: forwards;
-  font-size: 28px;
-  padding: 6px 0 8px 0;
-}
-
-.link-command-key {
-  font-size: 28px;
-}
-
-.link-command-rest {
-  font-size: 26px;
-  letter-spacing: 4px;
-  padding-left: 1px;
 }
 
 .info-section {

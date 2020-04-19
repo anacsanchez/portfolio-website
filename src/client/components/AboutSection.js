@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import ImageModal from './ImageModal';
 
-const About = () => {
+const AboutSection = () => {
   const [ showModal, setShowModal ] = useState(false);
 
   return (
-    <section id="about">
+    <Fragment>
       <div className="section-header">======  ABOUT  ======</div>
         <div id="about-pic" style={{ backgroundImage: `url('assets/ana_portfolio.jpg')` }}></div>
         <div id="about-bio" className="expanding-item">
@@ -16,8 +16,8 @@ const About = () => {
           { showModal && <ImageModal assetName='tictac_rocket.jpeg' handleClick={() => setShowModal(!showModal)}/>}
         </div>
         <div className="section-footer">======= END =======</div>
-    </section>
+    </Fragment>
   );
 };
 
-export default About;
+export default AboutSection;

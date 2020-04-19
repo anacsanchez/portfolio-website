@@ -1,6 +1,7 @@
 import React from 'react';
-import { MenuButton, DelayedListItem } from './index';
+import { MenuButton } from './index';
 import { css } from '@emotion/core';
+import { delayedItemAnimation } from '../styles';
 
 const Menu = ({ handleSwitch, menuItems }) => {
 
@@ -18,9 +19,9 @@ const Menu = ({ handleSwitch, menuItems }) => {
       <ul className="menu-items" css={menuItemsStyle}>
       {
         menuItems.map((item,index) => (
-          <DelayedListItem delay={`${(index+3.1)*250}ms`} key={item}>
+          <li css={delayedItemAnimation(index+3, 250)} key={item}>
             <MenuButton handleClick={handleSwitch} menuItem={item} index={index} />
-          </DelayedListItem>
+          </li>
         ))
       }
       </ul>

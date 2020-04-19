@@ -1,7 +1,6 @@
 import React, { useState, useEffect }  from 'react';
-import { Menu, Projects, About, Skills, SectionSwitch, Links, Resume } from './index';
-import nav from '../options';
-const { navOptions, navKeyCodes, linkKeyCodes } = nav;
+import { Menu, ProjectsSection, AboutSection, SkillsSection, SectionSwitch, Links, ResumeSection } from './index';
+import { navOptions, navKeyCodes, linkKeyCodes, linkOptions } from '../options';
 
 const MainContent = () => {
 
@@ -41,12 +40,12 @@ const MainContent = () => {
     <main>
       <Menu handleSwitch={ switchSection } menuItems={ menuItems } />
       <SectionSwitch sectionToDisplay={currSection}>
-        <About key={ about.name }/>
-        <Projects key={ projects.name } />
-        <Resume key={ resume.name } />
-        <Skills key={ skills.name } />
+        <AboutSection key={ about.name }/>
+        <ProjectsSection key={ projects.name } />
+        <ResumeSection key={ resume.name } />
+        <SkillsSection key={ skills.name } />
       </SectionSwitch>
-      <Links tabIndexStart={menuItems.length+1}/>
+      <Links tabIndexStart={menuItems.length+1} links={Object.keys(linkOptions)}/>
     </main>
   );
 };
