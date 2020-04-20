@@ -3,7 +3,8 @@ import {
   sectionHeaderAndFooterStyles,
   itemStyles,
   expandingItemAnimationInMs,
-  expandingTextStyles
+  expandingTextStyles,
+  colors
 } from '../styles';
 import { css } from '@emotion/core';
 
@@ -31,6 +32,14 @@ const ResumeSection = () => {
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
         ====== RESUME ======
       </div>
+      <a href="/Ana_Sanchez-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        id="resume-url"
+        css={resumeLinkStyles}
+      >
+        [ DOWNLOAD ]
+      </a>
       <ul className="list" id="resume-experience">
         {
           workExperience?.length ? workExperience.map((work, index) => {
@@ -103,6 +112,17 @@ const listItemStyles = css(itemStyles, {
 
 const listBodyStyles = css({
   padding: '4px 0'
+});
+
+const resumeLinkStyles = css({
+  margin: '8px 0',
+  color: colors.green,
+  padding: '0 2px',
+  ':hover': {
+    cursor: 'pointer',
+    backgroundColor: colors.neonGreen,
+    color: colors.black
+  }
 });
 
 export default ResumeSection;
