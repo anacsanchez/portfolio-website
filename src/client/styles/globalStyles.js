@@ -56,7 +56,6 @@ export const itemStyles = css`
 
 export const expandingItemAnimationInMs = (delayIndex, baseMs) => css({
   width: '0%',
-  // padding: '12px 0',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
   animation: `500ms steps(100, end) ${animations.typing}`,

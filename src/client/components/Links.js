@@ -33,7 +33,7 @@ const Links = ({ tabIndexStart, links }) => {
 const linksSectionStyles = css({
   display: 'flex',
   flexDirection: 'column',
-  paddingTop: '32px',
+  paddingTop: '28px',
   color: colors.lightBlue
 });
 

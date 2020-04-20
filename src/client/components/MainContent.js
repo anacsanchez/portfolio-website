@@ -1,6 +1,8 @@
 import React, { useState, useEffect }  from 'react';
 import { Menu, ProjectsSection, AboutSection, SkillsSection, SectionSwitch, Links, ResumeSection } from './index';
 import { navOptions, navKeyCodes, linkKeyCodes, linkOptions } from '../options';
+import { delayedItemAnimationInMs, colors } from '../styles';
+import { css } from '@emotion/core';
 
 const MainContent = () => {
 
@@ -46,8 +48,20 @@ const MainContent = () => {
         <SkillsSection key={ skills.name } />
       </SectionSwitch>
       <Links tabIndexStart={menuItems.length+1} links={Object.keys(linkOptions)}/>
+      <div css={[
+        delayedItemAnimationInMs(menuItems.length+Object.keys(linkOptions).length+5, 250), instructionsStyles
+        ]}
+      >
+        Press [KEY] or [TAB] to navigate.
+      </div>
     </main>
   );
 };
+
+const instructionsStyles = css({
+  color: colors.white,
+  fontSize: '24px',
+  padding: '32px 0 8px 0'
+});
 
 export default MainContent;

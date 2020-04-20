@@ -1,19 +1,21 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import { animations, colors } from '../styles';
+import { animations, colors, expandingTextStyles } from '../styles';
 
 const Header = () => {
 
-  const headerTypingDuration = 2.1;
+  const headerTypingDuration = 2200;
 
   const headerAnimation = css({
-    animation: `${animations.typing} ${headerTypingDuration}s steps(80, end)`
+    width: '0%',
+    animation: `${headerTypingDuration}ms steps(80, end) ${animations.typing}`,
+    animationFillMode: 'forwards',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap',
   });
 
   const headerBase = css({
     fontSize: '38px',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap',
     letterSpacing: '0px'
   });
 
@@ -28,11 +30,11 @@ const Header = () => {
   });
 
   return (
-    <header id="header">
-        <h1 css={[headerBase, headerName, headerAnimation]} id="name">
+    <header id="header" css={headerAnimation}>
+        <h1 css={[headerBase, headerName, expandingTextStyles]} id="name">
           Ana C Sanchez
         </h1>
-        <h2 css={[headerBase, headerTitle, headerAnimation]} id="title">
+        <h2 css={[headerBase, headerTitle, expandingTextStyles]} id="title">
           Software Engineer
         </h2>
     </header>

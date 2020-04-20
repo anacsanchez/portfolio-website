@@ -34,6 +34,7 @@ body {
   background-color: var(--black);
   padding: 18px;
   font-family: "JD Nadia Regular";
+  min-width: 200px;
 }
 
 a {

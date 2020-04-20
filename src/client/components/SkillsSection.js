@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
-import { colors, sectionHeaderAndFooterStyles } from '../styles';
+import { colors, sectionHeaderAndFooterStyles, expandingItemAnimationInMs } from '../styles';
 
 const Skills = () => {
 
@@ -10,7 +10,7 @@ const Skills = () => {
         ===== SKILLS =====
       </div>
       <div css={{ display: 'flex', flexDirection: 'column' }}>
-        <ul id="proficient-skills" css={listStyles}>
+        <ul id="proficient-skills" css={[listStyles, expandingItemAnimationInMs(0, 100)]}>
           <li css={listTitleStyles}>Proficient:</li>
           <li>Javascript</li>
           <li>React.js</li>
@@ -23,7 +23,7 @@ const Skills = () => {
           <li>Mocha</li>
           <li>HTML</li>
         </ul>
-        <ul id="knowledgeable-skills" css={listStyles}>
+        <ul id="knowledgeable-skills" css={[listStyles, expandingItemAnimationInMs(1, 100)]}>
           <li css={listTitleStyles}>Knowledgeable:</li>
           <li>Docker</li>
           <li>GraphQL</li>

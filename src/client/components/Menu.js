@@ -14,7 +14,9 @@ const Menu = ({ handleSwitch, menuItems }) => {
           </li>
         ))
       }
+      {/* <li css={delayedItemAnimationInMs(0, 250)}>Press [KEY] or [TAB] to navigate.</li> */}
       </ul>
+      {/* <p css={{ color: 'white' }}>Press [KEY] or [TAB] to navigate.</p> */}
     </nav>
   );
 };
