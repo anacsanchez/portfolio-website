@@ -17,7 +17,8 @@ const colors = {
   orange: '#EA851C',
   lightOrange: '#F09238',
   darkOrange: '#AC6B2C',
-  whiteShadow: 'hsl(0, 0%, 100%,40%)'
-}
+  whiteShadow: 'hsl(0, 0%, 100%,40%)',
+  neonGreen: '#00F983'
+};
 
 export default colors;

@@ -4,7 +4,7 @@ import { animations, colors } from '../styles';
 
 const Header = () => {
 
-  const headerTypingDuration = 2.3;
+  const headerTypingDuration = 2.1;
 
   const headerAnimation = css({
     animation: `${animations.typing} ${headerTypingDuration}s steps(80, end)`

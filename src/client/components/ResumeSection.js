@@ -31,16 +31,14 @@ const ResumeSection = () => {
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
         ====== RESUME ======
       </div>
-      <ul className="list" id="resume-experience" >
+      <ul className="list" id="resume-experience">
         {
           workExperience?.length ? workExperience.map((work, index) => {
             const { title, company, location, date, responsibilities } = work;
             return (
               <li css={[
                   expandingItemAnimationInMs(index, 180),
-                  { paddingBottom: '16px' },
-                  itemStyles,
-                  css({ '& p, .emphasized-text, .item-text, .item-title': expandingTextStyles })
+                  listItemStyles
                 ]}
                 key={`${company}`}
               >
@@ -51,7 +49,7 @@ const ResumeSection = () => {
                   <h6 className="item-text">{ date }</h6>
                 </div>
                 { responsibilities?.map((description,i) =>
-                  <p className="item-text" key={`${company}-desc-${i}`} >• {description}</p>)
+                  <p className="item-text" css={listBodyStyles} key={`${company}-desc-${i}`} >• {description}</p>)
                 }
             </li>
             );
@@ -66,8 +64,7 @@ const ResumeSection = () => {
               <li
                 css={[
                   expandingItemAnimationInMs(index+workExperience.length, 180),
-                  { paddingBottom: '16px' },
-                  itemStyles
+                  listItemStyles
                 ]}
                 key={school}
               >
@@ -86,11 +83,27 @@ const ResumeSection = () => {
           }) : ''
         }
       </ul>
-      <div className="section-footer" css={sectionHeaderAndFooterStyles}>
+      <div className="section-footer"
+        css={[
+          sectionHeaderAndFooterStyles,
+          expandingItemAnimationInMs(workExperience?.length + education?.length, 180)
+        ]}
+      >
         ======= END ========
       </div>
     </Fragment>
   );
 };
 
+const listItemStyles = css(itemStyles, {
+  paddingBottom: '18px',
+  paddingTop: '10px',
+  '& p, .emphasized-text, .item-text, .item-title': expandingTextStyles
+});
+
+const listBodyStyles = css({
+  padding: '4px 0'
+});
+
 export default ResumeSection;
+

@@ -26,8 +26,6 @@ export const itemStyles = css`
     padding: 2px 0 8px 0;
     color: ${colors.brightYellow};
     word-spacing: 3px;
-    width: 800px;
-    white-space: normal;
   }
 
   .item-sub-title {
@@ -41,9 +39,8 @@ export const itemStyles = css`
     word-spacing: 3px;
     letter-spacing: 1px;
     color: ${colors.white};
-    width: 800px;
-    white-space: normal;
     font-size: 26px;
+    line-height: 90%;
   }
 
   .item-text-section {
@@ -54,8 +51,6 @@ export const itemStyles = css`
     padding: 10px 0;
     color: ${colors.teal};
     word-spacing: 3px;
-    width: 800px;
-    white-space: normal;
   }
 `;
 

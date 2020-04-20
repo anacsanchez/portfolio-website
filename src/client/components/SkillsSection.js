@@ -4,19 +4,6 @@ import { colors, sectionHeaderAndFooterStyles } from '../styles';
 
 const Skills = () => {
 
-  const listTitleStyles = css({
-    color: colors.teal,
-    letterSpacing: '1px',
-    padding: '4px 0px'
-  });
-
-  const listStyles = css({
-    padding: '6px 6px 6px 0',
-    marginRight: '26px',
-    fontSize: '28px',
-    color: colors.white
-  });
-
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
@@ -51,6 +38,19 @@ const Skills = () => {
     </Fragment>
   );
 };
+
+const listTitleStyles = css({
+  color: colors.teal,
+  letterSpacing: '1px',
+  padding: '4px 0px'
+});
+
+const listStyles = css({
+  padding: '6px 6px 6px 0',
+  marginRight: '26px',
+  fontSize: '28px',
+  color: colors.white
+});
 
 export default Skills;
 

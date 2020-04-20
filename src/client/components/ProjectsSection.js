@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { SingleProject } from './index';
-import { sectionHeaderAndFooterStyles } from '../styles';
+import { sectionHeaderAndFooterStyles, delayedItemAnimationInMs } from '../styles';
 
 const ProjectsSection = () => {
   const [ projects, setProjects ] = useState([]);
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
           : ''
         }
         </ul>
-        <div className="section-footer" css={sectionHeaderAndFooterStyles}>
+        <div className="section-footer" css={[sectionHeaderAndFooterStyles, delayedItemAnimationInMs(projects.length+1, 180)]}>
           ======== END ========
         </div>
       </Fragment>

@@ -4,39 +4,10 @@ import { CommandKey } from './index';
 import { colors, delayedItemAnimationInMs } from '../styles';
 
 const Links = ({ tabIndexStart, links }) => {
-
-  const linksSectionStyles = css({
-    display: 'flex',
-    flexDirection: 'column',
-    paddingTop: '32px',
-    color: colors.lightBlue
-  });
-
-  const linkCommandKeyStyles = css({
-    fontSize: '28px'
-  });
-
-  const linkCommandRestStyles = css({
-    fontSize: '26px',
-    letterSpacing: '4px',
-    paddingLeft: '1px'
-  });
-
-  const linksHeaderStyles = css({
-    fontSize: '28px',
-    padding: '6px 0 8px 0'
-  });
-
-  const linkStyles = css({
-    boxSizing: 'border-box',
-    width: 'max-content',
-    fontSize: '26px'
-  });
-
   return(
     <div className="links-section" css={linksSectionStyles}>
         <div className="links-header"
-          css={[linksHeaderStyles, delayedItemAnimationInMs(tabIndexStart+2, 250)]}
+          css={[linksHeaderStyles, delayedItemAnimationInMs(tabIndexStart+3, 250)]}
         >
           Find me on:
         </div>
@@ -44,7 +15,7 @@ const Links = ({ tabIndexStart, links }) => {
         links?.map((link, index) =>
             <a tabIndex={tabIndexStart}
               className="link"
-              css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+3, 250)]}
+              css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+4, 250)]}
               key={link}
             >
               <CommandKey
@@ -58,5 +29,33 @@ const Links = ({ tabIndexStart, links }) => {
     </div>
   );
 };
+
+const linksSectionStyles = css({
+  display: 'flex',
+  flexDirection: 'column',
+  paddingTop: '32px',
+  color: colors.lightBlue
+});
+
+const linkCommandKeyStyles = css({
+  fontSize: '28px'
+});
+
+const linkCommandRestStyles = css({
+  fontSize: '26px',
+  letterSpacing: '4px',
+  paddingLeft: '1px'
+});
+
+const linksHeaderStyles = css({
+  fontSize: '28px',
+  padding: '6px 0 8px 0'
+});
+
+const linkStyles = css({
+  boxSizing: 'border-box',
+  width: 'max-content',
+  fontSize: '26px'
+});
 
 export default Links;
