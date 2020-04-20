@@ -3,11 +3,15 @@ import { CommandKey } from './index';
 import { css } from '@emotion/core';
 import { colors } from '../styles';
 
-const MenuButton = ({ handleClick, index, menuItem }) => {
+const MenuButton = ({ handleClick, index, menuItem, isActive }) => {
   return (
     <button
       className="menu-button"
-      css={[menuButtonStyle, menuButtonHover]}
+      css={[
+        menuButtonStyle,
+        !isActive && menuButtonHover,
+        isActive && menuButtonActive
+      ]}
       tabIndex={index+1}
       onClick={ () => handleClick(menuItem) }
       type="button"
@@ -37,10 +41,14 @@ const menuButtonStyle = css({
 });
 
 const menuButtonHover = css({
-  '&:hover': {
+  '&:hover, :focus': {
     color: colors.brightYellow,
     textShadow: `${colors.brightYellowShadow} 1px 0 10px`
   }
+});
+
+const menuButtonActive = css({
+  color: colors.lightTeal
 });
 
 const menuKeyOptionStyle = css({

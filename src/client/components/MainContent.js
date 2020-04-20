@@ -27,6 +27,16 @@ const MainContent = () => {
     }
   };
 
+  const handleLinkKeyEnter = (evt) => {
+    if (evt.key.toLowerCase() === 'enter') {
+      openLink(linkOptions[evt.currentTarget.id].url);
+    }
+  };
+
+  const handleLinkClick = (evt) => {
+    openLink(linkOptions[evt.currentTarget.id].url);
+  };
+
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return () => {
@@ -40,16 +50,26 @@ const MainContent = () => {
 
   return (
     <main>
-      <Menu handleSwitch={ switchSection } menuItems={ menuItems } />
+      <Menu
+        handleSwitch={ switchSection }
+        menuItems={ menuItems }
+        activeSection={currSection}
+      />
       <SectionSwitch sectionToDisplay={currSection}>
         <AboutSection key={ about.name }/>
         <ProjectsSection key={ projects.name } />
         <ResumeSection key={ resume.name } />
         <SkillsSection key={ skills.name } />
       </SectionSwitch>
-      <Links tabIndexStart={menuItems.length+1} links={Object.keys(linkOptions)}/>
+      <Links
+        tabIndexStart={menuItems.length+1}
+        links={Object.keys(linkOptions)}
+        handleClick={handleLinkClick}
+        handleKeyDown={handleLinkKeyEnter}
+      />
       <div css={[
-        delayedItemAnimationInMs(menuItems.length+Object.keys(linkOptions).length+5, 250), instructionsStyles
+        delayedItemAnimationInMs(menuItems.length+Object.keys(linkOptions).length+5, 250),
+        instructionsStyles
         ]}
       >
         Press [KEY] or [TAB] to navigate.

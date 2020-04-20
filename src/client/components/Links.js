@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import { CommandKey } from './index';
 import { colors, delayedItemAnimationInMs } from '../styles';
 
-const Links = ({ tabIndexStart, links }) => {
+const Links = ({ tabIndexStart, links, handleClick, handleKeyDown }) => {
   return(
     <div className="links-section" css={linksSectionStyles}>
         <div className="links-header"
@@ -15,8 +15,11 @@ const Links = ({ tabIndexStart, links }) => {
         links?.map((link, index) =>
             <a tabIndex={tabIndexStart}
               className="link"
+              id={link}
               css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+4, 250)]}
               key={link}
+              // onClick={handleClick}
+              onKeyDown={handleKeyDown}
             >
               <CommandKey
                 keyName={link}
@@ -55,7 +58,14 @@ const linksHeaderStyles = css({
 const linkStyles = css({
   boxSizing: 'border-box',
   width: 'max-content',
-  fontSize: '26px'
+  fontSize: '26px',
+  ':hover': {
+    cursor: 'pointer',
+    color: colors.teal
+  },
+  ':focus': {
+    color: colors.teal
+  }
 });
 
 export default Links;
