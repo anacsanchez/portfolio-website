@@ -21,19 +21,4 @@ router.get('/resume', (req,res,next) => {
   }
 });
 
-router.get('/resume/download', (req,res,next) => {
-  return res.sendFile('Ana_Sanchez-Resume.pdf', {
-    root: path.join(__dirname, '..','..','public')
-  },
-  (err) => {
-        if(err) {
-          next(err);
-        }
-        else {
-          console.log('File sent successfully');
-        }
-      }
-    );
-});
-
 module.exports = router;
