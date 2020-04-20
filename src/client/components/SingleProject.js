@@ -6,10 +6,23 @@ const SingleProject = ({ name, image, url, description, tools, github, index }) 
 
   return (
     <li css={[expandingItemAnimationInMs(index, 180), singleProjectStyles]}>
-      <h3 className="item-title">> { name.toUpperCase() }</h3>
-      <p className="item-text">{description}</p>
-      <p className="emphasized-text">Built with: { tools }</p>
-      <a className="project-url">[ VISIT ]</a>
+      <h3 className="item-title">
+        > { name.toUpperCase() }
+      </h3>
+      <p className="item-text">
+        {description}
+      </p>
+      <p className="emphasized-text">
+        Built with: { tools }
+      </p>
+      <a className="project-url"
+        css={projectLinkStyles}
+        href={url}
+        target='_blank'
+        rel="noopener noreferrer"
+      >
+         [ VISIT ]
+      </a>
     </li>
   );
 
@@ -37,13 +50,19 @@ const singleProjectStyles = css({
     padding: '10px 0',
     color: colors.teal,
     lineHeight: '95%'
-  },
-  '& .project-url': {
-    padding: '8px 0',
-    color: colors.neonGreen
   }
 },{ '& .item-title, .item-text, .emphasized-text': expandingTextStyles});
 
+const projectLinkStyles = css({
+  margin: '8px 0',
+  color: colors.neonGreen,
+  padding: '0 2px',
+  ':hover': {
+    cursor: 'pointer',
+    backgroundColor: colors.neonGreen,
+    color: colors.black
+  }
+});
 
 export default SingleProject;
 

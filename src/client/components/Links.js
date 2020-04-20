@@ -18,7 +18,7 @@ const Links = ({ tabIndexStart, links, handleClick, handleKeyDown }) => {
               id={link}
               css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+4, 250)]}
               key={link}
-              // onClick={handleClick}
+              onClick={handleClick}
               onKeyDown={handleKeyDown}
             >
               <CommandKey

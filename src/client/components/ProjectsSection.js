@@ -24,8 +24,7 @@ const ProjectsSection = () => {
         <div className="section-header" css={sectionHeaderAndFooterStyles}>
           ======  PROJECTS  ======
         </div>
-        <ul>
-        {
+        <ul> {
           projects?.length ?
             projects.map((project,i) =>
               <SingleProject key={ project.name } index={i} {...project} />
