@@ -1,87 +1,29 @@
-import React, { useState, useEffect }  from 'react';
-import { Menu, ProjectsSection, AboutSection, SkillsSection, SectionSwitch, Links, ResumeSection } from './index';
-import { navOptions, navKeyCodes, linkKeyCodes, linkOptions } from '../options';
-import { delayedItemAnimationInMs, colors } from '../styles';
+import React from 'react';
+import { ProjectsSection, AboutSection, SkillsSection, SectionSwitch, ResumeSection, WindowBorder } from './index';
 import { css } from '@emotion/core';
+import { expandingTextMediaQueries, mainContentMediaQueries } from '../styles';
 
-const MainContent = () => {
-
-  const [ currSection, setCurrSection ] = useState('');
-
-  const switchSection = (name) => {
-    setCurrSection(name);
-  };
-
-  const openLink = (url) => {
-    window.open(url,'_blank', 'noopener,noreferrer');
-  };
-
-  const handleKeyDown = (evt) => {
-    const evtKey = evt.key.toLowerCase();
-
-    if(navKeyCodes[evtKey]) {
-      switchSection(navKeyCodes[evtKey]);
-    }
-    else if(linkKeyCodes[evtKey]) {
-      openLink(linkKeyCodes[evtKey]);
-    }
-  };
-
-  const handleLinkKeyEnter = (evt) => {
-    if (evt.key.toLowerCase() === 'enter') {
-      openLink(linkOptions[evt.currentTarget.id].url);
-    }
-  };
-
-  const handleLinkClick = (evt) => {
-    openLink(linkOptions[evt.currentTarget.id].url);
-  };
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  },[]);
-
-  const menuItems = [ 'projects', 'resume', 'skills', 'about' ];
-
-  const { about, projects, resume, skills } = navOptions;
+const MainContent = ({ currentSection, sectionOptions }) => {
+  const { about, projects, resume, skills } = sectionOptions;
 
   return (
-    <main>
-      <Menu
-        handleSwitch={ switchSection }
-        menuItems={ menuItems }
-        activeSection={currSection}
-      />
-      <SectionSwitch sectionToDisplay={currSection}>
-        <AboutSection key={ about.name }/>
-        <ProjectsSection key={ projects.name } />
-        <ResumeSection key={ resume.name } />
-        <SkillsSection key={ skills.name } />
-      </SectionSwitch>
-      <Links
-        tabIndexStart={menuItems.length+1}
-        links={Object.keys(linkOptions)}
-        handleClick={handleLinkClick}
-        handleKeyDown={handleLinkKeyEnter}
-      />
-      <div css={[
-        delayedItemAnimationInMs(menuItems.length+Object.keys(linkOptions).length+5, 250),
-        instructionsStyles
-        ]}
-      >
-        Press [KEY] or [TAB] to navigate.
-      </div>
+    <main css={[mainContentStyles, mainContentMediaQueries]}>
+      <WindowBorder>
+        <SectionSwitch sectionToDisplay={currentSection}>
+          <AboutSection key={ about.name }/>
+          <ProjectsSection key={ projects.name } />
+          <ResumeSection key={ resume.name } />
+          <SkillsSection key={ skills.name } />
+        </SectionSwitch>
+      </WindowBorder>
     </main>
   );
 };
 
-const instructionsStyles = css({
-  color: colors.white,
-  fontSize: '24px',
-  padding: '32px 0 8px 0'
+const mainContentStyles = css({
+  marginLeft: '300px',
+  width: '800px',
+  marginTop: '2%'
 });
 
 export default MainContent;

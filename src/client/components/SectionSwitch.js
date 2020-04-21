@@ -5,7 +5,7 @@ const SectionSwitch = ({ children, sectionToDisplay }) => {
 
   const sectionStyles = css({
     fontSize: '26px',
-    padding: '24px 0 6px 0'
+    padding: '16px 16px 16px 16px'
   });
   return (
       <Fragment>
