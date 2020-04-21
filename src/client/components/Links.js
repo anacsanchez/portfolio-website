@@ -37,8 +37,7 @@ const linksSectionStyles = css({
   display: 'flex',
   flexDirection: 'column',
   paddingTop: '28px',
-  color: colors.lightBlue,
-  paddingLeft: '4px'
+  color: colors.lightBlue
 });
 
 const linkCommandKeyStyles = css({

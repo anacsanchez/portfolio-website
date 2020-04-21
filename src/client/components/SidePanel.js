@@ -47,10 +47,9 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
 };
 
 const instructionsStyles = css({
-  color: colors.offWhite,
+  color: colors.white,
   fontSize: '24px',
-  padding: '32px 0 0px 2px',
-  letterSpacing: '1px'
+  padding: '32px 0 0px 0'
 });
 
 const sidePanelStyles = css({
