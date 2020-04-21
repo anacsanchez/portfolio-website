@@ -57,7 +57,7 @@ const projectLinkStyles = css({
   margin: '8px 0',
   color: colors.neonGreen,
   padding: '0 2px',
-  ':hover': {
+  ':hover, :focus': {
     cursor: 'pointer',
     backgroundColor: colors.neonGreen,
     color: colors.black
