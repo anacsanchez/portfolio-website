@@ -4,33 +4,49 @@ import { colors, sectionHeaderAndFooterStyles, expandingItemAnimationInMs } from
 
 const Skills = () => {
 
+  const animationDuration = 25;
+
+  let currentAnimationDelay = 0;
+
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
         ====== SKILLS ======
       </div>
       <div css={{ display: 'flex', flexDirection: 'column' }}>
-        <ul id="proficient-skills" css={[listStyles, expandingItemAnimationInMs(0, 100)]}>
-          <li css={listTitleStyles}>Proficient:</li>
-          <li>•  Javascript</li>
-          <li>•  React.js</li>
-          <li>•  Redux</li>
-          <li>•  Node.js</li>
-          <li>•  SQL</li>
-          <li>•  Git</li>
-          <li>•  Sequelize</li>
-          <li>•  Postgres</li>
-          <li>•  Mocha</li>
-          <li>•  HTML</li>
-        </ul>
-        <ul id="knowledgeable-skills" css={[listStyles, expandingItemAnimationInMs(1, 100)]}>
-          <li css={listTitleStyles}>Knowledgeable:</li>
-          <li>•  Docker</li>
-          <li>•  GraphQL</li>
-          <li>•  Apollo</li>
-          <li>•  Kubernetes</li>
-          <li>•  Redis</li>
-        </ul>
+        {
+          Object.keys(skillsObj).map(currKey => {
+            return (
+              <ul id={`${currKey}-skills`}
+                key={currKey}
+                css={[
+                  listStyles,
+                  expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)
+                ]}
+              >
+                <li
+                  css={[
+                    listTitleStyles,
+                    expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)
+                  ]}
+                >
+                  {`${currKey}:`}
+                </li>
+                {
+                  skillsObj[currKey].map(currSkill => {
+                    return (
+                      <li key={currSkill}
+                        css={expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)}
+                      >
+                        •  {currSkill}
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+            );
+          })
+        }
       </div>
       <div className="section-footer" css={sectionHeaderAndFooterStyles}>
         ======= END ========
@@ -42,11 +58,12 @@ const Skills = () => {
 const listTitleStyles = css({
   color: colors.teal,
   letterSpacing: '1px',
-  padding: '4px 0px'
+  padding: '4px 0px',
+  textTransform: 'capitalize'
 });
 
 const listStyles = css({
-  padding: '6px 6px 6px 6px',
+  padding: '6px',
   fontSize: '28px',
   color: colors.white,
   wordSpacing: '3px',
@@ -56,3 +73,24 @@ const listStyles = css({
 
 export default Skills;
 
+const skillsObj = {
+  proficient: [
+    'Javascript',
+    'React.js',
+    'Redux',
+    'Node.js',
+    'SQL',
+    'Git',
+    'Sequelize',
+    'Postgres',
+    'Mocha',
+    'HTML'
+  ],
+  knowledgeable: [
+    'Docker',
+    'GraphQL',
+    'Apollo',
+    'Kubernetes',
+    'Redis'
+  ]
+};
