@@ -1,24 +1,5 @@
 :root {
-  /* --green: #05FF09;
-  --neon-green: #00F983;
-  --dark-green: #00550F;
-  --white: #F7F8F8;
-  --off-white:  #E7EAF1;
-  --bright-yellow: #FFFD00;
-  --bright-yellow-shadow: #fffd00ba;
-  --dark-yellow: #A8AE00;
-  --light-teal: #60E8FC;
-  --light-blue: lightblue;
-  --soft-blue: #D6FEFF; */
   --black: black;
-  /* --teal: #00F8FC;
-  --bright-blue: #009FFE;
-  --blue: #0098E2;
-  --gray: #818A93;
-  --orange: #EA851C;
-  --light-orange: #F09238;
-  --dark-orange: #AC6B2C;
-  --white-shadow: hsl(0, 0%, 100%,40%); */
 }
 
 @font-face {
@@ -32,7 +13,6 @@
 
 body {
   background-color: var(--black);
-  /* padding: 18px; */
   font-family: "JD Nadia Regular";
   min-width: 200px;
 }
@@ -53,41 +33,3 @@ h1,h2,h3,h4,h5,h6,p, ul, li, a {
 ul, li {
   list-style: none;
 }
-/*
-
-*/
-/* @media only screen and (max-width: 850px) {
-  p, .emphasized-text, .item-text {
-    width: 700px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  p, .emphasized-text, .item-text {
-    width: 600px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  p, .emphasized-text, .item-text {
-    width: 500px;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  p, .emphasized-text, .item-text {
-    width: 400px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  p, .emphasized-text, .item-text {
-    width: 300px;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  p, .emphasized-text, .item-text {
-    width: 225px;
-  }
-} */

@@ -1,7 +1,7 @@
 import React from 'react';
 import { linkOptions } from '../options';
 import { openLink } from '../utils';
-import { colors, sidePanelMediaQueries, delayedItemAnimationInMs } from '../styles';
+import { colors, sidePanelMediaQueries, sidePanelContentMediaQueries, delayedItemAnimationInMs } from '../styles';
 import { Header, Menu, Links } from './index';
 import { css } from '@emotion/core';
 
@@ -21,7 +21,7 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
 
   return (
     <div id="side-panel" css={[sidePanelStyles, sidePanelMediaQueries]}>
-      <div id="side-panel-content" css={sidePanelContentStyles}>
+      <div id="side-panel-content" css={[sidePanelContentStyles, sidePanelContentMediaQueries]}>
         <Header/>
         <Menu
           handleSwitch={ handleSwitchSection }
@@ -47,9 +47,10 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
 };
 
 const instructionsStyles = css({
-  color: colors.white,
+  color: colors.offWhite,
   fontSize: '24px',
-  padding: '32px 0 0px 0'
+  padding: '32px 0 0px 2px',
+  letterSpacing: '1px'
 });
 
 const sidePanelStyles = css({

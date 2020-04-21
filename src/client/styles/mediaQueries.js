@@ -32,30 +32,45 @@ const breakpointsExpandingTextStyles = {
     width: 450px;
   }`,
   525: `{
-    width: 400px;
-  }`,
-  475: `{
     width: 375px;
   }`,
-  425: `{
+  475: `{
     width: 325px;
   }`,
-  375: `{
+  425: `{
     width: 300px;
   }`,
-  350: `{
+  375: `{
     width: 275px;
   }`,
-  325: `{
+  350: `{
     width: 250px;
+  }`,
+  325: `{
+    width: 225px;
   }`
 };
 
 const breakpointsSidePanelStyles = {
-  // 725: `{
-  //   position: relative
-  // }`,
+  700: `{
+    position: relative;
+    min-height: initial;
+    margin-top: 24px;
+  }`,
 };
+
+const breakpointsSidePanelContentStyles = {
+  700: `{
+    justify-content: flex-start;
+  }`
+};
+
+const breakpointsPageStyles = {
+  700: `{
+    justify-content: flex-start;
+    margin-left: 16px;
+  }`
+}
 
 const breakpointsMainContentStyles = {
   1150: `{
@@ -127,3 +142,7 @@ export const headerMediaQueries = createMediaQueries(breakPointsHeaderStyles);
 export const sidePanelMediaQueries = createMediaQueries(breakpointsSidePanelStyles);
 
 export const mainContentMediaQueries = createMediaQueries(breakpointsMainContentStyles);
+
+export const sidePanelContentMediaQueries = createMediaQueries(breakpointsSidePanelContentStyles);
+
+export const pageMediaQueries = createMediaQueries(breakpointsPageStyles);

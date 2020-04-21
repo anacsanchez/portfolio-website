@@ -7,33 +7,33 @@ const Skills = () => {
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
-        ===== SKILLS =====
+        ====== SKILLS ======
       </div>
       <div css={{ display: 'flex', flexDirection: 'column' }}>
         <ul id="proficient-skills" css={[listStyles, expandingItemAnimationInMs(0, 100)]}>
           <li css={listTitleStyles}>Proficient:</li>
-          <li>Javascript</li>
-          <li>React.js</li>
-          <li>Redux</li>
-          <li>Node.js</li>
-          <li>SQL</li>
-          <li>Git</li>
-          <li>Sequelize</li>
-          <li>Postgres</li>
-          <li>Mocha</li>
-          <li>HTML</li>
+          <li>•  Javascript</li>
+          <li>•  React.js</li>
+          <li>•  Redux</li>
+          <li>•  Node.js</li>
+          <li>•  SQL</li>
+          <li>•  Git</li>
+          <li>•  Sequelize</li>
+          <li>•  Postgres</li>
+          <li>•  Mocha</li>
+          <li>•  HTML</li>
         </ul>
         <ul id="knowledgeable-skills" css={[listStyles, expandingItemAnimationInMs(1, 100)]}>
           <li css={listTitleStyles}>Knowledgeable:</li>
-          <li>Docker</li>
-          <li>GraphQL</li>
-          <li>Apollo</li>
-          <li>Kubernetes</li>
-          <li>Redis</li>
+          <li>•  Docker</li>
+          <li>•  GraphQL</li>
+          <li>•  Apollo</li>
+          <li>•  Kubernetes</li>
+          <li>•  Redis</li>
         </ul>
       </div>
       <div className="section-footer" css={sectionHeaderAndFooterStyles}>
-        ====== END =======
+        ======= END ========
       </div>
     </Fragment>
   );
@@ -46,10 +46,12 @@ const listTitleStyles = css({
 });
 
 const listStyles = css({
-  padding: '6px 6px 6px 0',
-  marginRight: '26px',
+  padding: '6px 6px 6px 6px',
   fontSize: '28px',
-  color: colors.white
+  color: colors.white,
+  wordSpacing: '3px',
+  letterSpacing: '1px',
+  lineHeight: '90%'
 });
 
 export default Skills;

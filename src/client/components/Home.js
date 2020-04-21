@@ -3,6 +3,7 @@ import { SidePanel, MainContent } from './index';
 import { navOptions, navKeyCodes, linkKeyCodes } from '../options';
 import { openLink } from '../utils';
 import { css } from '@emotion/core';
+import { pageMediaQueries } from '../styles';
 
 const Home = () => {
   const [ currSection, setCurrSection ] = useState('');
@@ -30,7 +31,7 @@ const Home = () => {
   },[]);
 
   return (
-    <div id="page" css={pageStyles}>
+    <div id="page" css={[pageStyles, pageMediaQueries]}>
       <SidePanel
         currentSection={currSection}
         handleSwitchSection={switchSection}
