@@ -67,7 +67,6 @@ const breakpointsSidePanelContentStyles = {
 
 const breakpointsPageStyles = {
   700: `{
-    justify-content: flex-start;
     margin-left: 16px;
   }`
 }
