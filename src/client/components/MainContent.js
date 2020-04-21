@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProjectsSection, AboutSection, SkillsSection, SectionSwitch, ResumeSection, WindowBorder } from './index';
 import { css } from '@emotion/core';
-import { expandingTextMediaQueries, mainContentMediaQueries } from '../styles';
+import { mainContentMediaQueries } from '../styles';
 
 const MainContent = ({ currentSection, sectionOptions }) => {
   const { about, projects, resume, skills } = sectionOptions;

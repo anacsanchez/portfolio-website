@@ -47,7 +47,7 @@ const breakpointsExpandingTextStyles = {
     width: 250px;
   }`,
   325: `{
-    width: 225px;
+    width: 200px;
   }`
 };
 
@@ -55,21 +55,10 @@ const breakpointsSidePanelStyles = {
   700: `{
     position: relative;
     min-height: initial;
-    margin-top: 24px;
+    margin-top: 25%;
+    align-self: center;
   }`,
 };
-
-const breakpointsSidePanelContentStyles = {
-  700: `{
-    justify-content: flex-start;
-  }`
-};
-
-const breakpointsPageStyles = {
-  700: `{
-    margin-left: 16px;
-  }`
-}
 
 const breakpointsMainContentStyles = {
   1150: `{
@@ -124,6 +113,9 @@ const breakpointsMainContentStyles = {
 // }
 
 const breakPointsHeaderStyles = {
+  350: `{
+    width: 225px;
+  }`,
   250: `{
     width: 225px;
   }`,
@@ -141,7 +133,3 @@ export const headerMediaQueries = createMediaQueries(breakPointsHeaderStyles);
 export const sidePanelMediaQueries = createMediaQueries(breakpointsSidePanelStyles);
 
 export const mainContentMediaQueries = createMediaQueries(breakpointsMainContentStyles);
-
-export const sidePanelContentMediaQueries = createMediaQueries(breakpointsSidePanelContentStyles);
-
-export const pageMediaQueries = createMediaQueries(breakpointsPageStyles);
