@@ -5,7 +5,7 @@ import { openLink } from '../utils';
 import { css } from '@emotion/core';
 
 const Home = () => {
-  const [ currSection, setCurrSection ] = useState('');
+  const [ currSection, setCurrSection ] = useState('projects');
 
   const switchSection = (name) => {
     setCurrSection(name);
@@ -43,7 +43,6 @@ const Home = () => {
           />
         : ''
       }
-
     </div>
   );
 };

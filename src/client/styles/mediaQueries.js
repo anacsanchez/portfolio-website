@@ -2,28 +2,37 @@ import { createMediaQueries } from './utils';
 
 const breakpointsExpandingTextStyles = {
   1150: `{
-    width: 750px;
-  }`,
-  1100: `{
     width: 700px;
   }`,
-  1050: `{
+  1100: `{
     width: 675px;
   }`,
-  1000: `{
+  1050: `{
     width: 625px;
   }`,
-  950: `{
+  1000: `{
     width: 575px;
   }`,
-  900: `{
+  950: `{
     width: 525px;
   }`,
-  850: `{
+  900: `{
     width: 475px;
   }`,
-  525: `{
+  850: `{
     width: 425px;
+  }`,
+  800: `{
+    width: 400px;
+  }`,
+  750: `{
+    width: 350px;
+  }`,
+  700: `{
+    width: 450px;
+  }`,
+  525: `{
+    width: 400px;
   }`,
   475: `{
     width: 375px;
@@ -43,15 +52,16 @@ const breakpointsExpandingTextStyles = {
 };
 
 const breakpointsSidePanelStyles = {
-  525: `{
+  725: `{
     position: relative
   }`,
 };
 
 const breakpointsMainContentStyles = {
-  525: `{
-    margin-left: 12px;
+  725: `{
+    margin-left: 24px;
     margin-top: 12px;
+    width: 500px;
   }`
 }
 

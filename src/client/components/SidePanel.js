@@ -51,7 +51,7 @@ const instructionsStyles = css({
 });
 
 const sidePanelStyles = css({
-  padding: '22px 16px 0 16px',
+  padding: '8px 16px 0 32px',
   position: 'fixed',
   top: '15%'
 });

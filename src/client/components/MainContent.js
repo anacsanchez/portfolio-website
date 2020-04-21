@@ -22,6 +22,7 @@ const MainContent = ({ currentSection, sectionOptions }) => {
 
 const mainContentStyles = css({
   marginLeft: '300px',
+  marginRight: '24px',
   width: '800px',
   marginTop: '2%'
 });
