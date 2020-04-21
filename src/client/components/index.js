@@ -13,3 +13,4 @@ export { default as MainContent } from './MainContent';
 export { default as CommandKey } from './CommandKey';
 export { default as MenuButton } from './MenuButton';
 export { default as WindowBorder } from './WindowBorder';
+export { default as SidePanel } from './SidePanel';
