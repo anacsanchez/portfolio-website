@@ -21,6 +21,7 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
 
   return (
     <div id="side-panel" css={[sidePanelStyles, sidePanelMediaQueries]}>
+      <div id="side-panel-content" css={sidePanelContentStyles}>
         <Header/>
         <Menu
           handleSwitch={ handleSwitchSection }
@@ -40,6 +41,7 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
         >
           Press [KEY] or [TAB] to navigate.
       </div>
+      </div>
     </div>
   );
 };
@@ -47,13 +49,24 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
 const instructionsStyles = css({
   color: colors.white,
   fontSize: '24px',
-  padding: '32px 0 8px 0'
+  padding: '32px 0 0px 0'
 });
 
 const sidePanelStyles = css({
-  padding: '8px 16px 0 32px',
-  position: 'fixed',
-  top: '15%'
+  padding: '0px 16px 0 16px',
+  position: 'sticky',
+  top: '0px',
+  minHeight: '95vh',
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignSelf: 'flex-start'
+});
+
+const sidePanelContentStyles = css({
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column'
 });
 
 export default SidePanel;

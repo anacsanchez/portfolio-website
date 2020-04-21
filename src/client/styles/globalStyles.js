@@ -14,7 +14,7 @@ export const sectionHeaderAndFooterStyles = css({
 });
 
 export const expandingTextStyles = css`{
-  width: 800px;
+  width: 750px;
   white-space: normal;
 
   ${expandingTextMediaQueries}

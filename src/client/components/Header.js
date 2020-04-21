@@ -12,6 +12,7 @@ const Header = () => {
     animationFillMode: 'forwards',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
+    paddingLeft: '2px'
   });
 
   const headerBase = css({
