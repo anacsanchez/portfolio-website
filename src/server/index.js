@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8080;
+const router = require('./api');
 module.exports = app;
 
 app.use(morgan('dev'));
@@ -13,7 +14,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', '..', 'public')));
+
+app.use('/api', router);
 
 app.use((req, res, next) => {
   if (path.extname(req.path).length) {
@@ -26,7 +29,7 @@ app.use((req, res, next) => {
 });
 
 app.use('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public/index.html'));
+  res.sendFile(path.join(__dirname, '..', '..', 'public', 'index.html'));
 });
 
 app.use((err, req, res, next) => {

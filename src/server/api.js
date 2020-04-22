@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const projects = require('./projects.json');
 const resume = require('./resume.json');
+const path = require('path');
 
 router.get('/projects', (req,res,next) => {
   if(!projects) {
