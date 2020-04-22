@@ -12,7 +12,7 @@ const MenuButton = ({ handleClick, index, menuItem, isActive }) => {
         !isActive && menuButtonHover,
         isActive && menuButtonActive
       ]}
-      tabIndex={index+1}
+      tabIndex={0}
       onClick={ () => handleClick(menuItem) }
       type="button"
     >

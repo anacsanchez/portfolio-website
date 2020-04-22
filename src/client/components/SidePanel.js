@@ -29,7 +29,7 @@ const SidePanel = ({ currentSection, handleSwitchSection}) => {
           activeSection={currentSection}
         />
         <Links
-          tabIndexStart={menuItems.length+1}
+          linkIndexStart={menuItems.length+1}
           links={Object.keys(linkOptions)}
           handleClick={handleLinkClick}
           handleKeyDown={handleLinkKeyEnter}

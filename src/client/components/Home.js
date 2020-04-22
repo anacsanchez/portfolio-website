@@ -40,7 +40,6 @@ const Home = () => {
           <MainContent
             currentSection={currSection}
             sectionOptions={navOptions}
-            tabIndexStart={Object.keys(navKeyCodes).length + Object.keys(linkKeyCodes).length + 1}
           />
         : ''
       }

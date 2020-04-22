@@ -3,7 +3,7 @@ import { ProjectsSection, AboutSection, SkillsSection, SectionSwitch, ResumeSect
 import { css } from '@emotion/core';
 import { mainContentMediaQueries } from '../styles';
 
-const MainContent = ({ currentSection, sectionOptions, tabIndexStart }) => {
+const MainContent = ({ currentSection, sectionOptions }) => {
   const { about, projects, resume, skills } = sectionOptions;
 
   return (
@@ -11,7 +11,7 @@ const MainContent = ({ currentSection, sectionOptions, tabIndexStart }) => {
       <WindowBorder>
         <SectionSwitch sectionToDisplay={currentSection}>
           <AboutSection key={ about.name }/>
-          <ProjectsSection key={ projects.name } projectTabIndexStart={tabIndexStart} />
+          <ProjectsSection key={ projects.name } />
           <ResumeSection key={ resume.name } />
           <SkillsSection key={ skills.name } />
         </SectionSwitch>

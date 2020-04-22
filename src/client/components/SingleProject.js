@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { colors, expandingItemAnimationInMs, expandingTextStyles } from '../styles';
 
-const SingleProject = ({ name, image, url, description, tools, github, index, tabIndex }) => {
+const SingleProject = ({ name, image, url, description, tools, github, index }) => {
 
   return (
     <li css={[expandingItemAnimationInMs(index, 180), singleProjectStyles]}>
@@ -20,7 +20,7 @@ const SingleProject = ({ name, image, url, description, tools, github, index, ta
         href={url}
         target='_blank'
         rel="noopener noreferrer"
-        tabIndex={tabIndex}
+        tabIndex={0}
       >
          [ VISIT ]
       </a>

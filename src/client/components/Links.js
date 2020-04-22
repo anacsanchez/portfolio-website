@@ -3,20 +3,20 @@ import { css } from '@emotion/core';
 import { CommandKey } from './index';
 import { colors, delayedItemAnimationInMs } from '../styles';
 
-const Links = ({ tabIndexStart, links, handleClick, handleKeyDown }) => {
+const Links = ({ linkIndexStart, links, handleClick, handleKeyDown }) => {
   return(
     <div className="links-section" css={linksSectionStyles}>
         <div className="links-header"
-          css={[linksHeaderStyles, delayedItemAnimationInMs(tabIndexStart+3, 250)]}
+          css={[linksHeaderStyles, delayedItemAnimationInMs(linkIndexStart+3, 250)]}
         >
           Find me on:
         </div>
       {
         links?.map((link, index) =>
-            <a tabIndex={tabIndexStart+index}
+            <a tabIndex={0}
               className="link"
               id={link}
-              css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+4, 250)]}
+              css={[linkStyles, delayedItemAnimationInMs(linkIndexStart+index+4, 250)]}
               key={link}
               onClick={handleClick}
               onKeyDown={handleKeyDown}

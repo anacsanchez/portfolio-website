@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { SingleProject } from './index';
 import { sectionHeaderAndFooterStyles, delayedItemAnimationInMs } from '../styles';
 
-const ProjectsSection = ({ projectTabIndexStart }) => {
+const ProjectsSection = () => {
   const [ projects, setProjects ] = useState([]);
 
   useEffect (() => {
@@ -27,7 +27,7 @@ const ProjectsSection = ({ projectTabIndexStart }) => {
         <ul> {
           projects?.length ?
             projects.map((project,i) =>
-              <SingleProject key={ project.name } index={i} {...project} tabIndex={projectTabIndexStart + i}/>
+              <SingleProject key={ project.name } index={i} {...project} />
             )
           : ''
         }
