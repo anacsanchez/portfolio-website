@@ -13,7 +13,7 @@ const Links = ({ tabIndexStart, links, handleClick, handleKeyDown }) => {
         </div>
       {
         links?.map((link, index) =>
-            <a tabIndex={tabIndexStart}
+            <a tabIndex={tabIndexStart+index}
               className="link"
               id={link}
               css={[linkStyles, delayedItemAnimationInMs(tabIndexStart+index+4, 250)]}
