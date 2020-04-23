@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import { CommandKey } from './index';
 import { colors, delayedDisplayAnimationInMs } from '../styles';
 
-const Links = ({ links, handleClick, handleKeyDown, baseDelayMs, startMs }) => {
+const Links = ({ links, handleLinkEvent, baseDelayMs, startMs }) => {
 
   return(
     <div className="links-section" css={linksSectionStyles}>
@@ -19,8 +19,8 @@ const Links = ({ links, handleClick, handleKeyDown, baseDelayMs, startMs }) => {
               id={link}
               css={[linkStyles, delayedDisplayAnimationInMs(index+1, baseDelayMs, startMs)]}
               key={link}
-              onClick={handleClick}
-              onKeyDown={handleKeyDown}
+              onClick={handleLinkEvent}
+              onKeyDown={handleLinkEvent}
             >
               <CommandKey
                 keyName={link}
@@ -42,11 +42,11 @@ const linksSectionStyles = css({
 });
 
 const linkCommandKeyStyles = css({
-  fontSize: '28px'
+  fontSize: '30px'
 });
 
 const linkCommandRestStyles = css({
-  fontSize: '26px',
+  fontSize: '28px',
   letterSpacing: '4px',
   paddingLeft: '1px'
 });

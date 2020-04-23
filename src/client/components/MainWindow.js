@@ -1,13 +1,20 @@
 import React from 'react';
-import { ProjectsSection, AboutSection, SkillsSection, SectionSwitch, ResumeSection, WindowBorder } from './index';
 import { css } from '@emotion/core';
-import { mainContentMediaQueries } from '../styles';
+import {
+  ProjectsSection,
+  AboutSection,
+  SkillsSection,
+  SectionSwitch,
+  ResumeSection,
+  WindowBorder
+} from './index';
+import { mainWindowMediaQueries } from '../styles';
 
 const MainWindow = ({ currentSection, sectionOptions }) => {
   const { about, projects, resume, skills } = sectionOptions;
 
   return (
-    <main css={[mainContentStyles, mainContentMediaQueries]}>
+    <main css={[mainWindowStyles, mainWindowMediaQueries]}>
       <WindowBorder>
         <SectionSwitch sectionToDisplay={currentSection}>
           <AboutSection key={ about.name }/>
@@ -20,7 +27,7 @@ const MainWindow = ({ currentSection, sectionOptions }) => {
   );
 };
 
-const mainContentStyles = css({
+const mainWindowStyles = css({
   width: '800px',
   marginTop: '24px'
 });

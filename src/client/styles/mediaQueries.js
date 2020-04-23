@@ -60,7 +60,7 @@ const breakpointsSidePanelStyles = {
   }`,
 };
 
-const breakpointsMainContentStyles = {
+const breakpointsMainWindowStyles = {
   1150: `{
     width: 700px;
   }`,
@@ -132,4 +132,4 @@ export const headerMediaQueries = createMediaQueries(breakPointsHeaderStyles);
 
 export const sidePanelMediaQueries = createMediaQueries(breakpointsSidePanelStyles);
 
-export const mainContentMediaQueries = createMediaQueries(breakpointsMainContentStyles);
+export const mainWindowMediaQueries = createMediaQueries(breakpointsMainWindowStyles);

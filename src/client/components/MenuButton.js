@@ -1,6 +1,6 @@
 import React from 'react';
-import { CommandKey } from './index';
 import { css } from '@emotion/core';
+import { CommandKey } from './index';
 import { colors } from '../styles';
 
 const MenuButton = ({ handleClick, menuItem, isActive }) => {
@@ -32,12 +32,12 @@ const menuButtonStyle = css({
     hsl(0, 0%, 10%,40%) 20px,
     hsl(220, 10%, 80%, 10%) 20px,
     hsl(220, 10%, 80%, 10%) 22px)`,
-  fontSize: "30px",
-  width: "max-content",
-  border: "none",
-  fontFamily: "JD Nadia Regular",
+  fontSize: '30px',
+  width: 'max-content',
+  border: 'none',
+  fontFamily: 'JD Nadia Regular',
   color: colors.white,
-  cursor: "pointer"
+  cursor: 'pointer'
 });
 
 const menuButtonHover = css({
@@ -52,11 +52,11 @@ const menuButtonActive = css({
 });
 
 const menuKeyOptionStyle = css({
-  fontSize: "30px"
+  fontSize: "32px"
 });
 
 const menuKeyRestStyle = css({
-  fontSize: "28px",
+  fontSize: "30px",
   letterSpacing: "4px",
   paddingLeft: "2px"
 });

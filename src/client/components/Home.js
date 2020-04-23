@@ -1,8 +1,15 @@
 import React, { useState, useEffect }  from 'react';
-import { SidePanel, MainWindow, Header, Menu, Links, Instructions } from './index';
+import { css } from '@emotion/core';
+import {
+  SidePanel,
+  MainWindow,
+  Header,
+  Menu,
+  Links,
+  Instructions
+} from './index';
 import navigation from '../navigation';
 import { openLink } from '../utils';
-import { css } from '@emotion/core';
 
 const Home = () => {
 
@@ -22,7 +29,7 @@ const Home = () => {
   };
 
   const handleLinkEvent = (evt) => {
-    if (evt.key.toLowerCase() === 'enter' || evt.type === 'click') {
+    if (evt.key?.toLowerCase() === 'enter' || evt.type === 'click') {
       openLink(links.options[evt.currentTarget.id].url);
     }
   };
@@ -40,7 +47,7 @@ const Home = () => {
   const baseDelayMs = 200;
   const headerTypingDuration = 900;
 
-  const menuStartDelay = headerTypingDuration + 25;
+  const menuStartDelay = headerTypingDuration + 50;
   const linksStartDelay = menuStartDelay + (menuItems.length * baseDelayMs);
   const instructionsStartDelay = linksStartDelay + (linksItems.length * baseDelayMs);
 
@@ -49,7 +56,7 @@ const Home = () => {
       <SidePanel>
         <Header duration={headerTypingDuration}/>
         <Menu
-          handleSwitch={() => setCurrSection(name)}
+          handleSwitch={(name) => setCurrSection(name)}
           menuItems={ menuItems }
           activeSection={currSection}
           baseDelayMs={baseDelayMs}

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import { css } from '@emotion/core';
 import {
   sectionHeaderAndFooterStyles,
   typingAnimationInMs,
   typingAnimationContentStyles,
   colors
 } from '../styles';
-import { css } from '@emotion/core';
 
 const ResumeSection = () => {
 
@@ -109,36 +109,43 @@ const ResumeSection = () => {
 const listItemStyles = css({
   paddingBottom: '18px',
   paddingTop: '10px',
-  '& *': typingAnimationContentStyles
+  '& *': typingAnimationContentStyles,
 });
 
 const listBodyStyles = css({
-  padding: '4px 0'
+  padding: '4px 0',
+  color: colors.white,
+  letterSpacing: '1px',
+  wordSpacing: '3px',
+  fontSize: '28px'
 });
 
 const downloadLinkStyles = css({
   margin: '8px 0',
   color: colors.green,
   padding: '0 2px',
+  fontSize: '30px',
   ':hover': {
     cursor: 'pointer',
     backgroundColor: colors.neonGreen,
     color: colors.black
-  }
+  },
 });
 
 const titleStyles = css({
-  fontSize: '28px',
   padding: '2px 0 8px 0',
   color: colors.brightYellow,
-  wordSpacing: '3px'
+  wordSpacing: '3px',
+  fontSize: '30px',
+  letterSpacing: '1px'
 });
 
 const orgNameStyles = css({
-  fontSize: '26px',
   padding: '2px 0',
   color: colors.teal,
-  wordSpacing: '3px'
+  wordSpacing: '3px',
+  fontSize: '28px',
+  letterSpacing: '1px'
 });
 
 const infoSectionStyles = css({
@@ -149,8 +156,8 @@ const infoTextStyles = css({
   wordSpacing: '3px',
   letterSpacing: '1px',
   color: colors.white,
-  fontSize: '26px',
-  lineHeight: '90%'
+  lineHeight: '90%',
+  fontSize: '28px'
 });
 
 export default ResumeSection;

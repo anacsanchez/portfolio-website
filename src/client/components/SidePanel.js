@@ -1,19 +1,14 @@
 import React from 'react';
-
+import { css } from '@emotion/core';
 import { sidePanelMediaQueries } from '../styles';
 
-import { css } from '@emotion/core';
-
-const SidePanel = ({ children }) => {
-
-  return (
-    <div id="side-panel" css={[sidePanelStyles, sidePanelMediaQueries]}>
-      <div id="side-panel-content" css={[sidePanelContentStyles]}>
-        {children}
-      </div>
+const SidePanel = ({ children }) => (
+  <div id="side-panel" css={[sidePanelStyles, sidePanelMediaQueries]}>
+    <div id="side-panel-content" css={[sidePanelContentStyles]}>
+      {children}
     </div>
-  );
-};
+  </div>
+);
 
 const sidePanelStyles = css({
   padding: '0px 16px 0 16px',

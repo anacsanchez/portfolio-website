@@ -1,6 +1,6 @@
 import React from 'react';
-import { MenuButton } from './index';
 import { css } from '@emotion/core';
+import { MenuButton } from './index';
 import { delayedDisplayAnimationInMs } from '../styles';
 
 const Menu = ({ handleSwitch, menuItems, activeSection, baseDelayMs, startMs }) => {

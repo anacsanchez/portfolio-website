@@ -19,11 +19,11 @@ export const animations = {
   `
 };
 
-export const typingAnimationInMs = (delayIndex, baseMs) => css({
+export const typingAnimationInMs = (delayIndex, baseMs, steps=100, duration=1000) => css({
   width: '0%',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
-  animation: `1000ms steps(100, end) ${animations.typing}`,
+  animation: `${duration}ms steps(${steps}, end) ${animations.typing}`,
   animationFillMode: 'forwards',
   animationDelay: `${ delayIndex * baseMs }ms`
 });
