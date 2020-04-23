@@ -47,10 +47,10 @@ const AboutSection = () => {
 const aboutTextStyles = css({
   padding: '8px 0',
   wordSpacing: '4px',
-  letterSpacing: '2px',
+  letterSpacing: '1px',
   color: colors.white,
   fontSize: '30px',
-  lineHeight: '90%'
+  lineHeight: '85%'
 });
 
 const aboutSectionContent = [

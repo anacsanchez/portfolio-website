@@ -6,7 +6,8 @@ const SectionSwitch = ({ children, sectionToDisplay }) => {
   const sectionStyles = css({
     fontSize: '26px',
     padding: '16px 16px 16px 32px',
-    // height: '70vh'
+    height: '70vh',
+    overflowY: 'scroll'
   });
   return (
       <Fragment>
