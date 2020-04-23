@@ -3,7 +3,7 @@ import { CommandKey } from './index';
 import { css } from '@emotion/core';
 import { colors } from '../styles';
 
-const MenuButton = ({ handleClick, index, menuItem, isActive }) => {
+const MenuButton = ({ handleClick, menuItem, isActive }) => {
   return (
     <button
       className="menu-button"

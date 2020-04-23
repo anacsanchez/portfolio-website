@@ -1,41 +1,30 @@
-import React, { useState, Fragment } from 'react';
-import ImageModal from './ImageModal';
+import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
-import { colors, sectionHeaderAndFooterStyles, expandingItemAnimationInMs, expandingTextStyles } from '../styles';
+import { colors,
+  sectionHeaderAndFooterStyles,
+  typingAnimationInMs,
+  typingAnimationContentStyles
+} from '../styles';
 
 const AboutSection = () => {
-  const [ showModal, setShowModal ] = useState(false);
+
+  const animationDurationMs = 200;
 
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
         ======  ABOUT  ======
       </div>
-      <div id="about-pic" style={{ backgroundImage: `url('assets/ana_portfolio.jpg')` }}></div>
       <div id="about-bio" css={ aboutTextStyles }>
-        <li css={expandingItemAnimationInMs(0,animationDurationMs)}>
-          <p>
-            I'm a software engineer with an excitement for new tech challenges and building projects that leave lasting impressions.
-          </p>
-        </li>
-        <li css={expandingItemAnimationInMs(3,animationDurationMs)}>
-          <p>
-            I've always loved experimenting with technology, from swapping parts in scrap computers as a kid to trying emulators on every single mobile device I owned.
-          </p>
-        </li>
-        <li css={expandingItemAnimationInMs(6,animationDurationMs)}>
-          <p>
-            I began to learn programming as a Tech Support Specialist, using HTML and CSS to implement more intuitive support articles than the built-in format. That experience empowered me to express my ideas through coding and branch out as a developer.
-          </p>
-        </li>
-        <li css={expandingItemAnimationInMs(9,animationDurationMs)}>
-          <p>
-            I'm currently living in downtown NYC with <span id="dog-modal-link" onClick={() => setShowModal(!showModal)}>two awesome rescue dogs.</span>
-          </p>
-        </li>
-        { showModal && <ImageModal assetName='tictac_rocket.jpeg' handleClick={() => setShowModal(!showModal)}/>}
+        {
+          aboutSectionContent.map((paragraph, index) =>
+            <li key={`paragraph-${index}`} css={ typingAnimationInMs(index * 3,animationDurationMs) }>
+              <p>{paragraph}</p>
+            </li>
+          )
+        }
       </div>
-      <div className="section-footer" css={[sectionHeaderAndFooterStyles, expandingItemAnimationInMs(12,animationDurationMs)]}>
+      <div className="section-footer" css={[ sectionHeaderAndFooterStyles, typingAnimationInMs(aboutSectionContent.length * 3,animationDurationMs) ]}>
         ======= END =======
       </div>
     </Fragment>
@@ -48,13 +37,18 @@ const aboutTextStyles = css({
     wordSpacing: '3px',
     letterSpacing: '1px',
     color: colors.white,
-    fontSize: '26px',
+    fontSize: '32px',
     lineHeight: '90%'
   }
 },
-{ '& p': expandingTextStyles }
+{ '& p': typingAnimationContentStyles }
 );
 
-const animationDurationMs = 60;
+const aboutSectionContent = [
+  "I'm a software engineer with an excitement for new tech challenges and building projects that leave lasting impressions.",
+  "I've always loved experimenting with technology, from swapping parts in scrap computers as a kid to trying emulators on every single mobile device I owned.",
+  "I began to learn programming as a Tech Support Specialist, using HTML and CSS to implement more intuitive support articles than the built-in format. That experience empowered me to express my ideas through coding and branch out as a developer.",
+  "I'm currently living in downtown NYC with two awesome rescue dogs."
+];
 
 export default AboutSection;

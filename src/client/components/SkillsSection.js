@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
-import { colors, sectionHeaderAndFooterStyles, expandingItemAnimationInMs } from '../styles';
+import { colors, sectionHeaderAndFooterStyles, typingAnimationInMs } from '../styles';
 
 const Skills = () => {
 
@@ -21,13 +21,13 @@ const Skills = () => {
                 key={currKey}
                 css={[
                   listStyles,
-                  expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)
+                  typingAnimationInMs(currentAnimationDelay++, animationDuration)
                 ]}
               >
                 <li
                   css={[
                     listTitleStyles,
-                    expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)
+                    typingAnimationInMs(currentAnimationDelay++, animationDuration)
                   ]}
                 >
                   {`${currKey}:`}
@@ -36,7 +36,7 @@ const Skills = () => {
                   skillsObj[currKey].map(currSkill => {
                     return (
                       <li key={currSkill}
-                        css={expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)}
+                        css={typingAnimationInMs(currentAnimationDelay++, animationDuration)}
                       >
                         •  {currSkill}
                       </li>

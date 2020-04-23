@@ -1,13 +1,14 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { CommandKey } from './index';
-import { colors, delayedItemAnimationInMs } from '../styles';
+import { colors, delayedDisplayAnimationInMs } from '../styles';
 
-const Links = ({ linkIndexStart, links, handleClick, handleKeyDown }) => {
+const Links = ({ links, handleClick, handleKeyDown, baseDelayMs, startMs }) => {
+
   return(
     <div className="links-section" css={linksSectionStyles}>
         <div className="links-header"
-          css={[linksHeaderStyles, delayedItemAnimationInMs(linkIndexStart+3, 250)]}
+          css={[linksHeaderStyles, delayedDisplayAnimationInMs(0, baseDelayMs, startMs)]}
         >
           Find me on:
         </div>
@@ -16,7 +17,7 @@ const Links = ({ linkIndexStart, links, handleClick, handleKeyDown }) => {
             <a tabIndex={0}
               className="link"
               id={link}
-              css={[linkStyles, delayedItemAnimationInMs(linkIndexStart+index+4, 250)]}
+              css={[linkStyles, delayedDisplayAnimationInMs(index+1, baseDelayMs, startMs)]}
               key={link}
               onClick={handleClick}
               onKeyDown={handleKeyDown}

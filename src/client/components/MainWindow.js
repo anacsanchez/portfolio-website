@@ -3,7 +3,7 @@ import { ProjectsSection, AboutSection, SkillsSection, SectionSwitch, ResumeSect
 import { css } from '@emotion/core';
 import { mainContentMediaQueries } from '../styles';
 
-const MainContent = ({ currentSection, sectionOptions }) => {
+const MainWindow = ({ currentSection, sectionOptions }) => {
   const { about, projects, resume, skills } = sectionOptions;
 
   return (
@@ -25,4 +25,4 @@ const mainContentStyles = css({
   marginTop: '24px'
 });
 
-export default MainContent;
+export default MainWindow;

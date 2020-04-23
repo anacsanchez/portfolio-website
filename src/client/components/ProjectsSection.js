@@ -1,8 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { SingleProject } from './index';
-import { sectionHeaderAndFooterStyles, delayedItemAnimationInMs } from '../styles';
+import { sectionHeaderAndFooterStyles, typingAnimationInMs } from '../styles';
 
 const ProjectsSection = () => {
+
+  const animationDuration = 200;
+
   const [ projects, setProjects ] = useState([]);
 
   useEffect (() => {
@@ -27,12 +30,12 @@ const ProjectsSection = () => {
         <ul> {
           projects?.length ?
             projects.map((project,i) =>
-              <SingleProject key={ project.name } index={i} {...project} />
+              <SingleProject key={ project.name } index={i} {...project} animationDuration={animationDuration}/>
             )
           : ''
         }
         </ul>
-        <div className="section-footer" css={[sectionHeaderAndFooterStyles, delayedItemAnimationInMs(projects.length+1, 180)]}>
+        <div className="section-footer" css={[sectionHeaderAndFooterStyles, typingAnimationInMs(projects.length+1, animationDuration)]}>
           ======== END ========
         </div>
       </Fragment>
