@@ -1,4 +1,4 @@
-export const navOptions = {
+export const menuOptions = {
   about: {
     name: 'about' ,
     keyCode: 'a'
@@ -17,7 +17,7 @@ export const navOptions = {
   },
 };
 
-export const linkOptions = {
+export const linksOptions = {
   github: {
     name: 'github',
     keyCode: 'g',
@@ -36,6 +36,19 @@ const generateKeyCodesObject = (options, propValue) => Object.keys(options).redu
   return { [keyCode]: singleOption[propValue], ...keyObj };
 }, {});
 
-export const navKeyCodes = generateKeyCodesObject(navOptions, 'name');
-export const linkKeyCodes = generateKeyCodesObject(linkOptions, 'url');
+export const menuKeyCodes = generateKeyCodesObject(menuOptions, 'name');
+export const linksKeyCodes = generateKeyCodesObject(linksOptions, 'url');
 
+
+const navigation = {
+  menu: {
+    options: menuOptions,
+    keyCodes: menuKeyCodes
+  },
+  links: {
+    options: linksOptions,
+    keyCodes: linksKeyCodes
+  }
+};
+
+export default navigation;

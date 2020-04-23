@@ -1,6 +1,6 @@
 import { createMediaQueries } from './utils';
 
-const breakpointsExpandingTextStyles = {
+const breakpointsTypingAnimationContentStyles = {
   1150: `{
     width: 650px;
   }`,
@@ -60,7 +60,7 @@ const breakpointsSidePanelStyles = {
   }`,
 };
 
-const breakpointsMainContentStyles = {
+const breakpointsMainWindowStyles = {
   1150: `{
     width: 700px;
   }`,
@@ -124,12 +124,12 @@ const breakPointsHeaderStyles = {
   }`
 };
 
-export const expandingTextMediaQueries = createMediaQueries(
-  breakpointsExpandingTextStyles
+export const typingAnimationContentMediaQueries = createMediaQueries(
+  breakpointsTypingAnimationContentStyles
 );
 
 export const headerMediaQueries = createMediaQueries(breakPointsHeaderStyles);
 
 export const sidePanelMediaQueries = createMediaQueries(breakpointsSidePanelStyles);
 
-export const mainContentMediaQueries = createMediaQueries(breakpointsMainContentStyles);
+export const mainWindowMediaQueries = createMediaQueries(breakpointsMainWindowStyles);

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
-import { colors, sectionHeaderAndFooterStyles, expandingItemAnimationInMs } from '../styles';
+import { colors, sectionHeaderAndFooterStyles, typingAnimationInMs } from '../styles';
 
 const Skills = () => {
 
@@ -15,19 +15,17 @@ const Skills = () => {
       </div>
       <div css={{ display: 'flex', flexDirection: 'column' }}>
         {
-          Object.keys(skillsObj).map(currKey => {
-            return (
+          Object.keys(skillsObj).map(currKey => (
               <ul id={`${currKey}-skills`}
                 key={currKey}
                 css={[
                   listStyles,
-                  expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)
+                  typingAnimationInMs(currentAnimationDelay++, animationDuration)
                 ]}
               >
-                <li
-                  css={[
+                <li css={[
                     listTitleStyles,
-                    expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)
+                    typingAnimationInMs(currentAnimationDelay++, animationDuration)
                   ]}
                 >
                   {`${currKey}:`}
@@ -36,7 +34,7 @@ const Skills = () => {
                   skillsObj[currKey].map(currSkill => {
                     return (
                       <li key={currSkill}
-                        css={expandingItemAnimationInMs(currentAnimationDelay++, animationDuration)}
+                        css={typingAnimationInMs(currentAnimationDelay++, animationDuration)}
                       >
                         •  {currSkill}
                       </li>
@@ -44,8 +42,8 @@ const Skills = () => {
                   })
                 }
               </ul>
-            );
-          })
+            )
+          )
         }
       </div>
       <div className="section-footer" css={sectionHeaderAndFooterStyles}>
@@ -59,19 +57,18 @@ const listTitleStyles = css({
   color: colors.teal,
   letterSpacing: '1px',
   padding: '4px 0px',
-  textTransform: 'capitalize'
+  textTransform: 'capitalize',
+  fontSize: '30px'
 });
 
 const listStyles = css({
   padding: '6px',
-  fontSize: '28px',
+  fontSize: '30px',
   color: colors.white,
   wordSpacing: '3px',
   letterSpacing: '1px',
   lineHeight: '90%'
 });
-
-export default Skills;
 
 const skillsObj = {
   proficient: [
@@ -94,3 +91,5 @@ const skillsObj = {
     'Redis'
   ]
 };
+
+export default Skills;

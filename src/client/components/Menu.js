@@ -1,14 +1,15 @@
 import React from 'react';
-import { MenuButton } from './index';
 import { css } from '@emotion/core';
-import { delayedItemAnimationInMs } from '../styles';
+import { MenuButton } from './index';
+import { delayedDisplayAnimationInMs } from '../styles';
 
-const Menu = ({ handleSwitch, menuItems, activeSection }) => {
+const Menu = ({ handleSwitch, menuItems, activeSection, baseDelayMs, startMs }) => {
+
   return (
     <nav className="menu" css={menuStyle}>
       <ul className="menu-items" css={menuItemsStyle}> {
         menuItems.map((item,index) => (
-          <li css={delayedItemAnimationInMs(index+4, 250)} key={item}>
+          <li css={delayedDisplayAnimationInMs(index, baseDelayMs, startMs)} key={item}>
             <MenuButton
               isActive={activeSection === item}
               handleClick={handleSwitch}

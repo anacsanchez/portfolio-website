@@ -1,14 +1,16 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import { css } from '@emotion/core';
 import {
   sectionHeaderAndFooterStyles,
-  itemStyles,
-  expandingItemAnimationInMs,
-  expandingTextStyles,
+  typingAnimationInMs,
+  typingAnimationContentStyles,
   colors
 } from '../styles';
-import { css } from '@emotion/core';
 
 const ResumeSection = () => {
+
+  const typingAnimationDuration = 200;
+
   const [ resume, setResume ] = useState({});
 
   useEffect (() => {
@@ -36,7 +38,7 @@ const ResumeSection = () => {
         target="_blank"
         rel="noopener noreferrer"
         id="resume-url"
-        css={resumeLinkStyles}
+        css={downloadLinkStyles}
       >
         [ DOWNLOAD ]
       </a>
@@ -46,19 +48,19 @@ const ResumeSection = () => {
             const { title, company, location, date, responsibilities } = work;
             return (
               <li css={[
-                  expandingItemAnimationInMs(index, 180),
+                  typingAnimationInMs(index, typingAnimationDuration),
                   listItemStyles
                 ]}
                 key={`${company}`}
               >
-                <h3 className="item-title">> { title.toUpperCase() }</h3>
-                <h4 className="item-sub-title">{ company }</h4>
-                <div className="item-text-section">
-                  <h6 className="item-text">{ location }</h6>
-                  <h6 className="item-text">{ date }</h6>
+                <h3 css={titleStyles}>> { title.toUpperCase() }</h3>
+                <h4 css={orgNameStyles}>{ company }</h4>
+                <div css={infoSectionStyles}>
+                  <h6 css={infoTextStyles}>{ location }</h6>
+                  <h6 css={infoTextStyles}>{ date }</h6>
                 </div>
                 { responsibilities?.map((description,i) =>
-                  <p className="item-text" css={listBodyStyles} key={`${company}-desc-${i}`} >• {description}</p>)
+                  <p css={listBodyStyles} key={`${company}-desc-${i}`} >• {description}</p>)
                 }
             </li>
             );
@@ -72,19 +74,19 @@ const ResumeSection = () => {
             return (
               <li
                 css={[
-                  expandingItemAnimationInMs(index+workExperience.length, 180),
+                  typingAnimationInMs(index+workExperience.length, typingAnimationDuration),
                   listItemStyles
                 ]}
                 key={school}
               >
-                <h3 className="item-title">> {title.toUpperCase()}</h3>
-                <h4 className="item-sub-title">{school}</h4>
-                <div className="item-text-section">
-                  <h6 className="item-text">{ location }</h6>
-                  <h6 className="item-text">{ date }</h6>
+                <h3 css={titleStyles}>> {title.toUpperCase()}</h3>
+                <h4 css={orgNameStyles}>{school}</h4>
+                <div css={infoSectionStyles}>
+                  <h6 css={infoTextStyles}>{ location }</h6>
+                  <h6 css={infoTextStyles}>{ date }</h6>
                 </div>
                 { curriculum?.map((description, i) => (
-                    <p key={`${school}-desc-${i}`} className="item-text">• {description}</p>
+                    <p css={listBodyStyles} key={`${school}-desc-${i}`}>• {description}</p>
                   ))
                 }
               </li>
@@ -95,7 +97,7 @@ const ResumeSection = () => {
       <div className="section-footer"
         css={[
           sectionHeaderAndFooterStyles,
-          expandingItemAnimationInMs(workExperience?.length + education?.length, 180)
+          typingAnimationInMs(workExperience?.length + education?.length, typingAnimationDuration)
         ]}
       >
         ======= END ========
@@ -104,25 +106,58 @@ const ResumeSection = () => {
   );
 };
 
-const listItemStyles = css(itemStyles, {
+const listItemStyles = css({
   paddingBottom: '18px',
   paddingTop: '10px',
-  '& p, .emphasized-text, .item-text, .item-title': expandingTextStyles
+  '& *': typingAnimationContentStyles,
 });
 
 const listBodyStyles = css({
-  padding: '4px 0'
+  padding: '4px 0',
+  color: colors.white,
+  letterSpacing: '1px',
+  wordSpacing: '3px',
+  fontSize: '28px'
 });
 
-const resumeLinkStyles = css({
+const downloadLinkStyles = css({
   margin: '8px 0',
   color: colors.green,
   padding: '0 2px',
+  fontSize: '30px',
   ':hover': {
     cursor: 'pointer',
     backgroundColor: colors.neonGreen,
     color: colors.black
-  }
+  },
+});
+
+const titleStyles = css({
+  padding: '2px 0 8px 0',
+  color: colors.brightYellow,
+  wordSpacing: '3px',
+  fontSize: '30px',
+  letterSpacing: '1px'
+});
+
+const orgNameStyles = css({
+  padding: '2px 0',
+  color: colors.teal,
+  wordSpacing: '3px',
+  fontSize: '28px',
+  letterSpacing: '1px'
+});
+
+const infoSectionStyles = css({
+  padding: '8px 0'
+});
+
+const infoTextStyles = css({
+  wordSpacing: '3px',
+  letterSpacing: '1px',
+  color: colors.white,
+  lineHeight: '90%',
+  fontSize: '28px'
 });
 
 export default ResumeSection;
