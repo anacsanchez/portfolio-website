@@ -1,7 +1,3 @@
-:root {
-  --black: black;
-}
-
 @font-face {
   font-family:"JD Nadia Regular";
   src:url("assets/jd_nadia.woff2") format("woff2"),
@@ -12,7 +8,7 @@
 }
 
 body {
-  background-color: var(--black);
+  background-color: black;
   font-family: "JD Nadia Regular";
   min-width: 200px;
 }

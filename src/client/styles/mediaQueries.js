@@ -1,53 +1,62 @@
 import { createMediaQueries } from './utils';
 
 const breakpointsTypingAnimationContentStyles = {
+  1250: `{
+    width: 715px;
+  }`,
+  1200: `{
+    width: 665px;
+  }`,
   1150: `{
-    width: 650px;
+    width: 615px;
   }`,
   1100: `{
-    width: 625px;
+    width: 590px;
   }`,
   1050: `{
-    width: 575px;
+    width: 540px;
   }`,
   1000: `{
-    width: 525px;
+    width: 490px;
   }`,
   950: `{
-    width: 475px;
+    width: 440px;
   }`,
   900: `{
-    width: 425px;
+    width: 390px;
   }`,
   850: `{
-    width: 400px;
+    width: 340px;
   }`,
   800: `{
-    width: 350px;
+    width: 290px;
   }`,
   750: `{
-    width: 300px;
+    width: 240px;
   }`,
   700: `{
-    width: 450px;
+    width: 400px;
+  }`,
+  650: `{
+    width: 350px;
   }`,
   525: `{
-    width: 375px;
-  }`,
-  475: `{
     width: 325px;
   }`,
-  425: `{
+  475: `{
     width: 300px;
   }`,
-  375: `{
+  425: `{
     width: 275px;
   }`,
+  375: `{
+    width: 225px;
+  }`,
   350: `{
-    width: 250px;
+    width: 200px;
   }`,
   325: `{
-    width: 200px;
+    width: 175px;
   }`
 };
 

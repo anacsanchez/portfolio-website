@@ -113,7 +113,7 @@ const listItemStyles = css({
 });
 
 const listBodyStyles = css({
-  padding: '4px 0',
+  padding: '12px 0',
   color: colors.white,
   letterSpacing: '1px',
   wordSpacing: '3px',
@@ -124,16 +124,20 @@ const downloadLinkStyles = css({
   margin: '8px 0',
   color: colors.green,
   padding: '0 2px',
-  fontSize: '30px',
+  fontSize: '32px',
   ':hover': {
     cursor: 'pointer',
     backgroundColor: colors.neonGreen,
     color: colors.black
   },
+  ':focus': {
+    backgroundColor: colors.neonGreen,
+    color: colors.black
+  }
 });
 
 const titleStyles = css({
-  padding: '2px 0 8px 0',
+  padding: '6px 0 10px 0',
   color: colors.brightYellow,
   wordSpacing: '3px',
   fontSize: '30px',

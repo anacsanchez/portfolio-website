@@ -13,7 +13,7 @@ export const sectionHeaderAndFooterStyles = css({
 });
 
 export const typingAnimationContentStyles = css`{
-  width: 750px;
+  width: 715px;
   white-space: normal;
 
   ${typingAnimationContentMediaQueries}
