@@ -47,7 +47,7 @@ const breakpointsTypingAnimationContentStyles = {
     width: 300px;
   }`,
   425: `{
-    width: 275px;
+    width: 250px;
   }`,
   375: `{
     width: 225px;
