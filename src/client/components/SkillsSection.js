@@ -67,7 +67,7 @@ const listStyles = css({
   color: colors.white,
   wordSpacing: '3px',
   letterSpacing: '1px',
-  lineHeight: '90%'
+  lineHeight: '100%'
 });
 
 const skillsObj = {

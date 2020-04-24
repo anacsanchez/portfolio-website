@@ -32,13 +32,14 @@ const SingleProject = ({ name, url, description, tools, github, index, animation
 //Emotion CSS
 const singleProjectStyles = css({
   wordSpacing: '3px',
-  paddingBottom: '12px',
-  paddingTop: '10px',
+  paddingBottom: '16px',
+  paddingTop: '16px',
 });
 
 const projectLinkStyles = css({
   margin: '8px 0',
   color: colors.neonGreen,
+  fontSize: '28px',
   padding: '0 2px',
   ':hover, :focus': {
     cursor: 'pointer',
@@ -48,16 +49,18 @@ const projectLinkStyles = css({
 });
 
 const projectTitleStyles = css({
-  fontSize: '28px',
+  fontSize: '30px',
   padding: '2px 0 8px 0',
   color: colors.brightYellow,
+  letterSpacing: '1px'
 });
 
 const projectTextStyles = css({
   letterSpacing: '1px',
   color: colors.white,
-  fontSize: '26px',
-  lineHeight: '95%'
+  fontSize: '28px',
+  lineHeight: '95%',
+  margin: '6px 0 14px 0'
 });
 
 export default SingleProject;

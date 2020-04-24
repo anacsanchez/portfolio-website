@@ -4,7 +4,7 @@ import { sectionHeaderAndFooterStyles, typingAnimationInMs } from '../styles';
 
 const ProjectsSection = () => {
 
-  const animationDuration = 200;
+  const animationDuration = 250;
 
   const [ projects, setProjects ] = useState([]);
 
