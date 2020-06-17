@@ -4,7 +4,7 @@
     "image":"assets/reddit_ss.png",
     "tools":"Javascript, React, Node.js",
     "description":"A search engine for Reddit. Features spoiler warnings and expandable post content.",
-    "url":"https://anacsanchez.com/reddit-search/",
+    "url":"/reddit-search/",
     "github":"https://github.com/anacsanchez/Reddit-Search"
   },
   {
@@ -28,7 +28,7 @@
     "image":"assets/burger_emporium_ss.png",
     "tools":"Javascript, React, Redux, Node.js, Postgres, Heroku, Stripe",
     "description":"An e-commerce web app featuring order and product management, guest checkout, and Stripe payment.",
-    "url": "https://anacsanchez.com/burgers-emporium/",
+    "url": "/burgers-emporium/",
     "github": "https://github.com/anacsanchez/Bobs-Burgers-Emporium"
   },
   {
