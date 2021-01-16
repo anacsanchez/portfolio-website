@@ -2,13 +2,13 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { typingAnimationInMs, colors, headerMediaQueries } from '../styles';
 
-const Header = ({ headerTypingDuration }) => {
+const Header = ({ animationDuration, delay }) => {
   return (
-    <header id="header" css={typingAnimationInMs(0, 0, 80, headerTypingDuration)}>
-        <h1 css={[headerBase, headerName, headerMediaQueries]} id="name">
+    <header id="header" css={ typingAnimationInMs(1, delay, 80, animationDuration) }>
+        <h1 css={[ headerBase, headerName, headerMediaQueries ]} id="name">
           Ana C Sanchez
         </h1>
-        <h2 css={[headerBase, headerTitle, headerMediaQueries]} id="title">
+        <h2 css={[ headerBase, headerTitle, headerMediaQueries ]} id="title">
           Software Engineer
         </h2>
     </header>

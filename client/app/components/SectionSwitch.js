@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
-import { colors } from '../styles';
 
 const SectionSwitch = ({ children, sectionToDisplay }) => {
   return (

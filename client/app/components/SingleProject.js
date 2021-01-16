@@ -2,10 +2,10 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { colors, typingAnimationInMs, typingAnimationContentStyles } from '../styles';
 
-const SingleProject = ({ name, url, description, tools, github, index, animationDuration }) => {
+const SingleProject = ({ name, url, description, tools, github, index, animationDuration, baseDelay }) => {
 
   return (
-    <li css={[singleProjectStyles, typingAnimationInMs(index, animationDuration)]}>
+    <li css={[singleProjectStyles, typingAnimationInMs(index, baseDelay, 100, animationDuration )]}>
       <h3 css={[projectTitleStyles, typingAnimationContentStyles]}>
         > { name.toUpperCase() }
       </h3>

@@ -58,7 +58,7 @@ const menuKeyOptionStyle = css({
 const menuKeyRestStyle = css({
   fontSize: "30px",
   letterSpacing: "4px",
-  paddingLeft: "2px"
+  paddingLeft: "6px"
 });
 
 export default MenuButton;
