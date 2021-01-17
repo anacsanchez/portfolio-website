@@ -8,7 +8,8 @@ import { colors,
 
 const AboutSection = () => {
 
-  const animationDurationMs = 225;
+  const animationDurationMs = 900;
+  const animationDelay = 850;
 
   return (
     <Fragment>
@@ -19,7 +20,7 @@ const AboutSection = () => {
         {
           aboutSectionContent.map((paragraph, index) =>
             <li key={`paragraph-${index}`}
-              css={ typingAnimationInMs(index * 4,animationDurationMs) }
+              css={ typingAnimationInMs(index, animationDelay, 100, animationDurationMs) }
             >
               <p css={[
                   aboutTextStyles,
@@ -35,7 +36,7 @@ const AboutSection = () => {
       <div className="section-footer"
         css={[
           sectionHeaderAndFooterStyles,
-          typingAnimationInMs(aboutSectionContent.length * 4,animationDurationMs)
+          typingAnimationInMs(aboutSectionContent.length, animationDelay, 100, animationDurationMs)
         ]}
       >
         ======= END =======

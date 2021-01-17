@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "build:client-watch": "webpack -w --config webpack.dev.js",
+    "build": "webpack --config client/webpack.prod.js",
+    "build:client-watch": "webpack -w --config client/webpack.dev.js",
     "postinstall": "npm run build",
-    "start": "node src/server",
+    "start": "node src/index.js",
     "start:dev": "concurrently \"npm:build:client-watch\" \"npm:start:dev-server\"",
-    "start:dev-server": "NODE_ENV='development' nodemon src/server -e html,js,scss --ignore public --ignore src/client"
+    "start:dev-server": "NODE_ENV='development' nodemon src/index.js -e html,js,scss --ignore client"
   },
   "author": "",
   "license": "ISC",

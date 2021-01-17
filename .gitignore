@@ -1,6 +1,6 @@
 node_modules
-public/bundle.js
-public/bundle.js.map
+client/public/bundle.js
+client/public/bundle.js.map
 config.js
 .DS_Store
 *.sh

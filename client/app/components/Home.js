@@ -45,37 +45,39 @@ const Home = () => {
   const linksItems = Object.keys(links.options);
 
   const baseDelayMs = 200;
-  const headerTypingDuration = 900;
+  const headerDelay = 100;
+  const headerAnimationDuration = 900;
+  const menuDelay = 50;
 
-  const menuStartDelay = headerTypingDuration + 50;
-  const linksStartDelay = menuStartDelay + (menuItems.length * baseDelayMs);
-  const instructionsStartDelay = linksStartDelay + (linksItems.length * baseDelayMs);
+  const menuStartMs = headerAnimationDuration + headerDelay + menuDelay;
+  const linksStartMs = menuStartMs + (menuItems.length * baseDelayMs);
+  const instructionsStartMs = linksStartMs + (linksItems.length * baseDelayMs);
 
   return (
     <div id="home" css={[homeStyles]}>
       <SidePanel>
-        <Header duration={headerTypingDuration}/>
+        <Header delay={headerDelay} animationDuration={headerAnimationDuration}/>
         <Menu
-          handleSwitch={(name) => setCurrSection(name)}
+          handleSwitch={ (name) => setCurrSection(name) }
           menuItems={ menuItems }
-          activeSection={currSection}
-          baseDelayMs={baseDelayMs}
-          startMs={menuStartDelay}
+          activeSection={ currSection }
+          baseDelayMs={ baseDelayMs }
+          startMs={ menuStartMs }
         />
         <Links
-          links={linksItems}
-          handleLinkEvent={handleLinkEvent}
-          baseDelayMs={baseDelayMs}
-          startMs={linksStartDelay}
+          links={ linksItems }
+          handleLinkEvent={ handleLinkEvent }
+          baseDelayMs={ baseDelayMs }
+          startMs={ linksStartMs }
         />
         <Instructions
-          startMs={instructionsStartDelay}
-          baseDelayMs={baseDelayMs}/>
+          startMs={ instructionsStartMs }
+          baseDelayMs={ baseDelayMs }/>
       </SidePanel>
     { currSection ?
         <MainWindow
-          currentSection={currSection}
-          sectionOptions={menu.options}
+          currentSection={ currSection }
+          sectionOptions={ menu.options }
         />
       : ''
     }
