@@ -1,23 +1,16 @@
 {
   "workExperience": [
     {
-      "title": "Software Engineer - Freelance",
-      "company": "Undertone",
-      "location": "",
-      "date": "5/2020 - Present",
-      "responsibilities": []
-    },
-    {
       "title": "Software Engineer",
       "company": "Undertone",
       "location": "New York, NY",
-      "date": "5/2019 - 1/2020",
+      "date": "5/2019 - 1/2020, 5/2020 - Present",
       "responsibilities": [
-        "Developed features and fixes for multiple React, Redux and Node based platforms.",
-        "Increased data reliability and error response time by building cron job monitors in Node to detect issues with external APIs and Redis sync processes.",
-        "Created SQL scripts to perform manual backend updates by user request.",
-        "Authored and maintained detailed REST API and application dataflow documentation for internal and user reference.",
-        "Monitored log activity and cached data in AWS, Kubernetes, and Kibana dashboards to quickly debug issues."
+        "Develop features for Node, React and Ruby full stack applications and cron jobs in Agile sprints.",
+        "Created a Docker development environment for engineers that incorporates production-level networking and dependency management, tools such as Verdaccio for NPM package testing, and Docker-Sync for faster development on Mac OS.",
+        "Engineered an auto-update alert system for client partners to reduce manual campaign maintenance with integral business implications.",
+        "Coordinate feature requirements and user stories with other departments.",
+        "Generate SQL scripts for custom reporting and bulk backend updates."
       ]
     },
     {
