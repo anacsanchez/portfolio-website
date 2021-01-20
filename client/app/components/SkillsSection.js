@@ -76,17 +76,18 @@ const skillsObj = {
   proficient: [
     'Javascript',
     'React.js',
-    'Redux',
     'Node.js',
     'SQL',
+    'Postgres',
+    'Docker',
     'Git',
     'Sequelize',
-    'Postgres',
+    'Redux',
     'Mocha',
-    'HTML'
+    'HTML',
+    'CSS'
   ],
   knowledgeable: [
-    'Docker',
     'GraphQL',
     'Apollo',
     'Kubernetes',
