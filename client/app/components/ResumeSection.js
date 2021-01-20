@@ -9,11 +9,17 @@ import {
 
 const ResumeSection = () => {
 
-  const typingAnimationDuration = 200;
+  const typingAnimationDuration = 800;
+  const baseDelay = 800;
 
   const [ resume, setResume ] = useState({});
+  const [ isLoading, setIsLoading ] = useState(false);
+
+  const resumeHeader = '====== RESUME ======';
+  const resumeFooter = '======= END ========';
 
   useEffect (() => {
+    setIsLoading(true);
     const fetchResume = async() => {
       try {
         const data = await fetch('/api/resume');
@@ -23,6 +29,7 @@ const ResumeSection = () => {
       catch(err) {
         console.error(err);
       }
+      setIsLoading(false);
     };
     fetchResume();
   }, []);
@@ -32,7 +39,7 @@ const ResumeSection = () => {
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
-        ====== RESUME ======
+        {resumeHeader}
       </div>
       <a href="/Ana_Sanchez-Resume.pdf"
         target="_blank"
@@ -48,7 +55,7 @@ const ResumeSection = () => {
             const { title, company, location, date, responsibilities } = work;
             return (
               <li css={[
-                  typingAnimationInMs(index, typingAnimationDuration),
+                  typingAnimationInMs(index, baseDelay, 100, typingAnimationDuration),
                   listItemStyles
                 ]}
                 key={`${company}`}
@@ -94,14 +101,17 @@ const ResumeSection = () => {
           }) : ''
         }
       </ul>
-      <div className="section-footer"
-        css={[
-          sectionHeaderAndFooterStyles,
-          typingAnimationInMs(workExperience?.length + education?.length, typingAnimationDuration)
-        ]}
-      >
-        ======= END ========
-      </div>
+      {
+        isLoading ? '' :
+        <div className="section-footer"
+          css={[
+            sectionHeaderAndFooterStyles,
+            typingAnimationInMs(workExperience?.length + education?.length, typingAnimationDuration)
+          ]}
+        >
+          {resumeFooter}
+        </div>
+      }
     </Fragment>
   );
 };

@@ -8,9 +8,11 @@ const ProjectsSection = () => {
   const baseDelay = 500;
 
   const [ projects, setProjects ] = useState([]);
+  const [ isLoading, setIsLoading ] = useState(false);
 
   useEffect (() => {
     const fetchProjects = async() => {
+      setIsLoading(true);
       try {
         const data = await fetch('/api/projects');
         const projectsData = await data.json();
@@ -19,6 +21,7 @@ const ProjectsSection = () => {
       catch(err) {
         console.error(err);
       }
+      setIsLoading(false);
     };
     fetchProjects();
   }, []);
@@ -33,22 +36,25 @@ const ProjectsSection = () => {
             projects.map((project,i) =>
               <SingleProject
                 key={ project.name }
-                index={ i } { ...project }
+                index={ i }
                 animationDuration={ animationDuration }
                 baseDelay={ baseDelay }
+                { ...project }
               />
             )
           : ""
         }
         </ul>
-        <div className="section-footer"
+        {
+          isLoading? '' : <div className="section-footer"
           css={[
             sectionHeaderAndFooterStyles,
-            typingAnimationInMs(projects.length, baseDelay, 100, animationDuration)
+            typingAnimationInMs((projects.length), baseDelay, 100, animationDuration)
           ]}
         >
           ======== END ========
         </div>
+        }
       </Fragment>
     );
 };

@@ -11,10 +11,13 @@ const AboutSection = () => {
   const animationDurationMs = 900;
   const animationDelay = 850;
 
+  const aboutHeader = '======  ABOUT  ======';
+  const aboutFooter = '======= END =======';
+
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
-        ======  ABOUT  ======
+        {aboutHeader}
       </div>
       <div id="about-bio">
         {
@@ -39,7 +42,7 @@ const AboutSection = () => {
           typingAnimationInMs(aboutSectionContent.length, animationDelay, 100, animationDurationMs)
         ]}
       >
-        ======= END =======
+        {aboutFooter}
       </div>
     </Fragment>
   );

@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
-import { colors, sectionHeaderAndFooterStyles, typingAnimationInMs } from '../styles';
+import { colors, sectionHeaderAndFooterStyles, typingAnimationInMs, typingAnimationContentStyles } from '../styles';
 
 const Skills = () => {
 
-  const animationDuration = 25;
+  const animationDuration = 500;
+  const baseDelay = 80;
 
-  let currentAnimationDelay = 0;
+  const skillLevels = Object.keys(skillsObj);
+  const totalLength = skillLevels.reduce((length, currSkillLevel) => skillsObj[currSkillLevel].length + length, 0);
 
   return (
     <Fragment>
@@ -15,26 +17,23 @@ const Skills = () => {
       </div>
       <div css={{ display: 'flex', flexDirection: 'column' }}>
         {
-          Object.keys(skillsObj).map(currKey => (
-              <ul id={`${currKey}-skills`}
-                key={currKey}
-                css={[
-                  listStyles,
-                  typingAnimationInMs(currentAnimationDelay++, animationDuration)
-                ]}
-              >
+          skillLevels.map((currSkillLevel, i) => (
+              <ul id={`${currSkillLevel}-skills`} key={currSkillLevel} css={listStyles}>
                 <li css={[
                     listTitleStyles,
-                    typingAnimationInMs(currentAnimationDelay++, animationDuration)
+                    typingAnimationInMs((i + (skillsObj[skillLevels[i-1]]?.length ?? 0)), baseDelay, 100, animationDuration)
                   ]}
                 >
-                  {`${currKey}:`}
+                  {`${currSkillLevel}:`}
                 </li>
                 {
-                  skillsObj[currKey].map(currSkill => {
+                  skillsObj[currSkillLevel].map((currSkill, j) => {
                     return (
                       <li key={currSkill}
-                        css={typingAnimationInMs(currentAnimationDelay++, animationDuration)}
+                        css={[
+                          listItemStyles,
+                          typingAnimationInMs((j + 1 + (skillsObj[skillLevels[i-1]]?.length ?? 0)), baseDelay, 100, animationDuration)
+                        ]}
                       >
                         •  {currSkill}
                       </li>
@@ -46,7 +45,12 @@ const Skills = () => {
           )
         }
       </div>
-      <div className="section-footer" css={sectionHeaderAndFooterStyles}>
+      <div className="section-footer"
+          css={[
+            sectionHeaderAndFooterStyles,
+            typingAnimationInMs(totalLength, baseDelay, 100, animationDuration)
+          ]}
+        >
         ======= END ========
       </div>
     </Fragment>
@@ -56,35 +60,41 @@ const Skills = () => {
 const listTitleStyles = css({
   color: colors.teal,
   letterSpacing: '1px',
-  padding: '4px 0px',
+  margin: '12px 4px 6px 6px',
   textTransform: 'capitalize',
-  fontSize: '30px'
+  fontSize: '30px',
+  '& *': typingAnimationContentStyles
 });
 
 const listStyles = css({
-  padding: '6px',
-  fontSize: '30px',
+  padding: '0px 0px 8px 0px'
+});
+
+const listItemStyles = css({
   color: colors.white,
+  fontSize: '30px',
   wordSpacing: '3px',
   letterSpacing: '1px',
-  lineHeight: '100%'
+  lineHeight: '100%',
+  padding: '0px 0px 0px 6px',
+  '& *': typingAnimationContentStyles,
 });
 
 const skillsObj = {
   proficient: [
     'Javascript',
     'React.js',
-    'Redux',
     'Node.js',
     'SQL',
+    'Postgres',
+    'Docker',
     'Git',
     'Sequelize',
-    'Postgres',
+    'Redux',
     'Mocha',
     'HTML'
   ],
   knowledgeable: [
-    'Docker',
     'GraphQL',
     'Apollo',
     'Kubernetes',
