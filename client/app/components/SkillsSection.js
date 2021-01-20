@@ -7,6 +7,8 @@ const Skills = () => {
   const animationDuration = 25;
 
   let currentAnimationDelay = 0;
+  const skillLevels = Object.keys(skillsObj);
+  const totalLength = skillLevels.reduce((length, currSkillLevel) => skillsObj[currSkillLevel].length + length, 0);
 
   return (
     <Fragment>
@@ -15,7 +17,7 @@ const Skills = () => {
       </div>
       <div css={{ display: 'flex', flexDirection: 'column' }}>
         {
-          Object.keys(skillsObj).map(currKey => (
+          skillLevels.map(currKey => (
               <ul id={`${currKey}-skills`}
                 key={currKey}
                 css={[
@@ -46,7 +48,7 @@ const Skills = () => {
           )
         }
       </div>
-      <div className="section-footer" css={sectionHeaderAndFooterStyles}>
+      <div className="section-footer" css={[sectionHeaderAndFooterStyles, typingAnimationInMs(currentAnimationDelay+totalLength, animationDuration)]}>
         ======= END ========
       </div>
     </Fragment>
@@ -74,17 +76,18 @@ const skillsObj = {
   proficient: [
     'Javascript',
     'React.js',
-    'Redux',
     'Node.js',
     'SQL',
+    'Postgres',
+    'Docker',
     'Git',
     'Sequelize',
-    'Postgres',
+    'Redux',
     'Mocha',
-    'HTML'
+    'HTML',
+    'CSS'
   ],
   knowledgeable: [
-    'Docker',
     'GraphQL',
     'Apollo',
     'Kubernetes',

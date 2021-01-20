@@ -33,9 +33,10 @@ const ProjectsSection = () => {
             projects.map((project,i) =>
               <SingleProject
                 key={ project.name }
-                index={ i } { ...project }
+                index={ i }
                 animationDuration={ animationDuration }
                 baseDelay={ baseDelay }
+                { ...project }
               />
             )
           : ""
@@ -44,7 +45,7 @@ const ProjectsSection = () => {
         <div className="section-footer"
           css={[
             sectionHeaderAndFooterStyles,
-            typingAnimationInMs(projects.length, baseDelay, 100, animationDuration)
+            typingAnimationInMs((projects.length), baseDelay, 100, animationDuration)
           ]}
         >
           ======== END ========

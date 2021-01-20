@@ -9,9 +9,13 @@ import {
 
 const ResumeSection = () => {
 
-  const typingAnimationDuration = 200;
+  const typingAnimationDuration = 800;
+  const baseDelay = 800;
 
   const [ resume, setResume ] = useState({});
+
+  const resumeHeader = '====== RESUME ======';
+  const resumeFooter = '======= END ========';
 
   useEffect (() => {
     const fetchResume = async() => {
@@ -32,7 +36,7 @@ const ResumeSection = () => {
   return (
     <Fragment>
       <div className="section-header" css={sectionHeaderAndFooterStyles}>
-        ====== RESUME ======
+        {resumeHeader}
       </div>
       <a href="/Ana_Sanchez-Resume.pdf"
         target="_blank"
@@ -48,7 +52,7 @@ const ResumeSection = () => {
             const { title, company, location, date, responsibilities } = work;
             return (
               <li css={[
-                  typingAnimationInMs(index, typingAnimationDuration),
+                  typingAnimationInMs(index, baseDelay, 100, typingAnimationDuration),
                   listItemStyles
                 ]}
                 key={`${company}`}
@@ -100,7 +104,7 @@ const ResumeSection = () => {
           typingAnimationInMs(workExperience?.length + education?.length, typingAnimationDuration)
         ]}
       >
-        ======= END ========
+        {resumeFooter}
       </div>
     </Fragment>
   );
