@@ -4,8 +4,8 @@ import { colors, sectionHeaderAndFooterStyles, typingAnimationInMs, typingAnimat
 
 const Skills = () => {
 
-  const animationDuration = 500;
-  const baseDelay = 80;
+  const animationDuration = 400;
+  const baseDelay = 70;
 
   const skillLevels = Object.keys(skillsObj);
   const totalLength = skillLevels.reduce((length, currSkillLevel) => skillsObj[currSkillLevel].length + length, 0);

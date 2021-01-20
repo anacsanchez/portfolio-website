@@ -13,13 +13,11 @@ const ResumeSection = () => {
   const baseDelay = 800;
 
   const [ resume, setResume ] = useState({});
-  const [ isLoading, setIsLoading ] = useState(false);
 
   const resumeHeader = '====== RESUME ======';
   const resumeFooter = '======= END ========';
 
   useEffect (() => {
-    setIsLoading(true);
     const fetchResume = async() => {
       try {
         const data = await fetch('/api/resume');
@@ -29,7 +27,6 @@ const ResumeSection = () => {
       catch(err) {
         console.error(err);
       }
-      setIsLoading(false);
     };
     fetchResume();
   }, []);
@@ -101,17 +98,14 @@ const ResumeSection = () => {
           }) : ''
         }
       </ul>
-      {
-        isLoading ? '' :
-        <div className="section-footer"
-          css={[
-            sectionHeaderAndFooterStyles,
-            typingAnimationInMs(workExperience?.length + education?.length, typingAnimationDuration)
-          ]}
-        >
-          {resumeFooter}
-        </div>
-      }
+      <div className="section-footer"
+        css={[
+          sectionHeaderAndFooterStyles,
+          typingAnimationInMs(workExperience?.length + education?.length, typingAnimationDuration)
+        ]}
+      >
+        {resumeFooter}
+      </div>
     </Fragment>
   );
 };
