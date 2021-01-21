@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { css } from '@emotion/core';
 import {
   sectionHeaderAndFooterStyles,
@@ -6,30 +6,15 @@ import {
   typingAnimationContentStyles,
   colors
 } from '../styles';
+import resume from '../resume.json';
 
 const ResumeSection = () => {
 
   const typingAnimationDuration = 800;
   const baseDelay = 800;
 
-  const [ resume, setResume ] = useState({});
-
   const resumeHeader = '====== RESUME ======';
   const resumeFooter = '======= END ========';
-
-  useEffect (() => {
-    const fetchResume = async() => {
-      try {
-        const data = await fetch('/api/resume');
-        const resumeData = await data.json();
-        setResume(resumeData);
-      }
-      catch(err) {
-        console.error(err);
-      }
-    };
-    fetchResume();
-  }, []);
 
   const { workExperience, education } = resume;
 
