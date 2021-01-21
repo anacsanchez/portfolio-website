@@ -16,6 +16,7 @@ const Home = () => {
   const { menu, links } = navigation;
 
   const [ currSection, setCurrSection ] = useState('');
+  const [ isLoaded, setIsLoaded ] = useState(false);
 
   const handleKeyDown = (evt) => {
     const evtKey = evt.key.toLowerCase();
@@ -36,6 +37,7 @@ const Home = () => {
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
+    setIsLoaded(true);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
@@ -54,6 +56,7 @@ const Home = () => {
   const instructionsStartMs = linksStartMs + (linksItems.length * baseDelayMs);
 
   return (
+    !isLoaded ? "" :
     <div id="home" css={[homeStyles]}>
       <SidePanel>
         <Header delay={headerDelay} animationDuration={headerAnimationDuration}/>

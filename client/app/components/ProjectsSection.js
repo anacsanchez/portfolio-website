@@ -1,27 +1,12 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { SingleProject } from './index';
 import { sectionHeaderAndFooterStyles, typingAnimationInMs } from '../styles';
+import projects from '../projects.json';
 
 const ProjectsSection = () => {
 
   const animationDuration = 800;
   const baseDelay = 500;
-
-  const [ projects, setProjects ] = useState([]);
-
-  useEffect (() => {
-    const fetchProjects = async() => {
-      try {
-        const data = await fetch('/api/projects');
-        const projectsData = await data.json();
-        setProjects(projectsData);
-      }
-      catch(err) {
-        console.error(err);
-      }
-    };
-    fetchProjects();
-  }, []);
 
     return (
       <Fragment>
